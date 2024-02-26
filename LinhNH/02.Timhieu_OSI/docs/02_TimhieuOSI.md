@@ -106,5 +106,31 @@ Mô hình OSI phân chia quá trình truyền thông mạng thành 7 tầng khá
   - SNMP (Simple Network Management Protocol).
 - Chức năng chính của tầng ứng dụng là cung cấp giao diện và các dịch vụ để người dùng có thể tương tác và sử dụng các ứng dụng mạng. Nó cung cấp các cơ chế để xác định và thiết lập kết nối với các ứng dụng và dịch vụ mạng, xử lý yêu cầu và phản hồi, quản lý phiên làm việc và truyền tải dữ liệu giữa người dùng và mạng.
 
+ ***__Tổng kết__***
+
+![hinh_2.7](/LinhNH/02.Timhieu_OSI/images/Tong_ket.png)
+
+
+## 3. Workflow với mô hình OSI
+_Khi A gửi một dữ liệu (thông tin) đến B thì dữ liệu sẽ trải qua 2 tiến trình cơ bản là_
+### a. Quá trình đóng gói tại trạm gửi (Data Encapsulation)
+- __Bước 1__: Trình ứng dụng (bên A) tạo ra dữ liệu và các chương trình phần cứng, phần mềm cài đặt mỗi lớp sẽ bổ sung vào header
+- __Bước 2__: Tiếp theo các thông tin đó được chuyển xuống lớp Presentation để chuyển thành dạng chung, rồi mã hoá và nén dữ liệu. Tiếp đó dữ liệu được chuyển xuống lớp Session để bổ sung các thông tin về phiên giao dịch này.
+- __Bước 3__: Dữ liệu tiếp tục được chuyển xuống lớp Transport, tại đây dữ liệu được cắt ra thành nhiều Segment và dán số port đích, port source (ngẫu nhiên), số thứ tự vào mỗi phần nhỏ đó để đảm bảo độ tin cậy khi truyền.
+- __Bước 4__: Dữ liệu tiếp tục được chuyển xuống lớp Network, tại lớp này mỗi Segment được cắt ra thành nhiều Packet và thực hiện việc tìm nexthop để đẩy gói tin đi.
+- __Bước 5__: Tiếp đó dữ liệu được chuyển xuống lớp DataLink, tại đây thực hiện việc dán địa chỉ mac cổng thiết bị hiện tại và mac đích (mac của cổng router phía trước), dán xong thì packet được gọi là frame.
+- __Bước 6__: Cuối cùng, mỗi Frame sẽ được tầng Vật Lý chuyển thành một chuỗi các bit và truyền đến B trên dây mạng.
+
+### b. Quá trình mở gói dữ liệu (Data De-encapsulation)
+- __Bước 1__: Lớp Physical kiểm tra quá trình đồng bộ bit và đặt chuỗi bit nhận được vào vùng đệm. Sau đó thông báo cho lớp Data Link dữ liệu đã được nhận.
+- __Bước 2__: Lớp DataLink kiểm lỗi frame. Nếu có lỗi thì frame bị bỏ. Sau đó kiểm tra địa chỉ lớp DataLink (địa chỉ mac) xem có trùng với địa chỉ máy nhận hay không. Nếu đúng thì phần dữ liệu sau khi loại header sẽ được chuyển lên cho lớp Network.
+- __Bước 3__: Địa chỉ lớp Networkđược kiểm tra xem có phải là địa chỉ máy nhận hay không (địa chỉ IP) ? Nếu đúng thì dữ liệu được chuyển lên cho lớp Transport xử lý.
+- __Bước 4__: Nếu giao thức lớp Transport có hỗ trợ việc phục hồi lỗi thì số định danh phân đoạn được xử lý. Các thông tin ACK,NAK (gói tin ACK,NAK dùng để phản hồi về việc các gói tin đã được gởi đến máy nhận chưa) cũng được xử lý ở lớp này. Sau quá trình phục hồi lỗi và sắp thứ tự các phân đoạn, dữ liệu được đưa lên lớp Session.
+- __Bước 5__: Lớp Session đảm bảo một chuỗi các thông điệp đã trọn vẹn. Sau khi các luồng đã hoàn tất, lớp Session chuyển dữ liệu sau header lớp 5 lên cho lớp Presentation xử lý.
+- __Bước 6__: Dữ liệu sẽ được lớp Presentation xử lý bằng cách chuyển đổi dạng thức dữ liệu. Sau đó kết quả chuyển lên cho lớp Application.
+- __Bước 7__: Lớp Application xử lý header cuối cùng. Header này chứa các tham số thoả thuận giữa hai trình ứng dụng. Do vậy tham số này thường chỉ được trao đổi lúc khởi động quá trình truyền thông giữa hai trình ứng dụng.
+------------
+
+
 
 
