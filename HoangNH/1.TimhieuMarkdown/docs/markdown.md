@@ -43,10 +43,10 @@ Kết quả: [Github](https://github.com/)
 
 Sử dụng cú pháp `![]()` để chèn link trong bài viết, ở đó nội dung trong `[]` sẽ là thẻ alt text, và nội dung trong `()` sẽ là địa chỉ ảnh mà bạn muốn người đọc nhìn thấy.
 
-Ví dụ: `![Image1](https://images.viblo.asia/518eea86-f0bd-45c9-bf38-d5cb119e947d.png)`
+Ví dụ: `![Image1](/HoangNH/1.TimhieuMarkdown/images/Image.png)`
 
 Kết quả:
-![Image1](https://images.viblo.asia/518eea86-f0bd-45c9-bf38-d5cb119e947d.png)
+![Image1](/HoangNH/1.TimhieuMarkdown/images/Image.png)
 
 ### 2.5 Dùng cho list
 
