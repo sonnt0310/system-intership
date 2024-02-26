@@ -116,6 +116,8 @@ _Khi A gửi một dữ liệu (thông tin) đến B thì dữ liệu sẽ trả
 
 ### Phía máy gửi: Quá trình đóng gói tại trạm gửi (Data Encapsulation)
 
+![hinh_3.1](/LinhNH/02.Timhieu_OSI/images/Phia_may_gui.png)
+
 - __Bước 1__: Trình ứng dụng (bên A) tạo ra dữ liệu và các chương trình phần cứng, phần mềm cài đặt mỗi lớp sẽ bổ sung vào header
 - __Bước 2__: Tiếp theo các thông tin đó được chuyển xuống lớp Presentation để chuyển thành dạng chung, rồi mã hoá và nén dữ liệu. Tiếp đó dữ liệu được chuyển xuống lớp Session để bổ sung các thông tin về phiên giao dịch này.
 - __Bước 3__: Dữ liệu tiếp tục được chuyển xuống lớp Transport, tại đây dữ liệu được cắt ra thành nhiều Segment và dán số port đích, port source (ngẫu nhiên), số thứ tự vào mỗi phần nhỏ đó để đảm bảo độ tin cậy khi truyền.
@@ -124,6 +126,9 @@ _Khi A gửi một dữ liệu (thông tin) đến B thì dữ liệu sẽ trả
 - __Bước 6__: Cuối cùng, mỗi Frame sẽ được tầng Vật Lý chuyển thành một chuỗi các bit và truyền đến B trên dây mạng.
 
 ### Phía máy nhận: Quá trình mở gói dữ liệu (Data De-encapsulation)
+
+![hinh_3.2](/LinhNH/02.Timhieu_OSI/images/Phia_may_nhan.png)
+
 - __Bước 1__: Lớp Physical kiểm tra quá trình đồng bộ bit và đặt chuỗi bit nhận được vào vùng đệm. Sau đó thông báo cho lớp Data Link dữ liệu đã được nhận.
 - __Bước 2__: Lớp DataLink kiểm lỗi frame. Nếu có lỗi thì frame bị bỏ. Sau đó kiểm tra địa chỉ lớp DataLink (địa chỉ mac) xem có trùng với địa chỉ máy nhận hay không. Nếu đúng thì phần dữ liệu sau khi loại header sẽ được chuyển lên cho lớp Network.
 - __Bước 3__: Địa chỉ lớp Networkđược kiểm tra xem có phải là địa chỉ máy nhận hay không (địa chỉ IP) ? Nếu đúng thì dữ liệu được chuyển lên cho lớp Transport xử lý.
