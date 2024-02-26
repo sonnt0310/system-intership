@@ -103,12 +103,12 @@ Ví dụ:
 
 MARKDOWN 
 
-    ![hinh_1](https://dongphucgiadinh.com/wp-content/uploads/2022/09/logo-dai-hoc-bach-khoa.png)
+    ![hinh_1](/LinhNH/01.Timhieu_Markdown/images/hinh_1.png)
 
 
 OUTPUT 
 
-![hinh_1](https://dongphucgiadinh.com/wp-content/uploads/2022/09/logo-dai-hoc-bach-khoa.png)
+![hinh_1](/LinhNH/01.Timhieu_Markdown/images/hinh_1.png)
 
 
 * Đính kèm liên kết vào hình ảnh: 
@@ -119,11 +119,11 @@ Ví dụ:
 
 MARKDOWN
 
-    [![hinh_1](https://dongphucgiadinh.com/wp-content/uploads/2022/09/logo-dai-hoc-bach-khoa.png)](https://facebook.com/)
+    [![hinh_1](/LinhNH/01.Timhieu_Markdown/images/hinh_1.png)](https://facebook.com/)
 
 OUTPUT
 
-[![hinh_1](https://dongphucgiadinh.com/wp-content/uploads/2022/09/logo-dai-hoc-bach-khoa.png)](https://facebook.com/)
+[![hinh_1](/LinhNH/01.Timhieu_Markdown/images/hinh_1.png)](https://facebook.com/)
 
 #### 2.5) Bảng
 
