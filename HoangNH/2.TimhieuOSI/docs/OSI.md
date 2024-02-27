@@ -93,7 +93,7 @@ Các giao thức và dịch vụ phổ biến như:
 ![image7](/HoangNH/2.TimhieuOSI/image/image7.png)
 
 
-##3. Workflow với mô hình OSI
+## 3. Workflow với mô hình OSI
 
 ![image8](/HoangNH/2.TimhieuOSI/image/image8.avif)
 
