@@ -1,6 +1,26 @@
 # **Tìm hiểu về mô hình OSI** 
 
- ## 1. Khái quát về mô hình OSI
+# Mục lục
+1. [Khái quát về mô hình OSI](#1-khái-quát-về-mô-hình-osi )
+2. [Các tầng trong mô hình OSI](#2-các-tầng-trong-mô-hình-osi)
+
+    2.1 [Tầng vật lý](#21-tầng-vật-lý-physical-layer)
+
+    2.2 [Tầng liên kết dữ liệu](#22-tầng-liên-kết-dữ-liệu-data-link-layer)
+
+    2.3 [Tầng mạng](#23-tầng-mạng-network-layer)
+
+    2.4 [Tầng giao vận](#24-tầng-giao-vận-transport-layer)
+
+    2.5 [Tầng phiên](#25-tầng-phiên-session-layer)
+
+    2.6 [Tầng trình diễn](#26-tầng-trình-diễn-presentation-layer)
+
+    2.7 [Tầng ứng dụng](#27-tầng-ứng-dụng-application-layer)
+
+3. [Workflow với mô hình OSI](#3-workflow-với-mô-hình-osi)
+-------------
+## 1. Khái quát về mô hình OSI
 
 **Mô hình OSI** (_Open Systems Interconnection_) là một mô hình tham chiếu để mô tả cách mà các hệ thống mạng giao tiếp với nhau. Mô hình OSI phân chia quá trình giao tiếp mạng thành các tầng độc lập nhằm tăng tính tương thích và tách biệt giữa các phần của một hệ thống mạng.
 
