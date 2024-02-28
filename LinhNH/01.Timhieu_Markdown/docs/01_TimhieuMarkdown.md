@@ -1,17 +1,28 @@
 # **Tìm hiểu về ngôn ngữ Markdown** 
 
 # Mục lục
-## 1. Giới thiệu về ngôn ngữ Markdown 
-## 2. Những định dạng phổ biến khi sử dụng Markdown
-#### 2.1) Văn bản in đậm, in nghiêng
-#### 2.2) Tiêu đề
-#### 2.3) Liên kết & email
-#### 2.4) Hình ảnh
-#### 2.5) Bảng
-#### 2.6) Gạch ngang chữ
-#### 2.7) Dùng cho chèn Code
-#### 2.8) Danh sách
-#### 2.9) Dùng cho Blockquote
+1. [Giới thiệu về ngôn ngữ Markdown](#1-giới-thiệu-về-ngôn-ngữ-markdown)
+2. [Những định dạng phổ biến khi sử dụng Markdown](#2-những-định-dạng-phổ-biến-khi-sử-dụng-markdown)
+
+    2.1) [Văn bản in đậm, in nghiêng](#21-văn-bản-in-đậm-in-nghiêng)
+
+    2.2) [Tiêu đề](#22-tiêu-đề)    
+
+    2.3) [Liên kết & email](#23-liên-kết--email)
+
+    2.4) [Hình ảnh](#24-hình-ảnh) 
+
+    2.5) [Bảng](#25-bảng) 
+
+    2.6) [Gạch ngang chữ](#26-gạch-ngang-chữ) 
+
+    2.7) [Dùng cho chèn Code](#27-dùng-cho-chèn-code) 
+
+    2.8) [Danh sách](#28-danh-sách) 
+
+    2.9) [Dùng cho Blockquote](#29-dùng-cho-blockquote) 
+
+--------------------------
 
 
 ## 1. Giới thiệu về ngôn ngữ Markdown 
