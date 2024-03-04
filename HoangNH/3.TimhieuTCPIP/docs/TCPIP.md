@@ -15,7 +15,7 @@ TCP/IP gồm hai phần chính:
 Mô hình TCP/IP gồm 4 tầng.
 
 
-![tcpip1](C:/Hoang_TT/system-intership/HoangNH/3.TimhieuTCPIP/image/image1.png)
+![tcpip1](HoangNH/3.TimhieuTCPIP/image/image1.png)
 
 
 ### 2.1.Tầng vật lý
@@ -61,7 +61,7 @@ Các giao thức phổ biến:
 ## 3. So sánh với mô hình OSI
 
 
-![sosanh](C:/Hoang_TT\system-intership\HoangNH\3.TimhieuTCPIP\image\sosanh.avif)
+![sosanh](/HoangNH/3.TimhieuTCPIP/image/sosanh.avif)
 
 ### 3.1.Điểm giống nhau
 
@@ -79,4 +79,4 @@ Các giao thức phổ biến:
 - Trong TCP/IP, các giao thức được phát triển trước mô hình. Còn đối với mô hình OSI thì ngược lại.
 - TCP/IP giúp thiết lập kết nối giữa các thiết bị sử dụng với nhau. OSI giúp chuẩn hóa router, switch, bo mạch chủ và các phần cứng khác.
 
-![bang](C:/Hoang_TT\system-intership\HoangNH\3.TimhieuTCPIP\image\bang.avif)
+![bang](/HoangNH/3.TimhieuTCPIP/image/bang.avif)
