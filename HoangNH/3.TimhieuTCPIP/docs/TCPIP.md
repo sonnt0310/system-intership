@@ -1,17 +1,5 @@
 # Tìm hiểu về TCP/IP
 
-# Mục lục
-1.[Giới thiệu về TCP/IP](#1-giới-thiệu-về-tcp-ip)
-2.[Các tầng trong TCP/IP](#2-các-tầng-trong-tcp-ip)
-  2.1.[Tầng vật lý](#21-tầng-vật-lý)
-  2.2.[Tầng mạng](#22-tầng-mạng)
-  2.3.[Tầng giao vận](#23-tầng-giao-vận)
-  2.4.[Tầng ứng dụng](#24-tầng-ứng-dụng)
-3.[So sánh với mô hình OSI](#3-so-sánh-với-mô-hình-osi)
-  3.1.[Điểm giống nhau](#31-điểm-giống-nhau)
-  3.2.[Điểm khác nhau](#32-điểm-khác-nhau)
-
-
 
 ## 1.Giới thiệu về TCP/IP
 
