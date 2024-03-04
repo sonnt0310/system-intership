@@ -84,7 +84,10 @@ Các giao thức phổ biến:
 
 ## 4.Workflow của mô hình TCP/IP
 
+Các bước:
 
+- Dữ liệu từ ứng dụng thiết bị qua các giao thức thêm phần Header thành stream chứa thông tin về ứng dụng đích và cổng rồi chuyển đến tầng giao vận.
+- 
 
 ## 5.Phân biệt giao thức UDP và TCP
 
