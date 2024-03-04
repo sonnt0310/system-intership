@@ -7,8 +7,10 @@
     2.3 [Tầng giao vận](#23-tầng-giao-vận)  
     2.4 [Tầng ứng dụng](#24-tầng-ứng-dụng)
 3. [So sánh giữa mô hình OSI và TCP/IP](#3-so-sánh-giữa-mô-hình-osi-và-tcpip)
-        
-
+4. [Workflow với mô hình TCP/IP](#4-workflow-với-mô-hình-tcpip)
+5. [Phân biệt giao thức UDP và TCP](#5-phân-biệt-giao-thức-udp-và-tcp)  
+    5.1 [Tổng quan về giao thức UDP](#51-tổng-quan-về-giao-thức-udp)  
+    5.2 [So sánh giữa UDP - TCP](#52-so-sánh-giữa-udp---tcp)  
 --------
 ## 1. Khái quát về mô hìnhTCP/IP
 - **`TCP/IP`**  (Transmission Control Protocol/ Internet Protocol) là giao thức điều khiển để truyền nhận liên mạng. Đây là một bộ giao thức có chức năng truyền và kết nối các thông tin giữa các thiết bị trong một mạng lưới internet.
@@ -31,7 +33,7 @@ Tầng 4: Tầng ứng dụng (Application)
 ![hinh_2](/LinhNH/03.Timhieu_TCP_IP/images/Layer.png)
 ### 2.1 Tầng vật lý
 Đây là tầng thấp nhất trong mô hình TCP/IP, đóng vai trò truyền dữ liệu giữa 2 thiết bị trong cùng 1 mạng. Ở tầng này, toàn bộ gói dữ liệu sẽ được đóng vào khung (Frame) và được định tuyến đi đến đích đã được chỉ định ban đầu.  
-**->** Lớp này là một nhóm phương thức vận hành trên một kết nối của máy chủ, thường được biết đến là Ethernet.
+**=>** Lớp này là một nhóm phương thức vận hành trên một kết nối của máy chủ, thường được biết đến là Ethernet.
 ### 2.2 Tầng mạng
 Đây là lớp kết nối các mạng nội bộ với nhau, còn được gọi là tầng Mạng. **Lớp Internet**  sẽ xử lý quá trình truyền gói tin trên mạng. Các giao thức của lớp này bao gồm:  
 - IP – Internet Protocol  
@@ -59,13 +61,27 @@ Lớp truyền tải sẽ phụ trách luồng dữ liệu giữa 2 trạm thự
 - **SNMP** (Simple Network Managerment Protocol) : Là ứng dụng chạy trên nền UDP , cho phép quản lý và giám sát các thiết bị mạng từ xa.
 - **Domain Name System** ( DNS) : Là giao thức phân giải tên miền, được sử dụng trong hỗ trợ truy nhập Internet.
 
+### 2.5 Các giao thức TCP/IP phổ biến nhất
+#### a. HTTP
+HTTP là giao thức của TCP/IP được sử dụng phổ biến để phân phối dữ liệu không an toàn (gồm các file ảnh, tệp HTML,…) giữa web client với một web server. Trình duyệt web trên máy tính sẽ gửi yêu cầu đến web server để biết thông tin về một website. Khi web server nhận được yêu cầu nó sẽ xác nhận và gửi thông tin về website cho trình duyệt internet trên máy tính – web client. HTTP có 3 đặc trưng cơ bản là kết nối không liên tục, hoạt động độc lập và stateless.
+#### b. HTTPS
+HTTPS là một giao thức của TCP/IP, nó có sự kết hợp giữa SSL và TLS. HTTPS được sử dụng phổ biến khi muốn gửi dữ liệu cần bảo mật cao như thẻ tín dụng, dữ liệu cá nhân từ một website đến một web server.
+
+![hinh_2.5](/LinhNH/03.Timhieu_TCP_IP/images/Giao-thuc-http-https.png)
+
+
+#### c. FTP
+FTP là một giao thức của TCP/IP, được sử dụng để trao đổi dữ liệu giữa hai hoặc nhiều máy tính qua internet. FTP hoạt động trên hai cổng là 20 và 21. Nhờ FTP, các máy client trong mạng có khả năng truy cập đến máy chủ để gửi và lấy dữ liệu. Điểm đặc biệt của giao thức này là giúp người dùng dù đang ở xa vẫn có thể truy cập vào máy chủ để truyền hoặc nhận dữ liệu.
+
+![hinh_2.5](/LinhNH/03.Timhieu_TCP_IP/images/Giao-thuc-ftp.png)
+
 ## 3. So sánh giữa mô hình OSI và TCP/IP
 ![hinh_3](/LinhNH/03.Timhieu_TCP_IP/images/So-sanh-osi-tcp-ip.png)
 
 `Giống nhau` :  
 - Cả 2 đều sử dụng mô hình kiến trúc phân lớp  
 - Đều có tầng Application mặc dù dịch vụ khác nhau  
-- Đều có tầng Transport, Network(ở mô hình TCP/IP là Internet)  
+- Đều có tầng Transport, Network (ở mô hình TCP/IP là Internet)  
 - Sử dụng kĩ thuật chuyển tin đóng gói Packet  
 
 ` Khác nhau` :
@@ -83,3 +99,45 @@ Lớp truyền tải sẽ phụ trách luồng dữ liệu giữa 2 trạm thự
 |Xuất hiện sau khi có Internet|Xuất hiện trước khi có Internet|
 |Header tối thiểu là 5 byte|Header tối thiểu là 20 byte|
 -----------------
+
+## 4. Workflow với mô hình TCP/IP
+_Khi A gửi một dữ liệu (thông tin) đến B thì sẽ trải qua quá trình bắt tay 3 bước :_
+- B1: Client gửi tới máy chủ yêu cầu kết nối
+- B2: Server nhận được yêu cầu và gửi trả lại gói tin SYN/ACK để xác nhận kết nối
+- B3: Client gửi dữ liệu hồi âm
+
+![hinh_4](/LinhNH/03.Timhieu_TCP_IP/images/Workflow-tcp-ip.png)
+
+`Thiết lập kết nối (Connection Establishment):`  
+Một thiết bị (được gọi là người gửi) gửi một thông điệp SYN (synchronize) đến thiết bị đích (được gọi là người nhận) để bắt đầu quá trình thiết lập kết nối.
+- Thiết bị nhận phản hồi bằng cách gửi một thông điệp SYN-ACK (synchronize-acknowledge) xác nhận việc nhận thông điệp SYN và sẵn sàng thiết lập kết nối.
+- Thiết bị gửi sau đó gửi một thông điệp ACK (acknowledge) để xác nhận việc nhận thông điệp SYN-ACK từ thiết bị nhận. Kết nối được thiết lập thành công.  
+
+`Truyền dữ liệu (Data Transmission):`  
+Sau khi kết nối được thiết lập, các thiết bị có thể bắt đầu truyền tải dữ liệu. Dữ liệu được chia thành các phân đoạn nhỏ hơn và đánh số tuần tự.
+Người gửi gửi các phân đoạn này đến người nhận qua kết nối đã thiết lập. Mỗi phân đoạn được đánh số thứ tự để cho phép người nhận xác định và lắp ráp chúng lại theo đúng thứ tự ban đầu.
+
+`Kiểm soát luồng (Flow Control):`
+TCP sử dụng cơ chế kiểm soát luồng để đảm bảo rằng người gửi không gửi quá nhiều dữ liệu mà người nhận không thể xử lý.
+- Người nhận sử dụng cơ chế xác nhận (ACK) để thông báo cho người gửi biết rằng dữ liệu đã được nhận thành công.
+- Người gửi điều chỉnh tốc độ truyền tải dựa trên thông tin ACK và các thông số kiểm soát luồng như cửa sổ trượt (sliding window).
+
+`Xử lý lỗi và khôi phục (Error Handling and Recovery):`
+Nếu người nhận không nhận được một phân đoạn hoặc xảy ra lỗi trong quá trình truyền tải, nó sẽ gửi một ACK có số thứ tự yêu cầu người gửi gửi lại phân đoạn bị mất hoặc bị lỗi. Người gửi nhận được yêu cầu này sẽ gửi lại các phân đoạn bị mất hoặc bị lỗi. Quá trình này được gọi là khôi phục (recovery) và sử dụng cơ chế retransmission.
+
+`Đóng kết nối (Connection Termination):`
+Khi quá trình truyền tải hoàn tất, hai thiết bị có thể đóng kết nối.
+Người gửi gửi một thông điệp FIN (finish) để cho biết nó đã hoàn thành việc truyền tải dữ liệu.
+Người nhận sẽ gửi một ACK để xác nhận việc nhận thông điệp FIN và sẵn sàng đóng kết nối.
+Sau đó, người nhận sẽ gửi một thông điệp FIN để yêu cầu đóng kết nối từ phía người gửi.
+Cuối cùng, người gửi sẽ gửi một ACK xác nhận việc nhận thông điệp FIN từ người nhận. Kết nối được đóng.
+
+![hinh_4](/LinhNH/03.Timhieu_TCP_IP/images/Workflow-TCPIP.png)
+
+## 5. Phân biệt giao thức UDP và TCP
+### 5.1 Tổng quan về giao thức UDP
+#### a. Giao thức UDP
+
+
+
+### 5.2 So sánh giữa UDP - TCP
