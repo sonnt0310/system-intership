@@ -15,7 +15,7 @@ TCP/IP gồm hai phần chính:
 Mô hình TCP/IP gồm 4 tầng.
 
 
-![tcpip1](HoangNH/3.TimhieuTCPIP/image/image1.png)
+![image1](HoangNH/3.TimhieuTCPIP/image/image1.png)
 
 
 ### 2.1.Tầng vật lý
