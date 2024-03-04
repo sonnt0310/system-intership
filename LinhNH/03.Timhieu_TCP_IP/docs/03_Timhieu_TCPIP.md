@@ -5,7 +5,8 @@
     2.1 [Tầng vật lý](#21-tầng-vật-lý)  
     2.2 [Tầng mạng](#22-tầng-mạng)  
     2.3 [Tầng giao vận](#23-tầng-giao-vận)  
-    2.4 [Tầng ứng dụng](#24-tầng-ứng-dụng)
+    2.4 [Tầng ứng dụng](#24-tầng-ứng-dụng)  
+    2.5 [Các giao thức TCP/IP phổ biến nhất](#25-các-giao-thức-tcpip-phổ-biến-nhất)  
 3. [So sánh giữa mô hình OSI và TCP/IP](#3-so-sánh-giữa-mô-hình-osi-và-tcpip)
 4. [Workflow với mô hình TCP/IP](#4-workflow-với-mô-hình-tcpip)
 5. [Phân biệt giao thức UDP và TCP](#5-phân-biệt-giao-thức-udp-và-tcp)  
@@ -137,7 +138,6 @@ Cuối cùng, người gửi sẽ gửi một ACK xác nhận việc nhận thô
 ## 5. Phân biệt giao thức UDP và TCP
 ### 5.1 Tổng quan về giao thức UDP
 #### a. Giao thức UDP
-
-
-
+**UDP** (User Datagram Protocol) – Giao thức dữ liệu người dùng là một giao thức giao tiếp thay thế cho TCP – 
+giao thức kiểm soát đường truyền, được sử dụng chủ yếu để thiết lập các kết nối có độ trễ thấp và không chịu lỗi giữa các ứng dụng trên internet.
 ### 5.2 So sánh giữa UDP - TCP
