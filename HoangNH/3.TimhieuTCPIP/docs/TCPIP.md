@@ -80,3 +80,94 @@ Các giao thức phổ biến:
 - TCP/IP giúp thiết lập kết nối giữa các thiết bị sử dụng với nhau. OSI giúp chuẩn hóa router, switch, bo mạch chủ và các phần cứng khác.
 
 ![bang](/HoangNH/3.TimhieuTCPIP/image/bang.avif)
+
+
+## 4.Workflow của mô hình TCP/IP
+
+
+
+## 5.Phân biệt giao thức UDP và TCP
+
+![phanbiet](/HoangNH/3.TimhieuTCPIP/image/phanbiet.png)
+
+### 5.1.Giao thức UDP
+
+UDP (User Datagram Protocol) là một giao thức truyền tải dữ liệu không đáng tin cậy trong mạng máy tính. UDP hoạt động dựa trên giao thức IP (Internet Protocol) và thường được sử dụng cho các ứng dụng yêu cầu truyền tải dữ liệu nhanh chóng và hiệu suất cao, như truyền tải âm thanh, video trực tiếp và trò chơi trực tuyến.
+
+UDP tập trung vào tốc độ và hiệu suất, sử dụng cơ chế truyền tải dữ liệu đơn giản hơn, gửi các gói tin gọi là datagram trực tiếp từ nguồn đến đích mà không cần thiết lập kết nối trước.
+
+
+![udp](/HoangNH/3.TimhieuTCPIP/image/udp.png)
+
+Cách hoạt động cơ bản của UDP:
+
+- Người gửi có thể gửi trực tiếp gói tin đến địa chỉ IP và cổng người nhận
+- Dữ liệu được chia thành các gói tin riêng lẻ, mỗi gói tin được đóng gói độc lập.
+- Các gói tin có thể bị mất, trùng lặp hoặc đến không đúng thứ tự. UDP không sử dụng cơ chế xác nhận, khôi phục sau lỗi và kiểm soát luồng.
+- Sử dụng giao diện IP để định tuyến gói tin trên mạng. Gói tin có địa chỉ nguồn và đích dựa trên địa chỉ IP của các thiết bị
+- Không có các quá trình phức tạp như thiết lập kết nối, kiểm soát luồng và xác nhận dữ liệu
+- UDP thích hợp cho các ứng dụng yêu cầu tốc độ truyền tải cao
+
+Ứng dụng của UDP: 
+
+- Truyền tải âm thanh, video trực tiếp, game trực tuyến với độ trễ thấp.
+- Truyền tải dữ liệu không yêu cầu tính đáng tin cậy như ửi gói tin broadcast hoặc multicast trong mạng nội bộ
+- Dùng cho các ứng dụng bắt buộc dữ liệu không bị hao hụt trong quá trình truyền tin.
+
+Ưu điểm của UDP:
+
+- Tốc độ và hiệu suất cao: UDP không có các quá trình thiết lập kết nối và kiểm soát luồng phức tạp như TCP, giúp giảm độ trễ và tăng tốc độ truyền tải dữ liệu.
+- Tính nhẹ nhàng và tiết kiêm tài nguyên: thiếu các quá trình phức tạp như thiết lập kết nối, kiểm soát luồng và xác nhận dữ liệu khiến cho UDP phù hợp với môi trường mạng có tải cao hoặc có quy mô lớn.
+- UDP có thể truyền phát và truyền đa hướng: một gói tin UDP có thể được gửi đến nhiều người nhận cùng một lúc.
+
+Nhược điểm của UDP:
+
+- Không đảm bảo tính đáng tin cậy: Các gói tin có thể bị mất, trùng lặp hoặc đến không đúng thứ tự.
+- Không hỗ trợ kiểm soát luông: có thể dẫn đến tình trạng quá tải mạng hoặc mất mát dữ liệu.
+- Không hỗ trợ xác nhận giao nhận: người dùng sẽ không biết gói tin đã được gửi nhận thành công hay không.
+- Không hỗ trợ phân đoạn, lắp ghép: khi dữ liệu vượt quá kích thước gói tin thì người dùng phải tự chia nhỏ và ghép nối dữ liệu.
+
+### 5.2.Giao thức TCP
+
+Giao thức TCP (Transmission Control Protocol) là một giao thức lớp vận chuyển đảm bảo việc truyền tải tin nhắn giữa các thiết bị mạng trên Internet.
+
+TCP hoạt động dựa trên mô hình hướng kết nối, nghĩa là trước khi gửi dữ liệu, hai thiết bị mạng cần thiết lập một kết nối tạo thành một đường ống ảo giữa chúng. 
+
+Cách hoạt động cơ bản của TCP:
+
+- Thiết lập kết nối: Một thiết bị gửi một thông điệp (SYN) đến thiết bị đích để bắt đầu thiết lập kết nối. 
+Thiết bị nhận phản hồi bằng cách gửi một thông điệp SYN-ACK xác nhận việc nhận thông điệp SYN và sẵn sàng thiết lập kết nối.
+Thiết bị gửi sau đó gửi một thông điệp ACK để xác nhận việc nhận thông điệp SYN-ACK từ thiết bị nhận. Kết nối được thiết lập thành công.
+- Truyền dữ liệu: Dữ liệu được chia thành các phân đoạn nhỏ hơn và đánh số tuần tự.
+- Kiểm soát luồng: Đảm bảo người gửi không gửi quá nhiều dữ liệu khiến người nhận không thể xử lý. 
+- Xử lý lỗi và khôi phục: Khi xảy ra lỗi, nó sẽ gửi một ACK có số thứ tự yêu cầu người gửi gửi lại phân đoạn bị mất hoặc bị lỗi. Người gửi nhận được yêu cầu này sẽ gửi lại các phân đoạn bị mất hoặc bị lỗi. 
+- Đóng kết nối: Người gửi gửi một thông điệp FIN để cho biết nó đã hoàn thành việc truyền tải dữ liệu.
+Người nhận sẽ gửi một ACK để xác nhận việc nhận thông điệp FIN và sẵn sàng đóng kết nối.
+Sau đó, người nhận sẽ gửi một thông điệp FIN để yêu cầu đóng kết nối từ phía người gửi.
+Cuối cùng, người gửi sẽ gửi một ACK xác nhận việc nhận thông điệp FIN từ người nhận. Kết nối được đóng.
+
+Ứng dụng của TCP:
+
+- Truyền tải dữ liệu trên web (HTTP)
+- Gửi nhận Mail (SMTP, POP, IMAP)
+- Truyền tải tệp tin (FTP)
+- Truyền tải dữ liệu trực tiếp (TCP/IP sockets)
+- Tương tác đầu cuối từ xa (Telnet, SSH)
+- Truyền tải dữ liệu đa phương tiện (RTSP, RTP)
+
+Ưu điểm của TCP:
+
+- Đảm bảo độ tin cậy: dùng cơ chế xác nhận để đảm bảo dữ liệu được gửi nhận một cách chính xác.
+- Dùng cơ chế kiểm soát luồng để điều chỉnh tốc độ truyền tải dữ liệu tránh quá tải
+- Hỗ trợ kết nối đa luồng, cho phép nhiều luồng dữ liệu được truyền tải đồng thời trong cùng một kết nối làm tăng hiệu suất truyền tải và sử dụng tài nguyên mạng hiệu quả.
+- Hỗ trợ phân đoạn, lắp ghép dữ liệu khắc phục vấn đề kích thước gói tin và tăng hiệu suất truyền tải.
+
+Nhược điểm của TCP:
+
+- Đòi hỏi thời gian thiết lập kết nối.
+- Có độ trễ.
+- Tốn tài nguyên.
+- Không thích hợp cho mạng không đáng tin cậy.
+
+
+![sosanh](/HoangNH/3.TimhieuTCPIP/image/sosanh.png)
