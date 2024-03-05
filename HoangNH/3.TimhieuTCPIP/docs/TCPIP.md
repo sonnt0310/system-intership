@@ -84,10 +84,12 @@ Các giao thức phổ biến:
 
 ## 4.Workflow của mô hình TCP/IP
 
-Các bước:
+Các bước khi gửi dữ liệu từ A đến B:
 
 - Dữ liệu từ ứng dụng thiết bị qua các giao thức thêm phần Header thành stream chứa thông tin về ứng dụng đích và cổng rồi chuyển đến tầng giao vận.
-- 
+- Ở tầng giao vận, TCP thêm Header vào các segment, thiết lập kết nối giữa A và B.
+- Xử lý dữ liệu thêm thành phần header vào segment rồi chuyển xuống tầng vật lý.
+- gói dữ liệu đóng gói thành frame và chuyển thành các bit truyền qua đường truyền vật lý thông qua các thiết bị mạng đến đích.
 
 ## 5.Phân biệt giao thức UDP và TCP
 
