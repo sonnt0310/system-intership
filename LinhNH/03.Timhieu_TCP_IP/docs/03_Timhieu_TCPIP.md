@@ -163,14 +163,15 @@ Giao thức UDP hoạt động tương tự như TCP, nhưng nó bỏ qua quá t
 **_Bảng so sánh_**
 |Tính năng|TCP|UDP|  
 |:--------------|:-----------|:------|
-|Trạng thái kết nối|Yêu cầu kết nối đã thiết lập để truyền dữ liệu (Phải ngắt kết nối sau khi đã được truyền)|Không kết nối, không yêu cầu mở, không duy trì hoặc chấm dứt kết nối| 
+|Cơ chế kết nối|Thiết lập kết nối trước khi truyền dữ liệu. TCP sử dụng cơ chế bắt tay (handshake) để thiết lập một kết nối đáng tin cậy giữa máy gửi và máy nhận trước khi truyền dữ liệu| Không thiết lập kết nối trước khi truyền dữ liệu. UDP truyền gói tin mà không cần thiết lập một liên kết đầy đủ|
+|Quản lý trạng thái kết nối|Duy trì trạng thái kết nối liên tục giữa máy gửi và máy nhận trong suốt quá trình truyền dữ liệu. Mọi gói tin được gửi và nhận trong ngữ cảnh của kết nối đã thiết lập| Không duy trì trạng thái kết nối liên tục giữa máy gửi và máy nhận. Mỗi gói tin UDP độc lập với các gói tin khác| 
 |Giải trình tự dữ liệu|Có trình tự|Không trình tự|
-|Cung cấp dữ liệu đến đích|Đảm bảo|Không đảm bảo|
+|Đảm bảo tính toàn vẹn và xác minh|Đảm bảo|Không đảm bảo|
 |Truyền lại dữ liệu gói bị mất|Truyền lại được|Không truyền lại được|
 |Kiểm tra lỗi|Kiểm tra lỗi mở rộng và xác nhận dữ liệu|Tổng kiểm tra cơ bản|
 |Phương thức chuyển khoản|Dữ liệu đọc dưới dạng luồng byte, thông diệp được truyền đến ranh giới phân đoạn|Ranh giới xác định, gửi riêng lẻ và kiểm tra tính toàn vện khi đến nơi|
 |Tốc độ|Chậm hơn UDP|Nhanh hơn TCP|
 |Phát sóng|Không hỗ trợ phát sóng|Có hỗ trợ phát sóng|
-|Sử dụng tối ưu|Đucợ sử dụng bởi HTTPS, HTTP, SMTP, POP, FTP, v.v.|Hội nghị truyền hình, phát trực tuyến, DNS, VolP, v.v.|
-
+|Sử dụng tối ưu|Được sử dụng bởi HTTPS, HTTP, SMTP, POP, FTP, v.v.|Hội nghị truyền hình, phát trực tuyến, DNS, VolP, v.v.|
+--------------
 
