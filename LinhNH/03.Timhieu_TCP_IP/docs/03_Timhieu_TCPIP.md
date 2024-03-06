@@ -172,6 +172,5 @@ Giao thức UDP hoạt động tương tự như TCP, nhưng nó bỏ qua quá t
 |Phương thức chuyển khoản|Dữ liệu đọc dưới dạng luồng byte, thông diệp được truyền đến ranh giới phân đoạn|Ranh giới xác định, gửi riêng lẻ và kiểm tra tính toàn vện khi đến nơi|
 |Tốc độ|Chậm hơn UDP|Nhanh hơn TCP|
 |Phát sóng|Không hỗ trợ phát sóng|Có hỗ trợ phát sóng|
-|Sử dụng tối ưu|Được sử dụng bởi HTTPS, HTTP, SMTP, POP, FTP, v.v.|Hội nghị truyền hình, phát trực tuyến, DNS, VolP, v.v.|
---------------
-
+|Sử dụng tối ưu|Được sử dụng bởi HTTPS, HTTP, SMTP, POP, FTP, v.v.|Hội nghị truyền hình, phát trực tuyến, DNS, VolP, v.v.|  
+---------
