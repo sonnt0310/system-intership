@@ -2,43 +2,31 @@
 
 # Mục lục
 1. [Khái quát về mô hình OSI](#1-khái-quát-về-mô-hình-osi )
-2. [Các tầng trong mô hình OSI](#2-các-tầng-trong-mô-hình-osi)
-
-    2.1 [Tầng vật lý](#21-tầng-vật-lý-physical-layer)
-
-    2.2 [Tầng liên kết dữ liệu](#22-tầng-liên-kết-dữ-liệu-data-link-layer)
-
-    2.3 [Tầng mạng](#23-tầng-mạng-network-layer)
-
-    2.4 [Tầng giao vận](#24-tầng-giao-vận-transport-layer)
-
-    2.5 [Tầng phiên](#25-tầng-phiên-session-layer)
-
-    2.6 [Tầng trình diễn](#26-tầng-trình-diễn-presentation-layer)
-
-    2.7 [Tầng ứng dụng](#27-tầng-ứng-dụng-application-layer)
-
+2. [Các tầng trong mô hình OSI](#2-các-tầng-trong-mô-hình-osi)  
+    2.1 [Tầng vật lý](#21-tầng-vật-lý-physical-layer)  
+    2.2 [Tầng liên kết dữ liệu](#22-tầng-liên-kết-dữ-liệu-data-link-layer)  
+    2.3 [Tầng mạng](#23-tầng-mạng-network-layer)  
+    2.4 [Tầng giao vận](#24-tầng-giao-vận-transport-layer)  
+    2.5 [Tầng phiên](#25-tầng-phiên-session-layer)  
+    2.6 [Tầng trình diễn](#26-tầng-trình-diễn-presentation-layer)  
+    2.7 [Tầng ứng dụng](#27-tầng-ứng-dụng-application-layer)  
 3. [Workflow với mô hình OSI](#3-workflow-với-mô-hình-osi)
 -------------
 ## 1. Khái quát về mô hình OSI
+**Mô hình OSI** (_Open Systems Interconnection_) là một mô hình tham chiếu để mô tả cách mà các hệ thống mạng giao tiếp với nhau. Mô hình OSI phân chia quá trình giao tiếp mạng thành các tầng độc lập nhằm tăng tính tương thích và tách biệt giữa các phần của một hệ thống mạng.  
 
-**Mô hình OSI** (_Open Systems Interconnection_) là một mô hình tham chiếu để mô tả cách mà các hệ thống mạng giao tiếp với nhau. Mô hình OSI phân chia quá trình giao tiếp mạng thành các tầng độc lập nhằm tăng tính tương thích và tách biệt giữa các phần của một hệ thống mạng.
-
-![hinh_0](/LinhNH/02.Timhieu_OSI/images/Mo_hinh_OSI.png)
-
-Mô hình OSI phân chia quá trình truyền thông mạng thành 7 tầng khác nhau. Mỗi tầng có chức năng và nhiệm vụ riêng, đồng thời tương tác với nhau để đảm bảo việc truyền thông dữ liệu hiệu quả. 
+![hinh_0](/LinhNH/02.Timhieu_OSI/images/Mo_hinh_OSI.png)  
+Mô hình OSI phân chia quá trình truyền thông mạng thành 7 tầng khác nhau. Mỗi tầng có chức năng và nhiệm vụ riêng, đồng thời tương tác với nhau để đảm bảo việc truyền thông dữ liệu hiệu quả.   
 
 ![hinh_1](/LinhNH/02.Timhieu_OSI/images/Layer.png)
-
 
 ## 2. Các tầng trong mô hình OSI
 
 ### 2.1 Tầng vật lý (Physical layer)
 
-- __Tầng Vật lý__ (Physical Layer) là tầng thấp nhất trong các tầng OSI, đảm bảo việc truyền dữ liệu qua môi trường vật lý và không quan tâm đến nội dung hay ý nghĩa của dữ liệu. Nó tạo ra một đường truyền vật lý ổn định và đáng tin cậy để các tầng cao hơn có thể gửi và nhận các gói tin dữ liệu.
+- __Tầng Vật lý__ (Physical Layer) là tầng thấp nhất trong các tầng OSI, đảm bảo việc truyền dữ liệu qua môi trường vật lý và không quan tâm đến nội dung hay ý nghĩa của dữ liệu. Nó tạo ra một đường truyền vật lý ổn định và đáng tin cậy để các tầng cao hơn có thể gửi và nhận các gói tin dữ liệu.  
 
 ![hinh_2.1](/LinhNH/02.Timhieu_OSI/images/Physical_Layer.png)
-
 
 - Nhiệm vụ của tầng Vật lý bao gồm:
 
@@ -62,16 +50,11 @@ Mô hình OSI phân chia quá trình truyền thông mạng thành 7 tầng khá
   - __Định địa chỉ vật lý__: Tầng Liên kết dữ liệu sử dụng địa chỉ MAC để xác định nguồn và đích của các khung dữ liệu.
   - __Kiểm soát lỗi__: Tầng này thực hiện kiểm tra lỗi, phát hiện và xử lý các vấn đề liên quan đến sự mất mát hoặc hỏng hóc dữ liệu ở tầng Vật lý.
   - __Kiểm soát truy cập vào phương tiện truyền thông__: Tầng Liên kết dữ liệu quản lý quy tắc truy cập vào môi trường chia sẻ, đảm bảo rằng các thiết bị không xung đột và có thể truyền dữ liệu một cách hiệu quả.
-
-
 ### 2.3 Tầng mạng (Network layer)
 - Network layer là gì? Tầng Mạng (Network Layer) là tầng thứ ba trong mô hình OSI. Tầng này có trách nhiệm quản lý việc định tuyến và chuyển tiếp dữ liệu giữa các mạng khác nhau trong hệ thống mạng. Tầng Mạng cung cấp các dịch vụ cho tầng trên là tầng Giao vận và tầng dưới là tầng Liên kết dữ liệu.
 
 ![hinh_2.3](/LinhNH/02.Timhieu_OSI/images/Network_Layer.png)
-
-
 - Tầng Mạng là tầng quan trọng trong mô hình OSI, vì nó đảm bảo việc định tuyến và chuyển tiếp dữ liệu giữa các mạng khác nhau. Các chức năng quan trọng của tầng Mạng bao gồm:
-
   - __Định tuyến__ (Routing): Tầng Mạng xác định đường đi tốt nhất cho việc truyền gói tin từ nguồn đến đích qua các mạng khác nhau. Nó sử dụng các thuật toán định tuyến như RIP (Routing Information Protocol) và OSPF (Open Shortest Path First) để quyết định đường đi tối ưu.
   - __Chuyển tiếp__ (Forwarding): Tầng Mạng thực hiện chuyển tiếp gói tin từ đầu vào đến đầu ra thông qua các thiết bị định tuyến (router). Các thiết bị định tuyến sử dụng bảng định tuyến để xác định cách chuyển tiếp gói tin đến đích.
   - __Địa chỉ IP__ (IP Addressing): Tầng Mạng sử dụng địa chỉ IP để định danh và định vị các thiết bị trong mạng. Địa chỉ IP là một địa chỉ duy nhất cho mỗi thiết bị mạng và nó được sử dụng để xác định nguồn và đích của gói tin.

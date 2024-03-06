@@ -88,7 +88,7 @@ FTP là một giao thức của TCP/IP, được sử dụng để trao đổi d
 ` Khác nhau` :
 
 |Mô hình OSI| Mô hình TCP/IP|
-|:---------:|:-------------:|
+|:---------|:-------------|
 |Do ISO nghiên cứu và phát triển|Do ARPANET nghiên cứu và phát triển|
 |Có sự phân biệt rõ ràng giữa các giao diện, dịch vụ và giao thức|Dịch vụ, giao diện và giao thức không có sự phân biệt|
 |Liên quan với Kết nối hệ thống mở|Liên quan với Giao thức điều khiển truyền dẫn|
@@ -103,30 +103,30 @@ FTP là một giao thức của TCP/IP, được sử dụng để trao đổi d
 
 ## 4. Workflow với mô hình TCP/IP
 _Khi A gửi một dữ liệu (thông tin) đến B thì sẽ trải qua quá trình bắt tay 3 bước :_
-- B1: Client gửi tới máy chủ yêu cầu kết nối
-- B2: Server nhận được yêu cầu và gửi trả lại gói tin SYN/ACK để xác nhận kết nối
-- B3: Client gửi dữ liệu hồi âm
+- **Bước 1:** Máy chủ A khởi tạo kết nối bằng cách gửi gói TCP SYN đến máy chủ đích B. Gói chứa số thứ tự ngẫu nhiên (ví dụ: 5432) đánh dấu sự bắt đầu của số thứ tự cho dữ liệu mà Máy chủ A sẽ truyền.  
+- **Bước 2:** Máy chủ B nhận gói và phản hồi bằng số thứ tự của chính nó. Phản hồi cũng bao gồm số xác nhận, là số thứ tự của Máy chủ A được tăng thêm 1 (ví dụ như: 5433).  
+- **Bước 3:** Máy chủ A xác nhận phản hồi của Máy chủ B bằng cách gửi số xác nhận, là số thứ tự của Máy chủ B tăng thêm 1.  
 
 ![hinh_4](/LinhNH/03.Timhieu_TCP_IP/images/Workflow-tcp-ip.png)
 
-`Thiết lập kết nối (Connection Establishment):`  
+**`Thiết lập kết nối (Connection Establishment):`**  
 Một thiết bị (được gọi là người gửi) gửi một thông điệp SYN (synchronize) đến thiết bị đích (được gọi là người nhận) để bắt đầu quá trình thiết lập kết nối.
 - Thiết bị nhận phản hồi bằng cách gửi một thông điệp SYN-ACK (synchronize-acknowledge) xác nhận việc nhận thông điệp SYN và sẵn sàng thiết lập kết nối.
 - Thiết bị gửi sau đó gửi một thông điệp ACK (acknowledge) để xác nhận việc nhận thông điệp SYN-ACK từ thiết bị nhận. Kết nối được thiết lập thành công.  
 
-`Truyền dữ liệu (Data Transmission):`  
+**`Truyền dữ liệu (Data Transmission):`**    
 Sau khi kết nối được thiết lập, các thiết bị có thể bắt đầu truyền tải dữ liệu. Dữ liệu được chia thành các phân đoạn nhỏ hơn và đánh số tuần tự.
 Người gửi gửi các phân đoạn này đến người nhận qua kết nối đã thiết lập. Mỗi phân đoạn được đánh số thứ tự để cho phép người nhận xác định và lắp ráp chúng lại theo đúng thứ tự ban đầu.
 
-`Kiểm soát luồng (Flow Control):`
+**`Kiểm soát luồng (Flow Control):`**  
 TCP sử dụng cơ chế kiểm soát luồng để đảm bảo rằng người gửi không gửi quá nhiều dữ liệu mà người nhận không thể xử lý.
 - Người nhận sử dụng cơ chế xác nhận (ACK) để thông báo cho người gửi biết rằng dữ liệu đã được nhận thành công.
-- Người gửi điều chỉnh tốc độ truyền tải dựa trên thông tin ACK và các thông số kiểm soát luồng như cửa sổ trượt (sliding window).
+- Người gửi điều chỉnh tốc độ truyền tải dựa trên thông tin ACK và các thông số kiểm soát luồng như cửa sổ trượt (sliding window).  
 
-`Xử lý lỗi và khôi phục (Error Handling and Recovery):`
-Nếu người nhận không nhận được một phân đoạn hoặc xảy ra lỗi trong quá trình truyền tải, nó sẽ gửi một ACK có số thứ tự yêu cầu người gửi gửi lại phân đoạn bị mất hoặc bị lỗi. Người gửi nhận được yêu cầu này sẽ gửi lại các phân đoạn bị mất hoặc bị lỗi. Quá trình này được gọi là khôi phục (recovery) và sử dụng cơ chế retransmission.
+**`Xử lý lỗi và khôi phục (Error Handling and Recovery):`**  
+Nếu người nhận không nhận được một phân đoạn hoặc xảy ra lỗi trong quá trình truyền tải, nó sẽ gửi một ACK có số thứ tự yêu cầu người gửi gửi lại phân đoạn bị mất hoặc bị lỗi. Người gửi nhận được yêu cầu này sẽ gửi lại các phân đoạn bị mất hoặc bị lỗi. Quá trình này được gọi là khôi phục (recovery) và sử dụng cơ chế retransmission. 
 
-`Đóng kết nối (Connection Termination):`
+**`Đóng kết nối (Connection Termination):`**  
 Khi quá trình truyền tải hoàn tất, hai thiết bị có thể đóng kết nối.
 Người gửi gửi một thông điệp FIN (finish) để cho biết nó đã hoàn thành việc truyền tải dữ liệu.
 Người nhận sẽ gửi một ACK để xác nhận việc nhận thông điệp FIN và sẵn sàng đóng kết nối.
@@ -139,5 +139,38 @@ Cuối cùng, người gửi sẽ gửi một ACK xác nhận việc nhận thô
 ### 5.1 Tổng quan về giao thức UDP
 #### a. Giao thức UDP
 **UDP** (User Datagram Protocol) – Giao thức dữ liệu người dùng là một giao thức giao tiếp thay thế cho TCP – 
-giao thức kiểm soát đường truyền, được sử dụng chủ yếu để thiết lập các kết nối có độ trễ thấp và không chịu lỗi giữa các ứng dụng trên internet.
+giao thức kiểm soát đường truyền, được sử dụng chủ yếu để thiết lập các kết nối có độ trễ thấp và không chịu lỗi giữa các ứng dụng trên internet.  
+#### b. Cấu trúc gói tin UDP  
+![hinh_5.1](/LinhNH/03.Timhieu_TCP_IP/images/Cautruc-UDP.png)
+- **Port nguồn** (Source Port) (2 byte)  
+Đây là số cổng của máy gửi dữ liệu. Số cổng này xác định ứng dụng nguồn mà dữ liệu đang được gửi.  
+- **Port đích** (Destination Port) (2 byte)  
+Đây là số cổng của máy nhận dữ liệu, xác định ứng dụng đích mà dữ liệu sẽ được chuyển đến.    
+- **Độ dài gói tin** (Length) (2 byte)  
+Đây là yếu tố xác định độ dài tổng của gói tin UDP, bao gồm cả tiêu đề và dữ liệu. Độ dài gói tin tính bằng byte.
+- **Kiểm tra CRC** (Checksum) (2 byte)  
+Yếu tố này sử dụng giá trị CRC (Cyclic Redundancy Check) để kiểm tra tính toàn vẹn của gói tin. Kiểm tra CRC giúp phát hiện các lỗi trong quá trình truyền dữ liệu, nhưng không thực hiện việc sửa chữa lỗi.  
+- **Dữ liệu** (Data) (N byte)  
+Đây là nội dung của gói tin, có độ dài thay đổi tuỳ vào ứng dụng đã sử dụng UDP.
+#### c. Cách thức hoạt động
+Giao thức UDP hoạt động tương tự như TCP, nhưng nó bỏ qua quá trình kiểm tra lỗi. Khi một ứng dụng sử dụng giao thức UDP, các gói tin được gửi cho bên nhận và bên gửi không phải chờ để đảm bảo bên nhận đã nhận được gói tin, do đó nó lại tiếp tục gửi gói tin tiếp theo. Nếu bên nhận bỏ lỡ một vài gói tin UDP, họ sẽ mất vì bên gửi không gửi lại chúng. Do đó thiết bị có thể giao tiếp nhanh hơn.    
+
+![hinh_5.1](/LinhNH/03.Timhieu_TCP_IP/images/UDP.png)
+
 ### 5.2 So sánh giữa UDP - TCP
+![hinh_5.2](/LinhNH/03.Timhieu_TCP_IP/images/So-sanh-tcp-udp.png)  
+
+**_Bảng so sánh_**
+|Tính năng|TCP|UDP|  
+|:--------------|:-----------|:------|
+|Trạng thái kết nối|Yêu cầu kết nối đã thiết lập để truyền dữ liệu (Phải ngắt kết nối sau khi đã được truyền)|Không kết nối, không yêu cầu mở, không duy trì hoặc chấm dứt kết nối| 
+|Giải trình tự dữ liệu|Có trình tự|Không trình tự|
+|Cung cấp dữ liệu đến đích|Đảm bảo|Không đảm bảo|
+|Truyền lại dữ liệu gói bị mất|Truyền lại được|Không truyền lại được|
+|Kiểm tra lỗi|Kiểm tra lỗi mở rộng và xác nhận dữ liệu|Tổng kiểm tra cơ bản|
+|Phương thức chuyển khoản|Dữ liệu đọc dưới dạng luồng byte, thông diệp được truyền đến ranh giới phân đoạn|Ranh giới xác định, gửi riêng lẻ và kiểm tra tính toàn vện khi đến nơi|
+|Tốc độ|Chậm hơn UDP|Nhanh hơn TCP|
+|Phát sóng|Không hỗ trợ phát sóng|Có hỗ trợ phát sóng|
+|Sử dụng tối ưu|Đucợ sử dụng bởi HTTPS, HTTP, SMTP, POP, FTP, v.v.|Hội nghị truyền hình, phát trực tuyến, DNS, VolP, v.v.|
+
+
