@@ -29,7 +29,6 @@ Mô hình OSI phân chia quá trình truyền thông mạng thành 7 tầng khá
 ![hinh_2.1](/LinhNH/02.Timhieu_OSI/images/Physical_Layer.png)
 
 - Nhiệm vụ của tầng Vật lý bao gồm:
-
   - __Truyền dữ liệu__: Tầng Vật lý biến các bit thành tín hiệu vật lý để truyền qua các phương tiện truyền thông như cáp đồng trục, cáp xoắn đôi, cáp quang hay sóng vô tuyến. Nó xác định các quy tắc về tốc độ truyền, đồng bộ hóa, kích thước khung dữ liệu, phạm vi tín hiệu và các thông số vật lý khác.
   - __Điều khiển tín hiệu__: Tầng Vật lý quản lý các tín hiệu điều khiển như tín hiệu báo động, tín hiệu đồng bộ, tín hiệu kiểm tra lỗi, và tín hiệu điều chỉnh tốc độ truyền dữ liệu.
   - __Định dạng dữ liệu__: Tầng Vật lý xác định cấu trúc và định dạng của dữ liệu trong từng bit, ví dụ như định dạng NRZ (Non-Return-to-Zero), Manchester, AMI (Alternate Mark Inversion) và các phương pháp khác.
