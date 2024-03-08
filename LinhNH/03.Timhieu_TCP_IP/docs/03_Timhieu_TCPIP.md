@@ -153,13 +153,15 @@ Yếu tố này sử dụng giá trị CRC (Cyclic Redundancy Check) để kiể
 - **Dữ liệu** (Data) (N byte)  
 Đây là nội dung của gói tin, có độ dài thay đổi tuỳ vào ứng dụng đã sử dụng UDP.
 #### c. Cách thức hoạt động
-Giao thức UDP hoạt động tương tự như TCP, nhưng nó bỏ qua quá trình kiểm tra lỗi. Khi một ứng dụng sử dụng giao thức UDP, các gói tin được gửi cho bên nhận và bên gửi không phải chờ để đảm bảo bên nhận đã nhận được gói tin, do đó nó lại tiếp tục gửi gói tin tiếp theo. Nếu bên nhận bỏ lỡ một vài gói tin UDP, họ sẽ mất vì bên gửi không gửi lại chúng. Do đó thiết bị có thể giao tiếp nhanh hơn.    
-
+Giao thức UDP hoạt động như sau:  
+- **Gửi dữ liệu:** Khi một ứng dụng muốn gửi dữ liệu cho một ứng dụng khác, nó sẽ gọi hàm của giao thức UDP để gửi dữ liệu.  
+- **Tạo datagram:** Giao thức UDP sẽ lấy dữ liệu từ ứng dụng và chèn thêm một số trường điều khiển vào dữ liệu, bao gồm hai trường địa chỉ cổng nguồn và đích.    
+- **Gửi datagram tới tầng mạng:** Giao thức UDP sẽ gửi datagram tới tầng mạng.    
+- **Gửi datagram tới máy tính nhận:** Tầng mạng sẽ gửi datagram tới máy tính nhận.      
+- **Nhận dữ liệu:** Khi máy tính nhận nhận được datagram, nó sẽ gọi hàm của giao thức UDP để nhận dữ liệu.  
 ![hinh_5.1](/LinhNH/03.Timhieu_TCP_IP/images/UDP.png)
-
 ### 5.2 So sánh giữa UDP - TCP
 ![hinh_5.2](/LinhNH/03.Timhieu_TCP_IP/images/So-sanh-tcp-udp.png)  
-
 **_Bảng so sánh_**
 |Tính năng|TCP|UDP|  
 |:--------------|:-----------|:------|
