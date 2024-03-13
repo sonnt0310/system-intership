@@ -24,6 +24,31 @@
     - ***IP*** : Giao thức Internet  
 
     Đảm bảo thông tin được truyền đến đúng địa chỉ. IP sẽ gán các địa chỉ và định tuyến từng gọi thông tin. Mỗi mạng sẽ có 1 địa chỉ IP để xác định được chính xác nơi chuyển/nhận thông tin, dữ liệu.  
+
+**Cấu trúc gói tin:** 1 gói tin TCP bao gồm 2 phần:  
+- Header (có độ dài 20 bytes)  
+- Dữ liệu    
+
+Phần header có 11 trường trong đó 10 trường bắt buộc. Trường thứ 11 là tùy chọn (trong bảng minh họa có màu nền đỏ)
+![hinh_1](/LinhNH/03.Timhieu_TCP_IP/images/Cau-truc-goi-tin-TCP.png)
+
+- Source port (16 bit): số cổng của tiến trình gửi
+- Destination port (16 bit): số cổng của tiến trình nhận
+- Sequence number (32 bit): số thứ tự (phụ thuộc vào giá trị của bit SYN)
+- Acknowledgement number (32 bit): số báo nhận. Trường số thứ tự và số báo nhận dùng để đảm bảo dịch vụ truyền dữ liệu tin cậy
+- Các trường flag (6 trường, mỗi trường 1 bit):
+
+  - ACK: xác nhận danh tính chính xác của giá trị trường Acknowledgement
+  - RST, SYN, FIN: thiết lập và hủy bỏ kết nối
+  - PSH: chỉ định máy nhận phải chuyển dữ liệu lên tầng trên ngay lập tức
+  - URG: chỉ định vùng dữ liệu được đánh dấu "urgent" (dữ liệu chuẩn)
+- Checksum (16 bit): sử dụng để kiểm tra lỗi
+- Window size (16 bit): kích thước cửa sổ dùng trong kiểm soát luồng
+- Reserved (3 bit): luôn chứa giá trị 000, để dành sử dụng trong tương lai
+- Data offset (4 bit): kích thước của TCP header.
+- Urgent pointer: nếu cờ URG bật thì giá trị trường này chính là số từ 16 bít mà số thứ tự gói tin (sequence number) cần dịch trái.
+- Options (độ dài thay đổi): được sử dụng khi hai máy tham gia truyền thông thỏa thuận về kích thước tối đa của segment
+
 ## 2. Cấu trúc mô hình TCP/IP
 - Mô hình TCP/IP tiêu chuẩn bao gồm 4 tầng được chồng lên nhau là:  
 Tầng 1: Tầng vật lý (Network Access)  
