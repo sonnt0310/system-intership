@@ -44,7 +44,7 @@ Tầng này có 2 giao thức chính:
 
 ### 2.4.Tầng ứng dụng
 
-Là tầng thứ tư trong mô hình TCP/IP. Tầng này cung cấp giao tiếp đến người dùng, Cung cấp các ứng dụng cho phép người dùng trao đổi dữ liệu ứng dụng thông qua các dịch vụ mạng khác nhau (như duyệt web, chat, gửi email,...).
+Là tầng thứ tư trong mô hình TCP/IP. Tầng này cung cấp giao tiếp đến người dùng, cung cấp các ứng dụng cho phép người dùng trao đổi dữ liệu ứng dụng thông qua các dịch vụ mạng khác nhau (như duyệt web, chat, gửi email,...).
 
 Dữ liệu khi đến đây sẽ được định dạng theo kiểu byte nối byte, cùng với đó là các thông tin định tuyến giúp xác định đường đi đúng của một gói tin.
 
