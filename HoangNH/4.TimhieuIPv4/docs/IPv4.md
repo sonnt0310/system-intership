@@ -13,6 +13,11 @@ Ipv4 là giao thức mang tính hướng dữ liệu và được sử dụng ch
 ## 2.Tại sao không có IPv1,2,3,5
 
 Trước khi IP ra đời như chúng ta biết ngày nay, các kiến ​​trúc sư mạng đã làm việc trên TCP. TCPv1 được thiết kế vào năm 1973, TCPv2 được ghi lại vào tháng 3 năm 1977.
+Hai phiên bản này phục vụ như một giao thức đầu cuối cấp máy chủ và để phục vụ như một giao thức định tuyến và đóng gói internet.
+Sau đó phiên bản thứ ba được triển khai xong vẫn chưa giải quyết được vấn đề ban đầu.
+
+IPv5 chưa bao giờ trở thành một giao thức chính thức. Với sự phát triển của IPv6, IPv5 không bao giờ được chuyển sang sử dụng công cộng phần lớn vì những hạn chế 32-bit của nó. Với sự phát triển của IPv6 và lời hứa của nó về địa chỉ IP gần như không giới hạn và một khởi đầu mới cho giao thức, IPv5 không bao giờ được chuyển sang sử dụng công cộng phần lớn vì những hạn chế 32-bit của nó.Định dạng của địa chỉ IPv4 là định dạng ###. ###. ###. ###, được tạo thành từ bốn bộ tám số (một đơn vị thông tin kỹ thuật số trong máy tính bao gồm tám bit), với mỗi bộ khác nhau từ 0 đến 255 và được phân tách bằng dấu chấm. Định dạng này cho phép 4,3 tỷ địa chỉ internet; tuy nhiên, tốc độ phát triển nhanh chóng của Internet đã sớm làm cạn kiệt số lượng địa chỉ duy nhất này.
+Đến năm 2011, các khối địa chỉ IPv4 còn lại cuối cùng đã được cấp phát. Với IPv5 sử dụng cùng một địa chỉ 32-bit, nó sẽ bị hạn chế tương tự.
 
 ## 3.Cấu trúc của IPv4
 
@@ -136,8 +141,31 @@ Bảng so sánh:
 
 ### 8.1.Multicast
 
+Multicast là một kiểu truyền tải dữ liệu trên mạng mà cho phép một thiết bị hoặc máy chủ gửi một tin nhắn hoặc dữ liệu tới nhiều thiết bị hoặc máy chủ khác cùng một lúc.
 
+![image7](/HoangNH/4.TimhieuIPv4/image/multicast.jpg)
 
+Multicast sẽ được bắt đầu từ Server đảm nhiệm vai trò gửi gói tin dữ liệu cho hàng loạt người nhận khác nhau. Thiết bị nhận bắt buộc phải sử dụng địa chỉ IP nằm trong vùng IP được thiết kế cho việc lưu thông Multicast. Nó dao động từ 224.0.0.0 cho đến 239.255.255.255.
+
+Sau khi Router nhận được dữ liệu lưu thông từ Multicast, nó sẽ cần đến giao thức IGMP (Internet Group Management Protocol) để xác định xem đâu là thiết bị kết nối nguồn nhận dữ liệu. Giao thức IGMP được hiểu là giao thức giao tiếp cho thiết bị mạng tạo ra nhóm Multicast.
+
+### 8.2.Broadcast
+
+Broadcast là một khái niệm trong mạng máy tính và hệ thống mạng. Địa chỉ broadcast là một địa chỉ IP đặc biệt dùng để gửi các gói tin tới tất cả các máy trong một mạng có cùng dải mạng. Ví dụ, nếu một máy tính có địa chỉ IP là 192.168.1.10 và có dải mạng là 255.255.255.0, thì địa chỉ broadcast của nó sẽ là 192.168.1.255. Một gói tin gửi đi tới địa chỉ broadcast sẽ được chuyển tiếp tới tất cả các máy trong mạng có cùng dải mạng.
+
+Địa chỉ broadcast cũng có thể được dùng để thực hiện các tác vụ khác trong mạng, như việc tìm kiếm các thiết bị khác trong mạng, hoặc cung cấp các dịch vụ đặc biệt cho các máy trong mạng.
+
+![image8](/HoangNH/4.TimhieuIPv4/image/broadcast.jpg)
+
+Bảng so sánh: 
+
+| Tiêu chí |  multicast | broadcast |
+|:------|:-----------------|:------|
+|Định nghĩa| Một nguồn độc lập sẽ gửi một dữ liệu giống nhau cho hàng loạt người nhận ở cùng một thời điểm|Một nguồn độc lập gửi dữ liệu cho tất cả đích đến.|
+|Cách thức tương tác| Tương tác diễn ra giữa một người gửi và rất nhiều người nhận cùng lúc.| Tương tác diễn ra giữa một người gửi và tất cả người nhận khả dụng.|
+|Cách thức hoạt động|Dữ liệu được luân chuyển khi nhận yêu cầu từ những người nhận cùng lúc.|Dữ liệu được luân chuyển cho tất cả người nhận bất kể có nhận được yêu cầu hay không.|
+|Độ bảo mật| Có độ bảo mật cao vì dữ liệu được gửi đến một nhóm người nhận nhất định| Độ bảo mật thấp do dữ liệu được gửi đến tất cả thiết bị trong mạng lưới|
+|Độ trễ| Trung bình| Cao|
 ## 9.Subnet, subnet mask, prefex
 
 ### 9.1.Subnet:
@@ -148,6 +176,9 @@ Subnet (hay còn gọi là mạng con) là một phần của một mạng lớn
 
  Subnet mask là một dải 32 bit nhị phân đi kèm với một địa chỉ IP, được các host sử dụng để xác định địa chỉ mạng của địa chỉ IP này.
 
- 
+### 9.3.Prefex
 
+Để mô tả một địa chỉ IP, người ta dùng một đại lượng khác được gọi là số prefix. Số prefix có thể hiểu một cách đơn giản là số bit mạng trong một địa chỉ IP, được viết ngay sau địa chỉ IP, và được ngăn cách với địa chỉ này bằng một dấu “/”.
+
+Ví du: 192.168.1.1/24, 172.16.0.0/16 hay 10.0.0.0/8, v.v…
 
