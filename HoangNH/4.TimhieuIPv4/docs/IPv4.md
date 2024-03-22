@@ -155,7 +155,7 @@ Broadcast là một khái niệm trong mạng máy tính và hệ thống mạng
 
 Địa chỉ broadcast cũng có thể được dùng để thực hiện các tác vụ khác trong mạng, như việc tìm kiếm các thiết bị khác trong mạng, hoặc cung cấp các dịch vụ đặc biệt cho các máy trong mạng.
 
-![image8](/HoangNH/4.TimhieuIPv4/image/broadcast.jpg)
+![image8](/HoangNH/4.TimhieuIPv4/image/broadcast.png)
 
 Bảng so sánh: 
 
