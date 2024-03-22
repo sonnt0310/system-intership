@@ -89,14 +89,6 @@ IP public được nhà cung cấp dịch vụ Internet (ISP) dùng để chuy�
 
 IP public đóng vai trò quan trọng trong việc truy cập Internet và giao tiếp trực tuyến. Nó cho phép các thiết bị truy cập vào các trang web, gửi hoặc nhận dữ liệu từ các máy chủ và tham gia vào các hoạt động trực tuyến khác.
 
-Phạm vi của IP public: Các phạm vi sẽ được nhà cung cấp dịch vụ mạng bảo lưu:
-
-- 0.0.0 đến 10.255.255.255
-- 16.0.0 đến 172.31.255.255
-- 168.0.0 đến 192.168.255.255
-
-Bên cạnh những địa chỉ nói trên thì phạm vi địa chỉ IP public nằm trong khoảng "1…" đến "191…." và tất cả các địa chỉ "192…" sẽ không được đăng ký công khai mà chỉ được sử dụng ở phía sau một router dưới dạng là một địa chỉ IP Private.
-
 Ưu điểm: 
 
 - Truy cập đa dạng: Với IP Public, bạn có thể truy cập vào nhiều nội dung trực tuyến mà có thể bị hạn chế hoặc chặn đối với IP cá nhân. Điều này giúp mở rộng khả năng truy cập của bạn trên Internet.
@@ -134,6 +126,7 @@ Bảng so sánh:
 |Phạm vi| Trừ một số địa chỉ nằm trong IP Private, phần còn lại sẽ là IP Public| 10.0.0.0 đến 10.255.255.255 / 172.16.0.0 đến 172.31.255.255 / 192.168.0.0 đến 192.168.255.255 |
                            
 ## 7.Cách chia địa chỉ IPv4
+
 
 
 
