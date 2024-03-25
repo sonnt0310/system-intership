@@ -26,6 +26,8 @@ Chức năng chủ yếu của tầng liên kết dữ liệu là thực hiện 
 
 Tầng này quản lý khung dữ liệu(frame) – là các tín hiệu kỹ thuật số được gói gọn trong các gói dữ liệu.Trong các mạng quảng bá, tầng con MAC (Medium Access Sublayer) điều khiển việc duy trì nhập đường truyền.
 
+header kt mac nguồn , mac ích có giống k, giống thì cho lên. k xóa thì k ọc úng, thì tầng k ọc ược.
+
 ![image2](/HoangNH/2.TimhieuOSI/image/image2.png)
 ### 2.3.Tầng mạng (Network Layer)
 
@@ -37,7 +39,10 @@ Tầng mạng thực hiện các chức năng chọn đường đi (routing) cho
 
 Tầng mạng còn có chức năng điều khiển tắc nghẽn (Congestion Control). Nếu có quá nhiều gói tin cùng lưu chuyển trên cùng một đường thì có thể xảy ra tình trạng tắc nghẽn. Thực hiện chức năng giao tiếp giữa các mạng khi các gói tin đi từ mạng này sang mạng khác để tới đích.
 
+ip nguồn va ip ích, k úng thì tìm ip khác bằng bảng ịnh tuyến, úng thì nhận. 
+
 ![image3](/HoangNH/2.TimhieuOSI/image/image3.png)
+h
 ### 2.4.Lớp vận chuyển (Transport layer)
 
 Đây là tầng thứ tư trong mô hình OSI và là tầng cao nhất liên có liên quan đến các giao thức trao đổi dữ liệu giữa các hệ thống mở, kiểm soát việc truyền dữ liệu từ nút tới nút (End-to-End).
@@ -112,6 +117,7 @@ Các bước đóng gói dữ liệu trong mô hình OSI:
 - Bước 5: Ở phía đầu thu, quá trình lại diễn ra ngược lại tức là lúc này dòng Bit nhị phân được đưa vào đường truyền vật lý và truyền lên trên.
 - Bước 6: Gói tin tiếp tụ được đẩy lên tầng trên Datalink
   - Ở tầng vật lý thì dữ liệu sẽ được tiếp tục đẩy lên tầng trên liên kết dữ liệu. Bóc 1 lớp gói hàng ra được gọi ethernet header ra ở tầng liên kết dữ liệu gọi là lớp Frames và tương tự đẩy lên tầng mạng và bóc lớp Packets tương tự như vậy đến tầng vận chuyển bóc Segments và đẩy lên tầng trên của nó.
+
 
 
 
