@@ -196,7 +196,7 @@ Giao thức UDP hoạt động như sau:
 |Đảm bảo tính toàn vẹn và xác minh|Đảm bảo|Không đảm bảo|
 |Truyền lại dữ liệu gói bị mất|Truyền lại được|Không truyền lại được|
 |Kiểm tra lỗi|Kiểm tra lỗi mở rộng và xác nhận dữ liệu|Tổng kiểm tra cơ bản|
-|Phương thức chuyển khoản|Dữ liệu đọc dưới dạng luồng byte, thông diệp được truyền đến ranh giới phân đoạn|Ranh giới xác định, gửi riêng lẻ và kiểm tra tính toàn vện khi đến nơi|
+|Phương thức truyền nhận|Dữ liệu đọc dưới dạng luồng byte, thông diệp được truyền đến ranh giới phân đoạn|Ranh giới xác định, gửi riêng lẻ và kiểm tra tính toàn vện khi đến nơi|
 |Tốc độ|Chậm hơn UDP|Nhanh hơn TCP|
 |Phát sóng|Không hỗ trợ phát sóng|Có hỗ trợ phát sóng|
 |Sử dụng tối ưu|Được sử dụng bởi HTTPS, HTTP, SMTP, POP, FTP, v.v.|Hội nghị truyền hình, phát trực tuyến, DNS, VolP, v.v.|  

@@ -1,7 +1,7 @@
 # **Tìm hiểu về IPv4** 
 
 # Mục lục
--------
+
 
 ## 1. Khái quát về IPv4
 ![hinh_1](/LinhNH/04.TimhieuIpV4/images/ipv4.png)
