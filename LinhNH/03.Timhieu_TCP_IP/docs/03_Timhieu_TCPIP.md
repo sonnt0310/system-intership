@@ -58,8 +58,8 @@ Tầng 4: Tầng ứng dụng (Application)
 
 ![hinh_2](/LinhNH/03.Timhieu_TCP_IP/images/Layer.png)
 ### 2.1 Tầng vật lý
-Đây là tầng thấp nhất trong mô hình TCP/IP, đóng vai trò truyền dữ liệu giữa 2 thiết bị trong cùng 1 mạng. Ở tầng này, toàn bộ gói dữ liệu sẽ được đóng vào khung (Frame) và được định tuyến đi đến đích đã được chỉ định ban đầu.  
-**=>** Lớp này là một nhóm phương thức vận hành trên một kết nối của máy chủ, thường được biết đến là Ethernet.
+- Đây là tầng thấp nhất trong mô hình TCP/IP, đóng vai trò truyền dữ liệu giữa 2 thiết bị trong cùng 1 mạng. Ở tầng này, toàn bộ gói dữ liệu sẽ được đóng vào khung (Frame) và được định tuyến đi đến đích đã được chỉ định ban đầu.  
+-  Lớp này là một nhóm phương thức vận hành trên một kết nối của máy chủ, thường được biết đến là Ethernet.
 ### 2.2 Tầng mạng
 Đây là lớp kết nối các mạng nội bộ với nhau, còn được gọi là tầng Mạng. **Lớp Internet**  sẽ xử lý quá trình truyền gói tin trên mạng. Các giao thức của lớp này bao gồm:  
 - IP – Internet Protocol  
@@ -89,15 +89,15 @@ Lớp truyền tải sẽ phụ trách luồng dữ liệu giữa 2 trạm thự
 
 ### 2.5 Các giao thức TCP/IP phổ biến nhất
 #### a. HTTP
-HTTP là giao thức của TCP/IP được sử dụng phổ biến để phân phối dữ liệu không an toàn (gồm các file ảnh, tệp HTML,…) giữa web client với một web server. Trình duyệt web trên máy tính sẽ gửi yêu cầu đến web server để biết thông tin về một website. Khi web server nhận được yêu cầu nó sẽ xác nhận và gửi thông tin về website cho trình duyệt internet trên máy tính – web client. HTTP có 3 đặc trưng cơ bản là kết nối không liên tục, hoạt động độc lập và stateless.
+- HTTP là giao thức của TCP/IP được sử dụng phổ biến để phân phối dữ liệu không an toàn (gồm các file ảnh, tệp HTML,…) giữa web client với một web server. Trình duyệt web trên máy tính sẽ gửi yêu cầu đến web server để biết thông tin về một website. Khi web server nhận được yêu cầu nó sẽ xác nhận và gửi thông tin về website cho trình duyệt internet trên máy tính – web client. HTTP có 3 đặc trưng cơ bản là kết nối không liên tục, hoạt động độc lập và stateless.
 #### b. HTTPS
-HTTPS là một giao thức của TCP/IP, nó có sự kết hợp giữa SSL và TLS. HTTPS được sử dụng phổ biến khi muốn gửi dữ liệu cần bảo mật cao như thẻ tín dụng, dữ liệu cá nhân từ một website đến một web server.
+- HTTPS là một giao thức của TCP/IP, nó có sự kết hợp giữa SSL và TLS. HTTPS được sử dụng phổ biến khi muốn gửi dữ liệu cần bảo mật cao như thẻ tín dụng, dữ liệu cá nhân từ một website đến một web server.
 
 ![hinh_2.5](/LinhNH/03.Timhieu_TCP_IP/images/Giao-thuc-http-https.png)
 
 
 #### c. FTP
-FTP là một giao thức của TCP/IP, được sử dụng để trao đổi dữ liệu giữa hai hoặc nhiều máy tính qua internet. FTP hoạt động trên hai cổng là 20 và 21. Nhờ FTP, các máy client trong mạng có khả năng truy cập đến máy chủ để gửi và lấy dữ liệu. Điểm đặc biệt của giao thức này là giúp người dùng dù đang ở xa vẫn có thể truy cập vào máy chủ để truyền hoặc nhận dữ liệu.
+- FTP là một giao thức của TCP/IP, được sử dụng để trao đổi dữ liệu giữa hai hoặc nhiều máy tính qua internet. FTP hoạt động trên hai cổng là 20 và 21. Nhờ FTP, các máy client trong mạng có khả năng truy cập đến máy chủ để gửi và lấy dữ liệu. Điểm đặc biệt của giao thức này là giúp người dùng dù đang ở xa vẫn có thể truy cập vào máy chủ để truyền hoặc nhận dữ liệu.
 
 ![hinh_2.5](/LinhNH/03.Timhieu_TCP_IP/images/Giao-thuc-ftp.png)
 
