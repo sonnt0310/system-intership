@@ -153,7 +153,7 @@ Broadcast là một khái niệm trong mạng máy tính và hệ thống mạng
 Bảng so sánh: 
 
 | Tiêu chí |  multicast | broadcast |
-|:------|:-----------------|:------|
+|:------   |:-----------------|:------ |
 |Định nghĩa| Một nguồn độc lập sẽ gửi một dữ liệu giống nhau cho hàng loạt người nhận ở cùng một thời điểm|Một nguồn độc lập gửi dữ liệu cho tất cả đích đến.|
 |Cách thức tương tác| Tương tác diễn ra giữa một người gửi và rất nhiều người nhận cùng lúc.| Tương tác diễn ra giữa một người gửi và tất cả người nhận khả dụng.|
 |Cách thức hoạt động|Dữ liệu được luân chuyển khi nhận yêu cầu từ những người nhận cùng lúc.|Dữ liệu được luân chuyển cho tất cả người nhận bất kể có nhận được yêu cầu hay không.|
@@ -167,7 +167,7 @@ Subnet (hay còn gọi là mạng con) là một phần của một mạng lớn
 
 ### 9.2.Subnet mask:
 
- Subnet mask là một dải 32 bit nhị phân đi kèm với một địa chỉ IP, được các host sử dụng để xác định địa chỉ mạng của địa chỉ IP này.
+Subnet mask là một dải 32 bit nhị phân đi kèm với một địa chỉ IP, được các host sử dụng để xác định địa chỉ mạng của địa chỉ IP này.
 
 ### 9.3.Prefex
 
