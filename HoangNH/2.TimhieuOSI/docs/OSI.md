@@ -118,6 +118,9 @@ Các bước đóng gói dữ liệu trong mô hình OSI:
 - Bước 6: Gói tin tiếp tụ được đẩy lên tầng trên Datalink
   - Ở tầng vật lý thì dữ liệu sẽ được tiếp tục đẩy lên tầng trên liên kết dữ liệu. Bóc 1 lớp gói hàng ra được gọi ethernet header ra ở tầng liên kết dữ liệu gọi là lớp Frames và tương tự đẩy lên tầng mạng và bóc lớp Packets tương tự như vậy đến tầng vận chuyển bóc Segments và đẩy lên tầng trên của nó.
 
+Quá trình đóng gói diễn ra ở phía người gửi diễn ra như sau: dữ liệu của người dùng được gọi là user data sẽ đi từ trên Application xuống từng lớp từng lớp một và không được bỏ qua bất kỳ lớp nào, khi đi tới 1 lớp user data sẽ được bọc vào trong header của lớp đó. Ở lớp 7 sẽ có layer 7 header, xuống lớp 6 sẽ có layer 6 header, riêng lớp 2 ngoài layer 2 header còn có phần trailer kiểm tra lỗi FCS (Frame Check Sequence), khi đi xuống lớp 1 sẽ chuyển thành bit nhị phân và truyền đi. Phần header chính là phần thông tin quản lý của gói tin còn data chính là phần dữ liệu thực sự của gói tin.
 
+Quá trình mở gói diễn ra ở phía người nhận sẽ ngược lại, dữ liệu sẽ đi ngược từ dưới lên trên, khi đi tới 1 lớp nào sẽ được gỡ bỏ header của lớp đó và cuối cùng trả về user data cho người dùng. Đầu tiên toàn bộ dãy bit nhị phân sẽ được chuyển thành 1 khung dữ liệu, đi lên lớp 2 sẽ được kiểm tra FCS và gỡ bỏ layer 2 header, lên lớp 3 sẽ được gỡ layer 3 header, tương tự đến layer 7 sau khi gỡ bỏ layer 7 header sẽ trả về user data cho người dùng.
 
+Các lớp dưới cung cấp dịch vụ trực tiếp cho các lớp ngay phía trên nó. Các lớp trên sẽ gửi yêu cầu xuống lớp dưới và nhận lại kết quả, các lớp trên không cần biết hoạt động cụ thể diễn ra tại lớp dưới, hoạt động của lớp dưới hoàn toàn trong suốt với lớp trên.
 
