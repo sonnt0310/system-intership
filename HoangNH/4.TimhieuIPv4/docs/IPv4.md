@@ -116,8 +116,6 @@ Bảng so sánh:
 ## 7.Cách chia địa chỉ IPv4
 
 
-
-
 ## 8.Phân biệt multicast và broadcast
 
 ### 8.1.Multicast
