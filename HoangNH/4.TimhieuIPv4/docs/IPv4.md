@@ -89,18 +89,6 @@ IP public được nhà cung cấp dịch vụ Internet (ISP) dùng để chuy�
 
 IP public đóng vai trò quan trọng trong việc truy cập Internet và giao tiếp trực tuyến. Nó cho phép các thiết bị truy cập vào các trang web, gửi hoặc nhận dữ liệu từ các máy chủ và tham gia vào các hoạt động trực tuyến khác.
 
-Ưu điểm: 
-
-- Truy cập đa dạng: Với IP Public, bạn có thể truy cập vào nhiều nội dung trực tuyến mà có thể bị hạn chế hoặc chặn đối với IP cá nhân. Điều này giúp mở rộng khả năng truy cập của bạn trên Internet.
-- Ứng dụng linh hoạt: IP Public cho phép bạn sử dụng nhiều ứng dụng và dịch vụ trực tuyến mà có thể yêu cầu IP duy nhất. Điều này giúp tăng cường trải nghiệm của người dùng và mở ra nhiều cơ hội mới.
-- Tốc độ kết nối: Với IP Public, bạn có thể truy cập vào các máy chủ với tốc độ kết nối nhanh hơn, giúp tối ưu hóa trải nghiệm trực tuyến và giảm thời gian chờ đợi.
-- Hỗ trợ kỹ thuật: Nếu gặp vấn đề về IP Public, bạn có thể dễ dàng nhận được sự hỗ trợ kỹ thuật từ các chuyên gia, giúp giải quyết vấn đề một cách nhanh chóng và hiệu quả.
-
-Nhược điểm:
-
-- Chi phí của việc sử dụng IP Public: Các dịch vụ cung cấp IP Public thường đưa ra các gói cước phí dựa vào nhu cầu sử dụng và số lượng IP cần thuê.
-- Vấn đề về bảo mật khi sử dụng IP Public: Việc sử dụng IP Public làm tăng khả năng bị tấn công mạng, theo dõi hoạt động trực tuyến và xâm nhập vào hệ thống thông tin.
-
 ### 6.2.IP private:
 
 IP private là địa chỉ IP chỉ sử dụng trong mạng nội bộ và không được sử dụng để truy cập Internet trực tiếp.

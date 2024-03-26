@@ -422,11 +422,68 @@ h) 10.0.0.0/8, mượn 18 bit, còn lại 6 bit
 
 ---------------------------------
 
+....
+
+---------------------------------
+
+10.255.255.192/26 --> địa chỉ mạng\
+10.255.255.193/26 --> địa chỉ host đầu
+
+....
+
+10.255.255.254/26 --> địa chỉ host cuối\
+10.255.255.255/26 --> địa chỉ broadcast
+
 Subnet mask là 255.255.255.192. Số prefex là 26
 
-4.6.2
+4.6.2: 172.16.5.0/24
 
-2^m - 2 >= 79
+Các mạng xếp theo thứ tự số host từ cao xuống thấp là 78 host, 50 host, 20 host, 10 host, 5 host
+
+Xét mạng nhiều host nhất: 78 host. Ta có hệ:
+
+2^m - 2 >= 79 và m + n = 8  => m = 7,n = 1 
+
+Vậy ta mượn 1 bit và dành mạng 172.16.5.0/25 để gán cho mạng 78 host. Mỗi mạng có 2^7 - 2 = 126 host.
+
+Tiếp theo xét đến mạng 50 host. Ta có hệ:
+
+2^m -2 >= 51 và m + n = 8 => m = 6, n = 2
+
+Vậy ta mượn 2 bit, mạng 172.16.5.0/24 được chia thành 4 mạng 172.16.5.0/26, 172.16.5.64/26, 172.16.5.128/26 và 172.16.5.192/26.
+Do 172.16.5.0/26, 172.16.5.64/26 đã dùng cho mạng 100 host nên ta lấy mạng 172.16.5.128/26 gán cho mạng 50 host. 
+
+Tiếp theo xét đến mạng 20 host. Ta có hệ:
+
+2^m - 2 >=21 và m + n = 8 => m = 5, n = 3
+
+Vậy ta mượn 3 bit, mạng 172.16.5.0/24 được chia thành 8 mạng. Ta lấy 172.16.5.192/27 gán cho mạng 20 host.
+
+Tiếp theo xét đến mạng 10 host. Ta có hệ:
+
+2^m - 2 >= 11 và m + n = 8 => m = 4, n = 4
+
+Vậy ta mượn 4 bit, mạng 172.16.5.0/24 chia thành 16 mạng. Ta lấy mạng 172.16.5.224/28 gán cho mạng 10 host.
+
+Tiếp theo xét đến mạng 5 host. Ta có hệ:
+
+2^m - 2 >= 6 và m + n = 8 => m = 3, n = 5
+
+Vậy ta mượn 5 bit, mạng 172.16.5.0/24 chia thành 32 mạng. Ta lấy mạng 172.16.5.240/29 gán cho mạng 5 host.
+
+Tiếp đó ta xét đến các mạng có 2 host là các liên kết điểm – điểm serial. Ta có hệ:
+
+2^m - 2 >= 2 và m + n = 8 => m = 2, n = 6
+
+Vây ta mượn 6 bit, mạng 172.16.5.0/24 chia thành 64 mạng. Trừ đi các dải đã gán cho các mạng 78 host, 50 host, 20 host, 10 host và 5 host, 
+ta có thể lấy từ mạng 172.16.5.248/30 gán cho các mạng 2 host. Ta lấy mạng 172.16.5.248/30 và 172.16.5.252 gán cho hai liên kết serial.
+
+Ta có kết quả như sau: 
+
+![image7](/HoangNH/4.TimhieuIPv4/image/bt.png)
+
+
+
 
 4.6.3
 
