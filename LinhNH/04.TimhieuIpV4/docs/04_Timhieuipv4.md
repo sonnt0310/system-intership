@@ -89,7 +89,19 @@ Bảo mật trung bình vì dữ liệu được gửi đến một nhóm thiế
 |Địa chỉ|Sử dụng một loạt các địa chỉ đặc biệt thuộc vào dải từ 224.0.0.0 đến 239.255.255.255|Thường là địa chỉ mạng với tất cả các bit địa chỉ máy đều là 1. Ví dụ, nếu địa chỉ mạng là 192.168.1.0, thì địa chỉ broadcast sẽ là 192.168.1.255|
 |Sử dụng|Các ứng dụng như video streaming, IPTV, giao thức OSPF, IGMP|Sử dụng cho các tin nhắn hoặc yêu cầu mà tất cả các thiết bị trong mạng cần nhân được (DHCP, ARP)
 |Bảo mật|Bảo mật trung bình vì dữ liệu được gửi đến một nhóm thiết bị cụ thể trong mạng|Bảo mật trung bình vì dữ liệu được gửi đến tất cả các thiết bị trong mạng|
-## 9. Tìm hiểu về subnet, subnet mask, prefex
+## 9. Tìm hiểu về subnet, subnet mask, prefix
+_Các khái niệm subnet, subnet mask và prefix đều liên quan đến cách chia mạng để quản lý và tăng hiệu suất mạng. Chúng là các khái niệm cơ bản trong lĩnh vực mạng máy tính và rất quan trọng trong việc cấu hình và quản lý mạng._
 ### 9.1 Subnet
+- Mạng con (Subnet) là một phần của một mạng lớn được chia nhỏ thành các phần nhỏ hơn để quản lý hiệu quả và để tăng cường bảo mật. Khi một mạng lớn được chia thành các mạng con, mỗi mạng con có thể được quản lý một cách độc lập và tối ưu hóa cho mục đích cụ thể của nó.
+- Mạng con thường được định nghĩa bằng một phạm vi các địa chỉ IP liên tiếp, cùng với một subnet mask hoặc độ dài tiền tố (prefix length).
 ### 9.2 Subnet mask
-### 9.3 Prefex 
+- Subnet mask là một số dãy bit được sử dụng để xác định phần của địa chỉ IP mà là phần mạng và phần nào là phần host. Nó được sử dụng cùng với địa chỉ IP để xác định mạng con mà một thiết bị hoặc máy tính cụ thể nằm trong.
+- Subnet mask thường được biểu diễn dưới dạng dãy số thập phân, gồm bốn octet (mỗi octet từ 0 đến 255), trong đó mỗi octet biểu diễn 8 bit. Các bit 1 trong subnet mask đại diện cho phần mạng của địa chỉ IP, trong khi các bit 0 đại diện cho phần host.
+### 9.3 Prefix 
+- Số prefix, hay độ dài tiền tố (prefix length), là một phần của hệ thống CIDR (Classless Inter-Domain Routing), được sử dụng để xác định mạng con của một địa chỉ IP. Số prefix định nghĩa số lượng bit trong subnet mask mà được sử dụng để xác định mạng con.
+- Trong CIDR, địa chỉ IP được biểu diễn bằng cách kết hợp địa chỉ IP cùng với số prefix, thường là dưới dạng "/xx" (ví dụ: /24), trong đó "xx" là số bit trong subnet mask được sử dụng cho mạng con. Ví dụ, nếu bạn thấy một địa chỉ IP được kèm theo "/24", điều này có nghĩa là subnet mask tương ứng là 255.255.255.0, vì có 24 bit mạng và 8 bit host.
+- Số prefix giúp biểu diễn mạng con một cách ngắn gọn và tiện lợi hơn, đồng thời cung cấp thông tin chi tiết về cách mạng con được chia. Nó cũng được sử dụng trong việc quản lý và cấu hình mạng, giúp quản trị viên mạng hiểu được cấu trúc mạng và phân biệt mạng con một cách dễ dàng.
+
+
+
+
