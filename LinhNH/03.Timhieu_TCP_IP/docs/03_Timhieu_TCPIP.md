@@ -29,7 +29,8 @@
 - Header (có độ dài 20 bytes)  
 - Dữ liệu    
 
-Phần header có 11 trường trong đó 10 trường bắt buộc. Trường thứ 11 là tùy chọn (trong bảng minh họa có màu nền đỏ)
+> Phần header: có 11 trường trong đó 10 trường bắt buộc. Trường thứ 11 là tùy chọn (trong bảng minh họa có màu nền đỏ)
+
 ![hinh_1](/LinhNH/03.Timhieu_TCP_IP/images/Cau-truc-goi-tin-TCP.png)
 
 - Source port (16 bit): số cổng của tiến trình gửi
