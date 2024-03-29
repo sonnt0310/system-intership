@@ -16,6 +16,7 @@
 7. [Cách chia địa chỉ IPv4](#7-cách-chia-địa-chỉ-ipv4)  
 8. [Phân biệt multicast và broadcast](#8-phân-biệt-multicast---broadcast)
 9. [Tìm hiểu về subnet, subnet mask, prefix](#9-tìm-hiểu-về-subnet-subnet-mask-prefix)
+10. [Thực hành chia mạng](#10-thực-hành-chia-mạng-ip)
 ## 1. Khái quát về IPv4
 ![hinh_1](/LinhNH/04.TimhieuIpV4/images/ipv4.png)
 - **`Địa chỉ IPv4`** (Internet Protocol version 4) được phát triển vào những năm 1970 và trở thành mạng lưới đầu tiên kết nối tất cả các máy tính trên toàn thế giới. Là một địa chỉ duy nhất được sử dụng để xác định một thiết bị trong mạng Internet.
@@ -95,9 +96,10 @@ _Các khái niệm subnet, subnet mask và prefix đều liên quan đến cách
 ### 9.3 Prefix 
 - Số prefix, hay độ dài tiền tố (prefix length), là một phần của hệ thống CIDR (Classless Inter-Domain Routing), được sử dụng để xác định mạng con của một địa chỉ IP. Số prefix định nghĩa số lượng bit trong subnet mask mà được sử dụng để xác định mạng con.
 - Trong CIDR, địa chỉ IP được biểu diễn bằng cách kết hợp địa chỉ IP cùng với số prefix, thường là dưới dạng "/xx" (ví dụ: /24), trong đó "xx" là số bit trong subnet mask được sử dụng cho mạng con. Ví dụ, nếu bạn thấy một địa chỉ IP được kèm theo "/24", điều này có nghĩa là subnet mask tương ứng là 255.255.255.0 (vì có 24 bit mạng và 8 bit host).
-- Số prefix giúp biểu diễn mạng con một cách ngắn gọn và tiện lợi hơn, đồng thời cung cấp thông tin chi tiết về cách mạng con được chia. Nó cũng được sử dụng trong việc quản lý và cấu hình mạng, giúp quản trị viên mạng hiểu được cấu trúc mạng và phân biệt mạng con một cách dễ dàng.
-## 10. Thực hành chia mạng
-> Bài tập 2.5
+- Số prefix giúp biểu diễn mạng con một cách ngắn gọn và tiện lợi hơn, đồng thời cung cấp thông tin chi tiết về cách mạng con được chia. Nó cũng được sử dụng trong việc quản lý và cấu hình mạng, giúp quản trị viên mạng hiểu được cấu trúc mạng và phân biệt mạng con một cách dễ dàng.  
+
+## 10. Thực hành chia mạng IP
+> Bài tập 2.5  
 
 __Địa chỉ có thể dùng cho host:__
 - 150.100.255.255  
