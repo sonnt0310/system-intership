@@ -42,7 +42,7 @@ Khi dữ liệu từ các VLAN khác nhau được gửi tới cổng Trunk trê
 
 Kỹ thuật trunking DOT1Q thực hiện chèn thêm 4 byte vào sau trường Source MAC của Ethernet Frame trên đường trunk. Thông tin chèn này được gọi là DOT1Q Tag.
 
-![image3](/HoangNH/5.TimhieuVlan/image/dot1g.jpg)
+![image3](/HoangNH/5.TimhieuVlan/image/dot1q.jpg)
 
 Các trường trong 802.1Q VLAN Tag bao gồm:
 
@@ -88,7 +88,7 @@ VTP mode và đặc điểm các mode:
 - Client: switch hoạt động ở mode này không được thay đổi thông tin VLAN mà chỉ nhận thông tin VLAN từ Server. Đồng bộ thông tin VLAN từ switch khác và forward thông tin VLAN.
 - Transparent: switch hoạt động ở mode này không tiến hành tiếp nhận thông tin VLAN. Nó vẫn nhận được thông tin VLAN từ các Switch khác nhưng không tiến hành đồng bộ thông tin VLAN. Có thể tạo, xóa, sửa VLAN độc lập trên nó. Không gửi thông tin VLAN của bản thân cho các Switch khác nhưng nó có thể forward thông tin VLAN nhận được đến các Switch khác.
 
-![image5](/HoangNH/5.TimhieuVlan/image/vtp/PNG)
+![image5](/HoangNH/5.TimhieuVlan/image/vtp.PNG)
 
 ## 3.Các thiết bị mạng
 
