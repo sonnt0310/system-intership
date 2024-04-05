@@ -10,6 +10,11 @@ Routing đóng vai trò quan trọng đến tốc độ việc truyền dữ li�
 
 Ngoài ra, định tuyến chính là cách cơ sở để tích hợp các mạng lại với nhau. Và gắn kết tất cả các thiết bị trong một mạng để liên kết và giao tiếp với nhau. Hơn nữa, định tuyến còn liên quan đến việc xây dựng các đường dự phòng hay bảo mật cho hệ thống mạng.
 
+Định tuyến được phân chia thành 2 loại cơ bản:
+
+- Static routing: Việc xây dựng bảng định tuyến của router được thực hiện bằng tay bởi người quản trị.
+- Dynamic routing: Việc xây dựng và duy trì trạng thái của bảng định tuyến được thực hiện tự động bởi router.
+
 ## 2.Static Routing
 
 Static routing là phương thức định tuyến mà người quản trị sẽ nhập tất cả thông tin về đường đi cho router. 
@@ -19,7 +24,7 @@ Nguyên lý hoạt động:
 
 - đầu tiên người quản trị sẽ cấu hình các đường cố định cho router
 - router sẽ cài đặt đường đi này vào bảng định tuyến
-- gói dữ liệu được định tuyến theo đường cố định.\
+- gói dữ liệu được định tuyến theo đường cố định.
 
 Ưu điểm:
 
