@@ -2,6 +2,75 @@
 
 # 2. Cấu hình VLAN trên SW
 
+![hinh](/LinhNH/05.Timhieu_VLAN_Trunking/images/anh1.png)
+
+
+Mặc định, thì tất cả các cổng (port) trên switch đều nằm trong cùng VLAN có ID là 1 (VLAN 1)
+
+__Tạo các VLAN10, VLAN11, VLAN12__
+
+    Switch>enable
+    Switch#configure terminal
+
+    Switch(config)#vlan 10
+    Switch(config-vlan)#name VLAN10
+    Switch(config-vlan)#exit
+
+    Switch(config)#vlan 11
+    Switch(config-vlan)#name VLAN11
+    Switch(config-vlan)#exit
+
+    Switch(config)#vlan 12
+    Switch(config-vlan)#name VLAN12
+    Switch(config-vlan)#exit
+
+Kiểm tra lại VLAN vừa tạo:
+
+![hinh](/LinhNH/05.Timhieu_VLAN_Trunking/images/anh2.png)
+
+3 VLAN đã được khởi tạo. Tuy nhiên, chưa có port nào được gán vào vlan.
+
+__Gán các port vào VLAN đã định trước__
+
+    Switch>enable
+    Switch#configure terminal
+
+    Switch(config)#interface fastEthernet 0/1
+    Switch(config-if)#switchport access vlan 10
+    Switch(config-if)#exit
+
+    Switch(config)#interface fastEthernet 0/2
+    Switch(config-if)#switchport access vlan 10
+    Switch(config-if)#exit
+
+    Switch(config)#interface fastEthernet 0/11
+    Switch(config-if)#switchport access vlan 11
+    Switch(config-if)#exit
+
+    Switch(config)#interface fastEthernet 0/12
+    Switch(config-if)#switchport access vlan 11
+    Switch(config-if)#exit
+
+    Switch(config)#interface fastEthernet 0/21
+    Switch(config-if)#switchport access vlan 12
+    Switch(config-if)#exit
+
+    Switch(config)#interface fastEthernet 0/22
+    Switch(config-if)#switchport access vlan 12
+    Switch(config-if)#end
+
+Kiểm tra các port gán đúng vlan chưa
+
+    Switch#show vlan
+
+![hinh](/LinhNH/05.Timhieu_VLAN_Trunking/images/anh3.png)
+
+Kiểm tra ping từ các PC trong cùng VLAN -> OK  
+Ping giữa các VLAN khác nhau -> Không ping được.
+
+![hinh](/LinhNH/05.Timhieu_VLAN_Trunking/images/anh4.png)
+
+
 # 3. Cấu hình VTP
 VTP domain là gì?  
 VTP domain (hay còn được gọi là VLAN managerment domain) bao gồm 1 SW hoặc một vài SW kết nối với nhau với nhiệm vụ quản trị 1 VTP domain name. 1 SW chỉ có thể nằm trong 1 VTP domain.
