@@ -131,7 +131,7 @@ SW1(config)#exit
 
 Kiểm tra:
 
-![image4](/HoangNH/5.TimhieuVlan/image/ping1.png)
+![image4](/HoangNH/5.TimhieuVlan/image/kt1.png)
 
 Trên SW2:
 
