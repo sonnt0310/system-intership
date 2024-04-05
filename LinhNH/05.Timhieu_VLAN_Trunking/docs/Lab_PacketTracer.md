@@ -220,6 +220,7 @@ Kiểm tra lại:
 
 ![hinh](/LinhNH/05.Timhieu_VLAN_Trunking/images/anh7.png)
 
+__Đặt IP cho các interface VLAN trên 2 SW__  
 Đặt các địa chỉ IP của SW1 cho VLAN10 và VLAN20:
 
     SW1#configure terminal 
@@ -255,3 +256,46 @@ Kiểm tra lại:
 
     SW2(config)#exit
     SW2#
+
+__Thiết lập VTP Server và VTP Client__
+
+Mặc định thì Catalyst switch sẽ được cấu hình làm VTP Server. Thiết lập cho SW1 là VTP Server và SW2 là VTP Client
+
+    SW1>enable 
+    SW1#configure terminal 
+    SW1(config)#vtp mode server
+    SW1(config)#vtp domain NH
+    SW1(config)#vtp password nhanhoa2020
+    SW1(config)#exit
+
+    SW2>enable 
+    SW2#configure terminal 
+    SW2(config)#vtp mode client
+    SW2(config)#vtp domain NH
+    SW2(config)#vtp password nhanhoa2020
+    SW2(config)#exit
+
+Tạo đường trunk từ SW1 đến SW2:
+    SW1#configure terminal 
+    SW1(config)#interface fastEthernet 0/1
+    SW1(config-if)#switchport mode trunk 
+    SW1(config-if)#end
+    SW1#
+
+    SW2#configure terminal 
+    SW2(config)#interface fastEthernet 0/1
+    SW2(config-if)#switchport mode trunk 
+    SW2(config-if)#end
+    SW2#
+
+Câu lệnh kiểm tra
+
+    SW# show vtp status
+
+    SW# show vtp pasword
+
+    SW# show vlan
+
+    SW# show interfaces trunk 
+
+![hinh](/LinhNH/05.Timhieu_VLAN_Trunking/images/anh8.png)
