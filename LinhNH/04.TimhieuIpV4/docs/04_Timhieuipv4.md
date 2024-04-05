@@ -45,24 +45,39 @@ Về cấu tạo, **địa chỉ IPv4** sẽ có 32 bit và được biểu di�
 ## 5. Các lớp của IPv4
 Trong địa chỉ IPv4, các lớp chính xác phân biệt và định rõ phạm vi và mục đích của mỗi địa chỉ IP. Cụ thể, có ba lớp chính (A, B, C) và 2 lớp phụ (D, E)
 ### 5.1 Lớp A
+
 ![hinh_5.1](/LinhNH/04.TimhieuIpV4/images/lopA.png)
+
 Địa chỉ lớp A có phần mạng là 8 bit đầu và phần host là 24 bit sau. Bit đầu tiên của phần mạng luôn là 0.
 Lớp A sẽ có các địa chỉ mạng từ 1.0.0.0 đến 126.0.0.0 và mỗi mạng sẽ có 224 địa chỉ host (loại trừ địa chỉ mạng và địa chỉ broadcast).  
 Mạng loopback sẽ là 127.0.0.0.
+
 ### 5.2 Lớp B
+
 ![hinh_5.2](/LinhNH/04.TimhieuIpV4/images/lopB.png)
+
 Địa chỉ lớp B có phần mạng là 16 bit đầu và phần host là 16 bit sau. 2 bit đầu tiên của phần mạng luôn là 1.0.
 Lớp B sẽ có các địa chỉ mạng từ 128.0.0.0 đến 191.255.0.0 và mỗi mạng sẽ có 214 địa chỉ host (loại trừ địa chỉ mạng và địa chỉ broadcast).
-Địa chỉ lớp C có phần mạng là 24 bit đầu và phần host là 8 bit sau. 3 bit đầu tiên của phần mạng luôn là 1.1.0.
+
 ### 5.3 Lớp C
+
 ![hinh_5.3](/LinhNH/04.TimhieuIpV4/images/lopC.png)
+
+Địa chỉ lớp C có phần mạng là 24 bit đầu và phần host là 8 bit sau. 3 bit đầu tiên của phần mạng luôn là 1.1.0.
 Lớp C sẽ có các địa chỉ mạng từ 192.0.0.0 đến 223.255.255.0 và mỗi mạng sẽ có 26 địa chỉ host (loại trừ địa chỉ mạng và địa chỉ broadcast).
+
 ### 5.4 Lớp D
+
 Lớp D
+
 Các địa chỉ trong lớp D là những địa chỉ multicast bao gồm 224.0.0.0 đến 239.255.255.255.
+
 ### 5.5 Lớp E
+
 Lớp E
-Các địa chỉ trong lớp E có vai trò dùng để dự phòng, bao gồm những địa chỉ từ 240.0.0.0 trở đi.
+
+Các địa chỉ trong lớp E có vai trò dùng để dự phòng, bao gồm những địa chỉ từ 240.0.0.0 trở đi. 
+
 ## 6. Phân biệt ip Public - ip Private
 - Địa chỉ IP được phân thành hai loại: private và public.
 ![hinh_6](/LinhNH/04.TimhieuIpV4/images/ip_public_private.png)
