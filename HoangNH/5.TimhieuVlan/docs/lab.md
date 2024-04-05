@@ -78,6 +78,8 @@ Cùng VLAN thì ping được, khác VLAN thì không ping được.
 
 ## 2.Cấu hình VTP
 
+![vtp](/HoangNH/5.TimhieuVlan/image/lab2.png)
+
 | VLAN |  Port | 
 |:-----|:------|
 |VLAN10|192.168.10.0/24|
