@@ -50,7 +50,7 @@ ID VLAN sẽ được dịch sang thẻ VLAN bằng một thẻ 12 bit xác đ�
 
 Các khung Ethernet được gắn thẻ sẽ chuyển tiếp về địa chỉ MAC đích của chúng (chỉ chuyển tiếp đến các cổng có liên kết VLAN). Lưu lượng quảng bá (broadcast), unicast, multicast đều được chuyển tiếp đến các cổng trong VLAN.
 
-Đường trung kế kết nối (Truck) giữa các switch nhận biết được VLAN nào trải dài trên switch. Truck còn đóng vai trò truyền lưu lượng truy cập cho các VLAN được sử dụng ở hai phía đầu, cuối của nó. Khi một khung chạm đến switch đích thì thẻ VLAN sẽ bị xóa trước khi khung được truyền tới máy tính đích.
+Đường trung kế kết nối (Trunk) giữa các switch nhận biết được VLAN nào trải dài trên switch. Trunk còn đóng vai trò truyền lưu lượng truy cập cho các VLAN được sử dụng ở hai phía đầu, cuối của nó. Khi một khung chạm đến switch đích thì thẻ VLAN sẽ bị xóa trước khi khung được truyền tới máy tính đích.
 
 Spanning Tree Protocol ( STP )là một giao thức được dùng để ngăn chặn sự lặp vòng giữa các switch trong mỗi miền lớp 2 (Ethernet). Mỗi VLAN sẽ chạy một STP riêng biệt, không phụ thuộc lẫn nhau. Nếu cấu trúc liên kết giữa nhiều VLAN giống nhau thì có thể chạy STP đa trường hợp để giảm chi phí STP.
 
@@ -58,11 +58,12 @@ Spanning Tree Protocol ( STP )là một giao thức được dùng để ngăn c
 ### 2.1 Khái niệm
 `Đường Trunk hay Trunking` là một kỹ thuật kết nối các thiết bị mạng với nhau để tạo thành một mạng lớn hơn, đặc biệt trong các mạng LAN hoặc các mạng VLAN. Đường trunk cho phép chuyển gói dữ liệu từ một VLAN này sang một VLAN khác trên cùng một đường truyền vật lý, điều này giúp tối ưu hóa việc sử dụng băng thông và giảm độ trễ trong mạng.
 ### 2.2 Chuẩn Trunking
+
 > a. IEEE 802.1Q  
 
 ![hinh_2a](/LinhNH/05.Timhieu_VLAN_Trunking/images/chuan-dot1q.png)
 ___`HOẠT ĐỘNG`___  
-Khi switch nhận được Frame có tag thông tin 802.1Q, nó sẻ tiến hành đọc thông tin này, xem frame này đến từ VLAN nào. Sau đó nó sẻ xử lí gở bỏ Tag trả lại frame đúng VLAN mà frame thuộc về. Thực chất Tag DOT1Q chỉ được tag trên đường trunk để phân biệt các frame của các VLAN khác nhau. Các End users không nhận biết được rằng frame được Tag và chuyển trên đường trunk. Trunking hoàn toàn transparent với các thiết bị đầu cuối này.
+Khi switch nhận được Frame có tag thông tin 802.1Q, nó sẽ tiến hành đọc thông tin này, xem frame này đến từ VLAN nào. Sau đó  xử lí gở bỏ Tag trả lại frame đúng VLAN mà frame thuộc về. Thực chất Tag DOT1Q chỉ được tag trên đường trunk để phân biệt các frame của các VLAN khác nhau. Các End users không nhận biết được rằng frame được Tag và chuyển trên đường trunk. Trunking hoàn toàn transparent với các thiết bị đầu cuối này.
 
 Trường 802.1Q có các thành phần sau đây:  
 • EtherType: sử dụng EtherType 0x8100 để cho biết đây là một khung 802.1Q.  
