@@ -63,7 +63,7 @@ Spanning Tree Protocol ( STP )là một giao thức được dùng để ngăn c
 
 ![hinh_2a](/LinhNH/05.Timhieu_VLAN_Trunking/images/chuan-dot1q.png)
 ___`HOẠT ĐỘNG`___  
-Khi switch nhận được Frame có tag thông tin 802.1Q, nó sẽ tiến hành đọc thông tin này, xem frame này đến từ VLAN nào. Sau đó  xử lí gở bỏ Tag trả lại frame đúng VLAN mà frame thuộc về. Thực chất Tag DOT1Q chỉ được tag trên đường trunk để phân biệt các frame của các VLAN khác nhau. Các End users không nhận biết được rằng frame được Tag và chuyển trên đường trunk. Trunking hoàn toàn transparent với các thiết bị đầu cuối này.
+Khi switch nhận được Frame có tag thông tin 802.1Q, nó sẽ tiến hành đọc thông tin này, xem frame này đến từ VLAN nào. Sau đó  xử lí gở bỏ Tag trả lại frame đúng VLAN mà frame thuộc về. Thực chất Tag DOT1Q chỉ được tag trên đường trunk để phân biệt các frame của các VLAN khác nhau. Các End users không nhận biết được rằng frame được Tag và chuyển trên đường trunk. Trunking hoàn toàn riêng biệt với các thiết bị đầu cuối này.
 
 Trường 802.1Q có các thành phần sau đây:  
 • EtherType: sử dụng EtherType 0x8100 để cho biết đây là một khung 802.1Q.  
