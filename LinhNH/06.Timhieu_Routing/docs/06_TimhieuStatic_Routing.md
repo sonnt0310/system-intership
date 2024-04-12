@@ -76,17 +76,6 @@ Lợi thế lớn nhất của định tuyến động là khả năng thích �
 
 ### 1.5 Thuật toán định tuyến
 
-Thuật toán định tuyến:
-
-- Thuật toán định tuyến tính toán đường đi ngắn nhất trên thông tin thu nhận được.
-
-- Thuật toán xác định đâu là thông tin tốt nhất để lưu trong bảng định tuyến.
-
-- Mỗi thuật toán định tuyến xác định thông tin tốt nhất theo cách của riêng nó.
-
-- Thuật toán tạo ra một số (metric, cost) cho mỗi đường đi qua mạng (nhỏ-tối ưu).
-
-Các metric có thể được tính toán dựa trên một đặc tính đơn lẻ hoặc kết hợp nhiều đặc tính.
 
 
 
