@@ -132,14 +132,14 @@ Một switch mạng sẽ có cấu tạo gồm 2 phần bao gồm: Phần cứng
 - Phần mềm software: các thuật toán đã được cài đặt sẵn, phần mềm thiết bị switch sử dụng hệ điều hành OS.
 
 **`Switch Layer 2`** truy xuất cập nhật địa chỉ MAC có trong frame, cho phép các thiết bị có thể truyền tin nhanh chóng cho nhau mà không cần phải kết nối trực tiếp.  
-Điểm đặc biệt là Switch Layer:  
+Điểm đặc biệt là switch Layer 2 :  
 - Không cần chia sẻ băng thông nhưng vẫn truyền dữ liệu một cách nhanh chóng.
 - Có khả năng điều chỉnh giới hạn của lưu lượng trưởng ở ngưỡng nào đó.
 - Switch Layer 2 còn có khả năng tạo ra mạng ảo VLAN sẽ tối ưu các nhóm trong mạng một cách dễ dàng.  
 
 **`Switch layer 3`** bao gồm nhiều tính năng hơn Switch Layer 2. Sở dĩ như vậy là bởi vì một số dịch vụ trong đó làm cho switch layer 3 hoạt động tốt hơn switch layer 2 như: bảng CAM, bảng FIB, địa chỉ IP của next hop, địa chỉ MAC,… Chính vì vậy giá thành của switch Layer 3 cao hơn hẳn switch Layer 2.
 
-Hơn nữa, hoạt động của switch layer 3 không những sở hữu các tính năng của Switch layer 2 mà còn tham gia vào một số hoạt động dựa trên thông tin của layer 3 và layer 4.
+Hơn nữa, hoạt động của switch layer 3 không những sở hữu các tính năng của Switch layer 2 mà còn tham gia vào một số hoạt động dựa trên thông tin của layer 3 và layer 4.  
 Điểm đặc biệt là Switch Layer 3:
 - Có thể lưu bảng của địa chỉ MAC của thiết bị kết nối.
 - Có thêm bảng định tuyến của một Router.
