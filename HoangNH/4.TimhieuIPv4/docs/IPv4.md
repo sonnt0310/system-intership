@@ -81,12 +81,6 @@ IP public được nhà cung cấp dịch vụ Internet (ISP) dùng để chuy�
 
 ![image5](/HoangNH/4.TimhieuIPv4/image/public.jpg)
 
-Đặc điểm của IP public:
-
-- Độc nhất: Mỗi thiết bị chỉ có một địa chỉ IP public duy nhất trên Internet.
-- Phân biệt: IP public giúp phân biệt giữa các thiết bị trên mạng.
-- Kết nối: Thiết bị có IP public có khả năng kết nối với các máy chủ và dịch vụ trên Internet.
-
 IP public đóng vai trò quan trọng trong việc truy cập Internet và giao tiếp trực tuyến. Nó cho phép các thiết bị truy cập vào các trang web, gửi hoặc nhận dữ liệu từ các máy chủ và tham gia vào các hoạt động trực tuyến khác.
 
 ### 6.2.IP private:

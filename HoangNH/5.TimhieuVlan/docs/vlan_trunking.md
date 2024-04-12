@@ -48,8 +48,8 @@ Các trường trong 802.1Q VLAN Tag bao gồm:
 
 - Tag Protocol ID (16 bit) nôi dung trường này luôn được set 0x8100 dùng để định danh ra frame này đã đc tag 802.1q để phân biệt với frame untagged trên đường trunk.
 - User Priority (3 bit) sử dụng cho kỹ thuật QoS.
-- Canonical Format Indicator (1bit) cho biết địa chỉ MAC đang được sử dụng ở định dạng Token Ring hay Ethernet Frame.
-- VLAN ID(12bit): cho biết Frame đang chạy trên đường trunk là của VLAN nào.
+- Canonical Format Indicator (1 bit) cho biết địa chỉ MAC đang được sử dụng ở định dạng Token Ring hay Ethernet Frame.
+- VLAN ID(12 bit): cho biết Frame đang chạy trên đường trunk là của VLAN nào.
 
 Cách xử lý frame:
 

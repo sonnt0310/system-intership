@@ -59,3 +59,51 @@ R(config)# ip route network [mask] {Address|interface}[distance][parmanent]
 |Distance| Xác định khoảng cách tới router gần nhất|
 |Permanent| Quy định router không bị thay đổi khi có một interface bị down|
 |Mask| Subnet mask|
+
+
+## 3.Lab 
+
+![image1](/HoangNH/5.TimhieuVlan/image/image.png)
+
+Đánh địa chỉ cho R1,R2:
+
+```
+
+Router>enable
+Router#configure terminal
+Router(config)#hostname R1
+R1(config)#interface FastEthernet 1/0
+R1(config-if)#ip address 192.168.1.1 255.255.255.0
+R1(config-if)#no shutdown
+R1(config-if)#exit
+R1(config)#interface FastEthernet 0/0
+R1(config-if)#ip address 192.168.2.1 255.255.255.0
+R1(config-if)#no shutdown
+R1(config-if)#exit
+```
+
+```
+Router>enable
+Router#configure terminal
+Router(config)#hostname R2
+R2(config)#interface FastEthernet 1/0
+R2(config-if)#ip address 192.168.1.2 255.255.255.0
+R2(config-if)#no shutdown
+R2(config-if)#exit
+R2(config)#interface FastEthernet 0/0
+R2(config-if)#ip address 192.168.3.2 255.255.255.0
+R2(config-if)#no shutdown
+R2(config-if)#exit
+```
+
+Cấu hình cho PC:
+
+![image1](/HoangNH/5.TimhieuVlan/image/pc1.png)
+
+![image1](/HoangNH/5.TimhieuVlan/image/pc2.png)
+
+Cấu hình Static routing:
+
+```
+R1(config)# ip route 192.168.3.0 255.255.255.0 192.168.1.2
+```
