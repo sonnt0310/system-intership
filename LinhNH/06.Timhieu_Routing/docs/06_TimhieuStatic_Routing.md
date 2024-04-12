@@ -12,6 +12,8 @@
 
 - Thông tin về những con đường này có thể được cập nhật tự động từ các router khác hoặc là do người quản trị mạng chỉ định cho router. Sau khi router nhận gói tin, thì router sẽ gỡ bỏ phần header lớp 2 để tìm địa chỉ đích thuộc lớp 3. Sau khi đọc xong địa chỉ đích lớp 3 nó tìm kiếm trong Routing Table cho mạng chứa địa chỉ đích.
 
+- Giao thức định tuyến
+
 Bảng định tuyến của mỗi giao thức định tuyến là khác nhau, nhưng có thể bao gồm những thông tin sau:
 
 - Địa chỉ đích của mạng, mạng con hoặc hệ thống.
@@ -73,6 +75,10 @@ Bản chất tĩnh của kỹ thuật định tuyến này đi kèm với nhữn
 Trong định tuyến động, các bộ định tuyến tạo và cập nhật bảng định tuyến trong thời gian chạy dựa trên điều kiện mạng thực tế. Bộ định tuyến cố gắng tìm đường dẫn nhanh nhất từ nguồn đến điểm đích bằng cách sử dụng một giao thức định tuyến động, đây là một tập hợp các quy tắc giúp tạo, duy trì và cập nhật bảng định tuyến động.
 
 Lợi thế lớn nhất của định tuyến động là khả năng thích ứng với các điều kiện mạng thay đổi, bao gồm lưu lượng truy cập, băng thông và lỗi mạng.
+
+__Giao thức định tuyến__
+
+
 
 ### 1.5 Thuật toán định tuyến
 
