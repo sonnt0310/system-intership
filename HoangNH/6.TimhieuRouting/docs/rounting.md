@@ -63,7 +63,7 @@ R(config)# ip route network [mask] {Address|interface}[distance][parmanent]
 
 ## 3.Lab 
 
-![image1](/HoangNH/5.TimhieuVlan/image/image.png)
+![image1](/HoangNH/6.TimhieuRouting/image/image.png)
 
 Đánh địa chỉ cho R1,R2:
 
@@ -98,9 +98,9 @@ R2(config-if)#exit
 
 Cấu hình cho PC:
 
-![image1](/HoangNH/5.TimhieuVlan/image/pc1.png)
+![image1](/HoangNH/6.TimhieuRouting/image/pc1.png)
 
-![image1](/HoangNH/5.TimhieuVlan/image/pc2.png)
+![image1](/HoangNH/6.TimhieuRouting/image/pc2.png)
 
 Cấu hình Static routing:
 
