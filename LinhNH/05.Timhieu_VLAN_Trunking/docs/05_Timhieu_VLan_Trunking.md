@@ -65,31 +65,10 @@ Spanning Tree Protocol ( STP )là một giao thức được dùng để ngăn c
 ___`HOẠT ĐỘNG`___  
 Khi switch nhận được Frame có tag thông tin 802.1Q, nó sẽ tiến hành đọc thông tin này, xem frame này đến từ VLAN nào. Sau đó  xử lí gở bỏ Tag trả lại frame đúng VLAN mà frame thuộc về. Thực chất Tag DOT1Q chỉ được tag trên đường trunk để phân biệt các frame của các VLAN khác nhau. Các End users không nhận biết được rằng frame được Tag và chuyển trên đường trunk. Trunking hoàn toàn riêng biệt với các thiết bị đầu cuối này.
 
-Trường 802.1Q có các thành phần sau đây:  
-• EtherType: sử dụng EtherType 0x8100 để cho biết đây là một khung 802.1Q.  
-• PRI: 3 bit, mang thông tin ưu tiên cho frame.  
-• Token Ring Encapsulation Flag: chỉ ra giải thích của frame nếu nó được truyền từ Ethernet tới Token Ring.  
-• VLAN ID: 12 bit, dùng để xác định frame là của VLAN nào.   
-> b. Inter-Switch Link
-
 ![hinh_2b](/LinhNH/05.Timhieu_VLAN_Trunking/images/chuan-isl.png)
 ___`ISL Header`___   
 Header của ISL có chứa nhiều trường với các giá trị xác định thuộc tính của dữ liệu frame nguồn. Thông tin này được sử dụng để giao nhận, nhận dạng đường truyền, và nhận dạng VLAN. Độ lớn của các trường trong header ISL khác nhau, tùy thuộc vào loại VLAN và loại đường liên kết. Các ASIC trên một cổng Ethernet đóng gói các frame với một header ISL 26 byte và một FCS 4 byte. Đây là 30-byte mà ISL đóng gói bổ sung thêm đã được hỗ trợ trong giao thức của Switch Cisco, nhưng kích thước tổng thể của frame thay đổi và được giới hạn bởi các MTU của giao thức lớp 2. 
 
-Các frame Ethernet ISL header có chứa các trường thông tin sau:
-
-• DA (Destination address): 40-bit địa chỉ đích.  
-• Type: 4 bit mô tả của các loại frame: Ethernet (0000), Token Ring (0001), FDDI (0010) và ATM (0011).  
-• User: 4 bit để xác định các ưu tiên Ethernet.  
-• SA (Source address): 48 bit địa chỉ MAC nguồn của cổng truyền trên Switch.  
-• LEN (Length): 16 bit mô tả độ dài khung khi trừ DA, Type, người sử dụng, SA, LEN, và CRC. 
-• AAAA03: 24 bit, đây là một hằng số.  
-• HSA (High bits of source address): 3 byte đầu tiên của SA (ID của nhà sản xuất).  
-• VID: 15 bit, nhưng chỉ có 10 bit được sử dụng cho 1024 VLAN. Dùng để phân biệt các frame của các VLAN.  
-• BPDU (Bridge Protocol Data Unit): 1 bit xác định liệu mô tả frame là một spanning tree BPDU. Nó cũng xác định nếu khung đóng gói là một Cisco Discovery Protocol (CDP) hoặc VLAN Trunk Protocol (VTP) frame.  
-• INDX (index): 16 bit để cho biết chỉ số port nguồn của gói tin mà nó đi ra khỏi Switch. Giá trị 16 bit này được bỏ qua trong các gói tin nhận.  
-• RES: 16 bit dành riêng cho Token Ring và FDDI frame.  
-• Encapsulated Ethernet Frame: gói dữ liệu được đóng gói, bao gồm cả giá trị CRC của riêng nó, hoàn toàn chưa sửa đổi. Frame bên trong phải có một giá trị CRC hợp lệ khi các trường ISL đóng gói bị loại bỏ. Một switch có thể nhận được các trường ISL và sử dụng trường ENCAP FRAME như là frame nhận.
 
 ## 3. Một số thiết bị khác
 ### 3.1 Router
