@@ -107,3 +107,4 @@ Cấu hình Static routing:
 ```
 R1(config)# ip route 192.168.3.0 255.255.255.0 192.168.1.2
 ```
+
