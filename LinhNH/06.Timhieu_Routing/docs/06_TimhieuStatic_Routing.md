@@ -1,6 +1,14 @@
 # Tìm hiểu về Routing, Static Routing
 ## Mục lục
+1. [Routing](#1-tìm-hiểu-về-routing)  
+    1.1 [Định tuyến](#11-định-tuyến-là-gì)  
+    1.2 [Bộ định tuyến](#12-bộ-định-tuyến-là-gì)  
+    1.3 [Cách hoạt động](#13-hoạt-động-của-định-tuyến)  
+    1.4 [Phân loại](#14-phân-loại-định-tuyến)  
+    1.5 [Thuật toán](#15-thuật-toán-định-tuyến)      
+2. [Static Routing](#2-tìm-hiểu-về-static-routing)
 
+------------------
 ## 1. Tìm hiểu về Routing
 
 ### 1.1 Định tuyến là gì?
