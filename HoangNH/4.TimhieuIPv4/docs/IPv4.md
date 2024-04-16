@@ -139,7 +139,7 @@ Bảng so sánh:
 |Cách thức hoạt động|Dữ liệu được luân chuyển khi nhận yêu cầu từ những người nhận cùng lúc.|Dữ liệu được luân chuyển cho tất cả người nhận bất kể có nhận được yêu cầu hay không.|
 |Độ bảo mật| Có độ bảo mật cao vì dữ liệu được gửi đến một nhóm người nhận nhất định| Độ bảo mật thấp do dữ liệu được gửi đến tất cả thiết bị trong mạng lưới|
 |Độ trễ| Trung bình| Cao|
-## 9.Subnet, subnet mask, prefex
+## 9.Subnet, subnet mask, prefix
 
 ### 9.1.Subnet:
 
@@ -149,7 +149,7 @@ Subnet (hay còn gọi là mạng con) là một phần của một mạng lớn
 
 Subnet mask là một dải 32 bit nhị phân đi kèm với một địa chỉ IP, được các host sử dụng để xác định địa chỉ mạng của địa chỉ IP này.
 
-### 9.3.Prefex
+### 9.3.Prefix
 
 Để mô tả một địa chỉ IP, người ta dùng một đại lượng khác được gọi là số prefix. Số prefix có thể hiểu một cách đơn giản là số bit mạng trong một địa chỉ IP, được viết ngay sau địa chỉ IP, và được ngăn cách với địa chỉ này bằng một dấu “/”.
 
