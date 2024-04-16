@@ -25,7 +25,7 @@ Khi gói tin từ máy tính này đi qua thiết bị NAT, địa chỉ IP ngu�
 Trang web nhận được yêu cầu từ địa chỉ IP 203.0.113.5 và gửi phản hồi lại cho địa chỉ này.
 Thiết bị NAT nhận được phản hồi và dịch ngược địa chỉ IP nguồn từ 203.0.113.5 thành 192.168.1.10 để gửi lại cho máy tính trong mạng nội bộ.
 
-![image2](/HoangNH/7.TimhieuNAT/image/snat.webp)
+![image2](/HoangNH/7.TimhieuNAT/image/staticnat.webp)
 
 ### 2.2.Dynamic NAT
 
@@ -39,10 +39,10 @@ Một số ứng dụng của Dynamic NAT bao gồm:
 - Giúp tiết kiệm địa chỉ IP công cộng bằng cách sử dụng chúng tạm thời thay vì cấp phát địa chỉ IP tĩnh cho mỗi thiết bị trong mạng nội bộ.
 - Cho phép nhiều thiết bị trong mạng nội bộ sử dụng chung một địa chỉ IP công cộng.
 
-Ví dụ: Trong hệ thống LAN của công ty có 100 IP, việc sử dụng SNAT đòi hỏi phải thuê 100 IP Public từ ISP. Vì vậy sử dụng DNAT giúp giảm chi phí bằng cách chỉ cần thuê 10 IP Public từ ISP nếu thời điểm đó có 10 IP truy cập internet.
+Ví dụ: Trong hệ thống LAN của công ty có 100 IP, việc sử dụng NAT tĩnh đòi hỏi phải thuê 100 IP Public từ ISP. Vì vậy sử dụng NAT động giúp giảm chi phí bằng cách chỉ cần thuê 10 IP Public từ ISP nếu thời điểm đó có 10 IP truy cập internet.
 Nếu có 20 IP muốn truy cập thì phải chờ 10 IP kia truy cập xong mới được sử dụng. 
 
-![image3](/HoangNH/7.TimhieuNAT/image/dnat.webp)
+![image3](/HoangNH/7.TimhieuNAT/image/dynamicnat.webp)
 
 ### 2.3.NAT Overload
 
@@ -63,6 +63,35 @@ nhưng sẽ qua các cổng khác nhau, máy A qua cổng 80, máy B qua cổng 
 Thiết bị NAT lưu lại thông tin về cả địa chỉ IP và cổng của mỗi kết nối. Các trang web từ internet sẽ phản hồi lại qua các cổng khác nhau. 
 NAT sử dụng thông tin về cổng để xác định nội dung phản hồi nào thuộc về máy A và nội dung nào thuộc về máy B, và gửi chúng đến đúng máy tương ứng. 
 
+### 2.4.SNAT
+
+SNAT (Source Network Address Translation) thường được sử dụng khi máy chủ nội bộ/private cần bắt đầu kết nối với máy chủ bên ngoài/public. Thiết bị thực hiện NAT thay đổi địa chỉ IP riêng của máy chủ nguồn thành IP Public. Nó cũng có thể thay đổi cổng nguồn trong TCP/ UDP.
+
+Một tình huống điển hình của SNAT là khi được yêu cầu thay đổi địa chỉ hay cổng riêng thành public khi các gói rời khỏi mạng. Về thứ tự hoạt động, SNAT xuất hiện sau khi quyết định định tuyến được đưa ra. Bên cạnh đó, khi có nhiều máy chủ trên mạng “bên trong” muốn truy cập vào “bên ngoài”, SNAT sẽ được sử dụng.
+
+![image5](/HoangNH/7.TimhieuNAT/image/snat.gif)
+
+### 2.5.DNAT
+
+DNAT (Destination Network Address Translation) có chức năng thay đổi địa chỉ đích trong IP của gói tin.
+
+Ngoài ra, DNAT cũng có thể thay đổi cổng đích trong TCP / UDP. Ứng dụng điển hình của nó là chuyển hướng các gói đến với đích là một địa chỉ/ cổng public, đi đến một địa chỉ/ cổng IP private bên trong mạng.
+
+Người dùng qua internet truy cập máy chủ web được lưu trữ trong trung tâm dữ liệu là một ví dụ điển hình mà DNAT được sử dụng để ẩn địa chỉ private. Đồng thời, thiết bị NAT chuyển IP đích public mà người dùng internet có thể truy cập thành địa chỉ IP private của máy chủ web.
+
+|  | SNAT | DNAT |
+|:--|:----|:----|
+|Thuật ngữ| đổi địa chỉ IP riêng của máy chủ nguồn thành IP Public| đổi địa chỉ đích trong IP của gói tin|
+|Trường hợp sử dụng| Khi một client bên trong mạng LAN hay sau firewall muốn sử dụng internet| Khi một website được lưu trữ bên trong trung tâm dữ liệu, sau firewall cần cho người dùng bên ngoài (public) kết nối đến thông qua mạng|
+|Thứ tự hoạt động| sau khi thực hiện định tuyến | trước khi thực hiện định tuyến |
+|Thay đổi địa chỉ | thay đổi địa chỉ nguồn của gói đi qua thiết bị NAT| thay đổi địa chỉ đích của gói đi qua Router|
+|Đơn/đa máy chủ| cho phép nhiều máy chủ bên trong mạng truy cập vào bất ký máy chủ nào bên ngoài| cho phép máy chủ bên ngoài truy cập vào một máy chủ bên trong|
+
+### 2.6.NAT 1:1
+
+NAT 1:1 ánh xạ địa chỉ IP bên ngoài (thường là public) thành địa chỉ IP nội bộ (thường là private)
+
+
 ### 3.Cơ chế hoạt động
 
 NAT sử dụng IP của chính nó làm IP công cộng cho mỗi máy con (client) với IP riêng. Khi một máy con thực hiện kết nối hoặc gửi dữ liệu tới một máy tính nào đó trên Internet, dữ liệu sẽ được gửi tới NAT, sau đó NAT sẽ thay thế địa chỉ IP gốc của máy con đó rồi gửi gói dữ liệu đi với địa chỉ IP của NAT. Máy tính từ xa hoặc máy tính nào đó trên Internet khi nhận được tín hiệu sẽ gửi gói tin trở về cho NAT computer bởi chúng nghĩ rằng NAT computer là máy đã gửi những gói dữ liệu đi. NAT ghi lại bảng thông tin của những máy tính đã gửi những gói thông tin ra ngoài trên mỗi cổng dịch vụ và gửi những gói tin nhận được về đúng client đó.
@@ -78,3 +107,4 @@ NAT xử lý một gói tin xuất phát từ bên trong đi ra bên ngoài mộ
 - Nếu có một hàng là tìm thấy, NAT sẽ thay thế địa chỉ đích bằng địa Outside local từ bảng NAT. 
 - Nếu NAT không tìm thấy một hàng nào, nó sẽ tạo ra một hàng mới trong bảng NAT và chèn địa chỉ mới vào trong gói tin.
 
+ 
