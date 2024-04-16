@@ -4,6 +4,8 @@
 
 NAT - Network Address Translation - chuyển đổi địa chỉ mạng là một kỹ thuật cho phép các thiết bị trong mạng riêng của bạn (private network) truy cập vào Internet thông qua một địa chỉ IP công cộng duy nhất. Khi các thiết bị trong mạng riêng gửi yêu cầu tới Internet, địa chỉ IP công cộng sẽ được sử dụng để giao tiếp với các máy chủ trên Internet.
 
+![image1](/HoangNH/7.TimhieuNAT/image/nat.png)
+
 ### 2.Phân loại NAT
 
 ### 2.1.Static NAT
@@ -23,6 +25,8 @@ Khi gói tin từ máy tính này đi qua thiết bị NAT, địa chỉ IP ngu�
 Trang web nhận được yêu cầu từ địa chỉ IP 203.0.113.5 và gửi phản hồi lại cho địa chỉ này.
 Thiết bị NAT nhận được phản hồi và dịch ngược địa chỉ IP nguồn từ 203.0.113.5 thành 192.168.1.10 để gửi lại cho máy tính trong mạng nội bộ.
 
+![image2](/HoangNH/7.TimhieuNAT/image/snat.png)
+
 ### 2.2.Dynamic NAT
 
 Dynamic NAT là một phương pháp NAT mà cho phép các địa chỉ IP tĩnh được ánh xạ tới các địa chỉ IP công cộng tạm thời theo yêu cầu.
@@ -38,6 +42,7 @@ Một số ứng dụng của Dynamic NAT bao gồm:
 Ví dụ: Trong hệ thống LAN của công ty có 100 IP, việc sử dụng SNAT đòi hỏi phải thuê 100 IP Public từ ISP. Vì vậy sử dụng DNAT giúp giảm chi phí bằng cách chỉ cần thuê 10 IP Public từ ISP nếu thời điểm đó có 10 IP truy cập internet.
 Nếu có 20 IP muốn truy cập thì phải chờ 10 IP kia truy cập xong mới được sử dụng. 
 
+![image3](/HoangNH/7.TimhieuNAT/image/dnat.png)
 
 ### 2.3.NAT Overload
 
@@ -50,6 +55,8 @@ Một số ưu điểm của NAT Overload bao gồm:
 - Giúp tiết kiệm địa chỉ IP công cộng bằng cách sử dụng cùng một địa chỉ IP công cộng cho nhiều thiết bị trong mạng nội bộ.
 - Giúp tăng tính bảo mật bằng cách ẩn địa chỉ IP thực của các thiết bị trong mạng nội bộ khỏi mạng bên ngoài.
 - Cho phép nhiều thiết bị trong mạng nội bộ sử dụng cùng lúc một địa chỉ IP công cộng để truy cập mạng bên ngoài.
+
+![image4](/HoangNH/7.TimhieuNAT/image/pat.png)
 
 Ví dụ: Trong mạng nội bộ, máy A có địa chỉ 192.168.1.10, máy B có địa chỉ 192.168.1.20, máy A muốn truy cập 1 trang web, máy B muốn gửi mail đến máy chủ trên internet, hai máy tính gửi yêu cầu đến cùng một địa chỉ IP công cộng của thiết bị NAT, ví dụ 203.0.113.5.
 nhưng sẽ qua các cổng khác nhau, máy A qua cổng 80, máy B qua cổng 25.
