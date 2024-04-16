@@ -79,6 +79,8 @@ Ngoài ra, DNAT cũng có thể thay đổi cổng đích trong TCP / UDP. Ứng
 
 Người dùng qua internet truy cập máy chủ web được lưu trữ trong trung tâm dữ liệu là một ví dụ điển hình mà DNAT được sử dụng để ẩn địa chỉ private. Đồng thời, thiết bị NAT chuyển IP đích public mà người dùng internet có thể truy cập thành địa chỉ IP private của máy chủ web.
 
+![image6](/HoangNH/7.TimhieuNAT/image/dnat.gif)
+
 |  | SNAT | DNAT |
 |:--|:----|:----|
 |Thuật ngữ| đổi địa chỉ IP riêng của máy chủ nguồn thành IP Public| đổi địa chỉ đích trong IP của gói tin|
@@ -86,6 +88,7 @@ Người dùng qua internet truy cập máy chủ web được lưu trữ trong 
 |Thứ tự hoạt động| sau khi thực hiện định tuyến | trước khi thực hiện định tuyến |
 |Thay đổi địa chỉ | thay đổi địa chỉ nguồn của gói đi qua thiết bị NAT| thay đổi địa chỉ đích của gói đi qua Router|
 |Đơn/đa máy chủ| cho phép nhiều máy chủ bên trong mạng truy cập vào bất ký máy chủ nào bên ngoài| cho phép máy chủ bên ngoài truy cập vào một máy chủ bên trong|
+
 
 ### 2.6.NAT 1:1
 
