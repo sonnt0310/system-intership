@@ -4,7 +4,7 @@
 1. [Khái quát về cơ chế NAT](#1-khái-quát-về-nat)  
 2. [Phân loại NAT](#2-phân-loại-nat)  
   2.1 [Static NAT](#21-static-nat)  
-  2.2 [Dynamic NAT](#22-dynamic-nat)
+  2.2 [Dynamic NAT](#22-dynamic-nat)  
   2.3 [NAT Overload](#23-pat)  
 3. [SNAT - DNAT là gì?](#3-snat-dnat)  
   3.1 [SNAT](#31-snat)  
