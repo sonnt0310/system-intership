@@ -33,7 +33,7 @@
 => one to one 
 
 ### 2.3 PAT
-Nhiều địa chỉ truy cập cùng 1 địa chỉ từ bên ngoài
+Nhiều địa chỉ truy cập cùng 1 địa chỉ từ bên ngoài có sử dụng thêm Port
 
 ![hinhanh2.3](/LinhNH/07.Timhieu_NAT/images/overloading.png)  
 
