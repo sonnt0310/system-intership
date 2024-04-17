@@ -1,7 +1,15 @@
 # Tìm hiểu về cơ chế NAT
 
 ## Mục lục
-
+1. [Khái quát về cơ chế NAT](#1-khái-quát-về-nat)  
+2. [Phân loại NAT](#2-phân-loại-nat)  
+  2.1 [Static NAT](#21-static-nat)  
+  2.2 [Dynamic NAT](#22-dynamic-nat)
+  2.3 [NAT Overload](#23-pat)  
+3. [SNAT - DNAT là gì?](#3-snat-dnat)  
+  3.1 [SNAT](#31-snat)  
+  3.2 [DNAT](#32-dnat)  
+4. [Cơ chế hoạt động](#4-cơ-chế-hoạt-động)  
 ## 1. Khái quát về NAT
 ![hinhanh1](/LinhNH/07.Timhieu_NAT/images/nat.png)  
 - NAT (Network Address Translation) là kỹ thuật dùng để dịch, chuyển đổi một bộ địa chỉ IP  sang một bộ địa chỉ khác.
@@ -22,11 +30,8 @@
 
 Đây là loại NAT phổ biến được sử dụng để chuyển đổi một địa chỉ IP động trong mạng cục bộ sang một địa chỉ IP công cộng. Trong quá trình chuyển đổi, NAT sẽ tạo ra một bảng ánh xạ động giữa những địa chỉ IP tĩnh và địa chỉ IP công cộng, cho phép những thiết bị trong mạng cục bộ chia sẻ cùng một địa chỉ IP công cộng.
 
-(dynamic NAT: trên router người quản trị cấu hình  1 danh sách các địa chỉ bên trong cần đi ra ngoài và 1 danh sách địa chỉ truy cập từ bên ngoài
-
-access-list -> pool)
-
 => one to one 
+
 ### 2.3 PAT
 ![hinhanh2.3](/LinhNH/07.Timhieu_NAT/images/overloading.png)  
 
@@ -50,8 +55,6 @@ DNAT (Destination Network Address Translation) là một kỹ thuật dịch đ�
 
 ## 4. Cơ chế hoạt động
 
-Vùng local , Vùng mạng server
-Kết nối nối máy 1 tới máy 2 , dùng router chuyển địa chỉ ip máy 1 dành cho pc 2 hiểu
 
 NAT sử dụng IP của chính nó làm IP công cộng cho mỗi máy con (client) với IP riêng. Khi một máy con thực hiện kết nối hoặc gửi dữ liệu tới một máy tính nào đó trên internet, dữ liệu sẽ được gởi tới NAT, sau đó NAT sẽ thay thế địa chỉ IP gốc của máy con đó rồi gửi gói dữ liệu đi với địa chỉ IP của NAT.
 
