@@ -33,6 +33,8 @@
 => one to one 
 
 ### 2.3 PAT
+Nhiều địa chỉ truy cập cùng 1 địa chỉ từ bên ngoài
+
 ![hinhanh2.3](/LinhNH/07.Timhieu_NAT/images/overloading.png)  
 
 NAT Overload (Port Address Translation - PAT), là một dạng của Network Address Translation (NAT) mà cho phép nhiều địa chỉ IP private trong mạng nội bộ được ánh xạ tới một địa chỉ IP public duy nhất bằng cách sử dụng các cổng khác nhau.
