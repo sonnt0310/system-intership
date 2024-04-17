@@ -21,23 +21,23 @@
 ![hinhanh2.1](/LinhNH/07.Timhieu_NAT/images/static.png)  
 
 
-Đây là loại NAT cơ bản nhất và thường được sử dụng để chuyển đổi một địa chỉ IP tĩnh trong mạng cục bộ sang một địa chỉ IP công cộng. Trong quá trình chuyển đổi, một địa chỉ IP tĩnh được ánh xạ với một địa chỉ IP công cộng, giúp thiết lập kết nối đến những thiết bị trong mạng cục bộ từ bên ngoài mạng. (ánh xạ  1:1)
+Đây là loại NAT cơ bản nhất và thường được sử dụng để chuyển đổi một địa chỉ IP private trong mạng cục bộ sang một địa chỉ IP public. Trong quá trình chuyển đổi, một địa chỉ IP private được ánh xạ với một địa chỉ IP public, giúp thiết lập kết nối đến những thiết bị trong mạng cục bộ từ bên ngoài mạng. (ánh xạ  1:1)
 
 => one to one
 
 ### 2.2 Dynamic NAT
 ![hinhanh2.2](/LinhNH/07.Timhieu_NAT/images/dynamic.png)  
 
-Đây là loại NAT phổ biến được sử dụng để chuyển đổi một địa chỉ IP động trong mạng cục bộ sang một địa chỉ IP công cộng. Trong quá trình chuyển đổi, NAT sẽ tạo ra một bảng ánh xạ động giữa những địa chỉ IP tĩnh và địa chỉ IP công cộng, cho phép những thiết bị trong mạng cục bộ chia sẻ cùng một địa chỉ IP công cộng.
+Đây là loại NAT phổ biến được sử dụng để chuyển đổi một địa chỉ IP private trong mạng cục bộ sang một địa chỉ IP public. Trong quá trình chuyển đổi, NAT sẽ tạo ra một bảng ánh xạ động giữa những địa chỉ IP private và địa chỉ IP public, cho phép những thiết bị trong mạng cục bộ chia sẻ cùng một địa chỉ IP public.
 
 => one to one 
 
 ### 2.3 PAT
 ![hinhanh2.3](/LinhNH/07.Timhieu_NAT/images/overloading.png)  
 
-NAT Overload (Port Address Translation - PAT), là một dạng của Network Address Translation (NAT) mà cho phép nhiều địa chỉ IP tĩnh trong mạng nội bộ được ánh xạ tới một địa chỉ IP công cộng duy nhất bằng cách sử dụng các cổng khác nhau.
+NAT Overload (Port Address Translation - PAT), là một dạng của Network Address Translation (NAT) mà cho phép nhiều địa chỉ IP private trong mạng nội bộ được ánh xạ tới một địa chỉ IP public duy nhất bằng cách sử dụng các cổng khác nhau.
 
-Khi một thiết bị trong mạng nội bộ yêu cầu truy cập mạng bên ngoài, router NAT sẽ ánh xạ địa chỉ IP và số cổng của thiết bị nội bộ tới một địa chỉ IP và một số cổng khác nhau trên địa chỉ IP công cộng. Các cổng này được sử dụng để phân biệt các kết nối khác nhau của các thiết bị nội bộ trên cùng một địa chỉ IP công cộng.
+Khi một thiết bị trong mạng nội bộ yêu cầu truy cập mạng bên ngoài, router NAT sẽ ánh xạ địa chỉ IP và số cổng của thiết bị nội bộ tới một địa chỉ IP và một số cổng khác nhau trên địa chỉ IP public. Các cổng này được sử dụng để phân biệt các kết nối khác nhau của các thiết bị nội bộ trên cùng một địa chỉ IP public.
 
 => many to one
 
@@ -56,7 +56,7 @@ DNAT (Destination Network Address Translation) là một kỹ thuật dịch đ�
 ## 4. Cơ chế hoạt động
 
 
-NAT sử dụng IP của chính nó làm IP công cộng cho mỗi máy con (client) với IP riêng. Khi một máy con thực hiện kết nối hoặc gửi dữ liệu tới một máy tính nào đó trên internet, dữ liệu sẽ được gởi tới NAT, sau đó NAT sẽ thay thế địa chỉ IP gốc của máy con đó rồi gửi gói dữ liệu đi với địa chỉ IP của NAT.
+NAT sử dụng IP của chính nó làm IP public cho mỗi máy con (client) với IP riêng. Khi một máy con thực hiện kết nối hoặc gửi dữ liệu tới một máy tính nào đó trên internet, dữ liệu sẽ được gởi tới NAT, sau đó NAT sẽ thay thế địa chỉ IP gốc của máy con đó rồi gửi gói dữ liệu đi với địa chỉ IP của NAT.
 
 ![hinhanh4](/LinhNH/07.Timhieu_NAT/images/coche_hoatdong.png) 
 
