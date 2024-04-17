@@ -22,7 +22,7 @@
 
 Đây là loại NAT phổ biến được sử dụng để chuyển đổi một địa chỉ IP động trong mạng cục bộ sang một địa chỉ IP công cộng. Trong quá trình chuyển đổi, NAT sẽ tạo ra một bảng ánh xạ động giữa những địa chỉ IP tĩnh và địa chỉ IP công cộng, cho phép những thiết bị trong mạng cục bộ chia sẻ cùng một địa chỉ IP công cộng.
 
-(dynamic NAT: trên router người quản trị cấu hình  1 danh sách các địa chỉ bên trong cần đi ra ngoài và 1 danh sách địa chỉ truy cập từ bên n
+(dynamic NAT: trên router người quản trị cấu hình  1 danh sách các địa chỉ bên trong cần đi ra ngoài và 1 danh sách địa chỉ truy cập từ bên ngoài
 
 access-list -> pool)
 
@@ -36,7 +36,7 @@ Khi một thiết bị trong mạng nội bộ yêu cầu truy cập mạng bên
 
 => many to one
 
-## 3. SNAT, DNAT, NAT 1:1
+## 3. SNAT, DNAT
 
 ### 3.1 SNAT
 ![hinhanh3.1](/LinhNH/07.Timhieu_NAT/images/snat.png) 
