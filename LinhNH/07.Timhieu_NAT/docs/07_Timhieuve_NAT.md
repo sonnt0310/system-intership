@@ -57,9 +57,7 @@ DNAT (Destination Network Address Translation) là một kỹ thuật dịch đ�
 
 ## 4. Cơ chế hoạt động
 
-
-Khi một máy tính trên Stub Domain có địa chỉ ip private muốn giao tiếp với địa chỉ bên ngoài mạng (Outsie the network), các gói tin sẽ được chuyển đến một NAT router. NAT sử dụng một địa chỉ IP công cộng (public IP address) để đại diện cho các thiết bị trong mạng nội bộ (private IP address). Lúc này gói tin sẽ được gửi đi với địa chỉ ip của NAT.
-
+Khi một máy con thực hiện kết nối hoặc gửi dữ liệu tới một máy tính nào đó trên internet, các gói tin sẽ được chuyển đến một NAT router. NAT sử dụng một địa chỉ IP công cộng (public IP address) để đại diện cho các thiết bị trong mạng nội bộ (private IP address). Lúc này gói tin sẽ được gửi đi với địa chỉ ip của NAT.
 
 ![hinhanh4](/LinhNH/07.Timhieu_NAT/images/coche_hoatdong.png) 
 
