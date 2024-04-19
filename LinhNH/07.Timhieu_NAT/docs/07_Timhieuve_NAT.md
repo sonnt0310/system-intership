@@ -13,7 +13,7 @@
 ## 1. Khái quát về NAT
 ![hinhanh1](/LinhNH/07.Timhieu_NAT/images/nat.png)  
 - NAT (Network Address Translation) là kỹ thuật dùng để dịch, chuyển đổi một bộ địa chỉ IP  sang một bộ địa chỉ khác.
-- Để giúp bảo toàn lượng ipv4 public có giới hạn trên toàn thế giới.
+- Để giúp bảo toàn lượng ipv4 public có giới hạn trên toàn thế giới (NAT có thể chia sẻ kết nối internet cho nhiều máy tính, thiết bị di động khác nhau trong mạng LAN chỉ với một địa chỉ IP public duy nhất).
 ## 2. Phân loại NAT
 ![hinhanh2](/LinhNH/07.Timhieu_NAT/images/phanloai.png)  
 
