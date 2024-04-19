@@ -89,12 +89,6 @@ Người dùng qua internet truy cập máy chủ web được lưu trữ trong 
 |Thay đổi địa chỉ | thay đổi địa chỉ nguồn của gói đi qua thiết bị NAT| thay đổi địa chỉ đích của gói đi qua Router|
 |Đơn/đa máy chủ| cho phép nhiều máy chủ bên trong mạng truy cập vào bất ký máy chủ nào bên ngoài| cho phép máy chủ bên ngoài truy cập vào một máy chủ bên trong|
 
-
-### 2.6.NAT 1:1
-
-NAT 1:1 ánh xạ địa chỉ IP bên ngoài (thường là public) thành địa chỉ IP nội bộ (thường là private)
-
-
 ### 3.Cơ chế hoạt động
 
 NAT sử dụng IP của chính nó làm IP công cộng cho mỗi máy con (client) với IP riêng. Khi một máy con thực hiện kết nối hoặc gửi dữ liệu tới một máy tính nào đó trên Internet, dữ liệu sẽ được gửi tới NAT, sau đó NAT sẽ thay thế địa chỉ IP gốc của máy con đó rồi gửi gói dữ liệu đi với địa chỉ IP của NAT. Máy tính từ xa hoặc máy tính nào đó trên Internet khi nhận được tín hiệu sẽ gửi gói tin trở về cho NAT computer bởi chúng nghĩ rằng NAT computer là máy đã gửi những gói dữ liệu đi. NAT ghi lại bảng thông tin của những máy tính đã gửi những gói thông tin ra ngoài trên mỗi cổng dịch vụ và gửi những gói tin nhận được về đúng client đó.
