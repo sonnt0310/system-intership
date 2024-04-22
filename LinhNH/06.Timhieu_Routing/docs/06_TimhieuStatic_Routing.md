@@ -20,7 +20,6 @@
 
 - Thông tin về những con đường này có thể được cập nhật tự động từ các router khác hoặc là do người quản trị mạng chỉ định cho router. Sau khi router nhận gói tin, thì router sẽ gỡ bỏ phần header lớp 2 để tìm địa chỉ đích thuộc lớp 3. Sau khi đọc xong địa chỉ đích lớp 3 nó tìm kiếm trong Routing Table cho mạng chứa địa chỉ đích.
 
-- Giao thức định tuyến
 
 Bảng định tuyến của mỗi giao thức định tuyến là khác nhau, nhưng có thể bao gồm những thông tin sau:
 
@@ -58,19 +57,19 @@ Bộ định tuyến chuyển tiếp dữ liệu đến thiết bị tiếp theo
 ![hinh_1.3](/LinhNH/06.Timhieu_Routing/images/hoatdong.png)
 
 
-Khi gửi đi một gói dữ liệu từ một máy tính này sang một máy tính khác, đầu tiên quá trình sẽ xác định xem gói dữ liệu được gửi nội bộ đến máy tính khác trên cùng LAN hay đến Router để định tuyến đến LAN đích.
+- Khi gửi đi một gói dữ liệu từ một máy tính này sang một máy tính khác, đầu tiên quá trình sẽ xác định xem gói dữ liệu được gửi nội bộ đến máy tính khác trên cùng LAN hay đến Router để định tuyến đến LAN đích.
 
-Nếu gói dữ liệu được gửi đến một máy tính nằm trong một LAN khác, nó sẽ được gửi đến Router (hoặc gateway). Sau đó Router sẽ xác định tuyến khả thi nhất để chuyển tiếp dữ liệu theo tuyến đó. Gói dữ liệu sẽ được gửi đến Router tiếp theo và quá trình như vậy được lặp lại cho tới khi nó đến được LAN đích.
+- Nếu gói dữ liệu được gửi đến một máy tính nằm trong một LAN khác, nó sẽ được gửi đến Router (hoặc gateway). Sau đó Router sẽ xác định tuyến khả thi nhất để chuyển tiếp dữ liệu theo tuyến đó. Gói dữ liệu sẽ được gửi đến Router tiếp theo và quá trình như vậy được lặp lại cho tới khi nó đến được LAN đích.
 
-Ở Lan đích, Router đích sẽ chuyển tiếp gói dữ liệu này đến máy tính đích. Để xác định xem tuyến nào là tốt nhất, các Router sử dụng thuật toán định tuyến phức tạp, thuật toán này sử dụng một loạt các hệ số gồm có tốc độ của môi trường truyền dẫn, số đoạn mạng và đoạn mạng có khả năng chuyển tải lưu lượng ở mức độ tối thiểu.
+- Ở Lan đích, Router đích sẽ chuyển tiếp gói dữ liệu này đến máy tính đích. Để xác định xem tuyến nào là tốt nhất, các Router sử dụng thuật toán định tuyến phức tạp, thuật toán này sử dụng một loạt các hệ số gồm có tốc độ của môi trường truyền dẫn, số đoạn mạng và đoạn mạng có khả năng chuyển tải lưu lượng ở mức độ tối thiểu.
 
-Các Router sẽ chia sẻ trạng thái và các thông tin định tuyến cho nhau để chúng có thể quản lý lưu lượng và tránh được các kết nối chậm.
+- Các Router sẽ chia sẻ trạng thái và các thông tin định tuyến cho nhau để chúng có thể quản lý lưu lượng và tránh được các kết nối chậm.
 
 ### 1.4 Phân loại định tuyến
 
 ![hinh_1.4](/LinhNH/06.Timhieu_Routing/images/phanloai.png)
 
- Routing được chia làm 2 phương thức chính là Static Routing và Dynamic Routing.
+__Routing được chia làm 2 phương thức chính là Static Routing và Dynamic Routing.__
 
 - Static Routing (Định tuyến tĩnh)
 
@@ -84,15 +83,7 @@ Trong định tuyến động, các bộ định tuyến tạo và cập nhật 
 
 Lợi thế lớn nhất của định tuyến động là khả năng thích ứng với các điều kiện mạng thay đổi, bao gồm lưu lượng truy cập, băng thông và lỗi mạng.
 
-__Giao thức định tuyến__
-
-
-
 ### 1.5 Thuật toán định tuyến
-
-
-
-
 ## 2. Tìm hiểu về Static Routing
 
 _Static routing là phương thức định tuyến mà người quản trị sẽ nhập tất cả thông tin về đường đi cho router. Khi cấu trúc hệ thống mạng có bất kỳ sự thay đổi nào thì người quản trị sẽ thay đổi bằng cách xóa hay thêm các thông tin về đường đi cho router, nói cách khác đường đi này là cố định._
