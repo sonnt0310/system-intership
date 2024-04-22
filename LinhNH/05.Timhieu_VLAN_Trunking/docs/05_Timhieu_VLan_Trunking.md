@@ -14,7 +14,6 @@
     3.4 [Hub](#34-hub)  
     3.5 [Gateway](#35-gateway)
 
-
 ## 1. VLAN
 ### 1.1 Tìm hiểu khái quát về VLAN
 ![hinh_1](/LinhNH/05.Timhieu_VLAN_Trunking/images/VLAN.png)
@@ -23,11 +22,10 @@
 
 ___Khi nào bạn cần một VLAN ?___  
 Bạn cần cân nhắc việc sử dụng VLAN trong các trường hợp sau đây:
-
 - Bạn có hơn 200 máy tính trong mạng LAN
 - Lưu lượng quảng bá (broadcast traffic) trong mạng LAN của bạn quá lớn
 - Các nhóm làm việc cần gia tăng bảo mật hoặc bị làm chậm vì quá nhiều bản tin quảng bá.
-- Các nhóm làm việc cần nằm trên cùng một miền quảng bá vì họ đang dùng chung các ứng dụng. Ví dụ như một công ty sử dụng điện thoại VoIP. Một số người muốn sử dụng điện thoại có thể thuộc một mạng VLAN khác, không cùng với người dùng thường xuyên.
+- Các nhóm làm việc cần nằm trên cùng một miền quảng bá vì họ đang dùng chung các ứng dụng.
 - Hoặc chỉ để chuyển đổi một switch đơn thành nhiều switch ảo.
 ### 1.2. Phân loại VLAN   
 Có 3 loại VLAN, bao gồm:  
