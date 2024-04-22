@@ -107,7 +107,6 @@ Bảng so sánh:
 |Quy tắc | Địa chỉ IP Public có thể hoạt động khác nhau theo một quy luật đồng nhất hay không đồng nhất | Địa chỉ IP Private sẽ được kết nối khác nhau trong mạng, nhưng vẫn tuân thủ theo một quy luật thống nhất |
 |Phạm vi| Trừ một số địa chỉ nằm trong IP Private, phần còn lại sẽ là IP Public| 10.0.0.0 đến 10.255.255.255 / 172.16.0.0 đến 172.31.255.255 / 192.168.0.0 đến 192.168.255.255 |
                            
-## 7.Cách chia địa chỉ IPv4
 
 
 ## 8.Phân biệt multicast và broadcast

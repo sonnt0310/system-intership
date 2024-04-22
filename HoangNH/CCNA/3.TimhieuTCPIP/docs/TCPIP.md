@@ -60,7 +60,6 @@ Các giao thức phổ biến:
  
 ## 3. So sánh với mô hình OSI
 
-
 ![sosanh](/HoangNH/3.TimhieuTCPIP/image/sosanh.avif)
 
 ### 3.1.Điểm giống nhau
