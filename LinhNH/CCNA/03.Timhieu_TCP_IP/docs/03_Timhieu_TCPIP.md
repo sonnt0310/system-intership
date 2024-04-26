@@ -16,7 +16,7 @@
 ## 1. Khái quát về mô hìnhTCP/IP
 - **`TCP/IP`**  (Transmission Control Protocol/ Internet Protocol) là giao thức điều khiển để truyền nhận liên mạng. Đây là một bộ giao thức có chức năng truyền và kết nối các thông tin giữa các thiết bị trong một mạng lưới internet.
 
-![hinh_1](/LinhNH/03.Timhieu_TCP_IP/images/TcpIP.png)
+![hinh_1](/LinhNH/CCNA/03.Timhieu_TCP_IP/images/TcpIP.png)
 - **`Chức năng hoạt động`**
     - ***TCP*** : Giao thức kiểm soát truyền tải.
     
@@ -31,7 +31,7 @@
 
 > Phần header: có 11 trường trong đó 10 trường bắt buộc. Trường thứ 11 là tùy chọn (trong bảng minh họa có màu nền đỏ)
 
-![hinh_1](/LinhNH/03.Timhieu_TCP_IP/images/Cau-truc-goi-tin-TCP.png)
+![hinh_1](/LinhNH/CCNA/03.Timhieu_TCP_IP/images/Cau-truc-goi-tin-TCP.png)
 
 - Source port (16 bit): số cổng của tiến trình gửi
 - Destination port (16 bit): số cổng của tiến trình nhận
@@ -57,7 +57,7 @@ Tầng 2: Tầng mạng (Internet)
 Tầng 3: Tầng giao vận (Transport)  
 Tầng 4: Tầng ứng dụng (Application)      
 
-![hinh_2](/LinhNH/03.Timhieu_TCP_IP/images/Layer.png)
+![hinh_2](/LinhNH/CCNA/03.Timhieu_TCP_IP/images/Layer.png)
 ### 2.1 Tầng vật lý
 - Đây là tầng thấp nhất trong mô hình TCP/IP, đóng vai trò truyền dữ liệu giữa 2 thiết bị trong cùng 1 mạng. Ở tầng này, toàn bộ gói dữ liệu sẽ được đóng vào khung (Frame) và được định tuyến đi đến đích đã được chỉ định ban đầu.  
 -  Lớp này là một nhóm phương thức vận hành trên một kết nối của máy chủ, thường được biết đến là Ethernet.
@@ -94,16 +94,16 @@ Lớp truyền tải sẽ phụ trách luồng dữ liệu giữa 2 trạm thự
 #### b. HTTPS
 - HTTPS là một giao thức của TCP/IP, nó có sự kết hợp giữa SSL và TLS. HTTPS được sử dụng phổ biến khi muốn gửi dữ liệu cần bảo mật cao như thẻ tín dụng, dữ liệu cá nhân từ một website đến một web server.
 
-![hinh_2.5](/LinhNH/03.Timhieu_TCP_IP/images/Giao-thuc-http-https.png)
+![hinh_2.5](/LinhNH/CCNA/03.Timhieu_TCP_IP/images/Giao-thuc-http-https.png)
 
 
 #### c. FTP
 - FTP là một giao thức của TCP/IP, được sử dụng để trao đổi dữ liệu giữa hai hoặc nhiều máy tính qua internet. FTP hoạt động trên hai cổng là 20 và 21. Nhờ FTP, các máy client trong mạng có khả năng truy cập đến máy chủ để gửi và lấy dữ liệu. Điểm đặc biệt của giao thức này là giúp người dùng dù đang ở xa vẫn có thể truy cập vào máy chủ để truyền hoặc nhận dữ liệu.
 
-![hinh_2.5](/LinhNH/03.Timhieu_TCP_IP/images/Giao-thuc-ftp.png)
+![hinh_2.5](/LinhNH/CCNA/03.Timhieu_TCP_IP/images/Giao-thuc-ftp.png)
 
 ## 3. So sánh giữa mô hình OSI và TCP/IP
-![hinh_3](/LinhNH/03.Timhieu_TCP_IP/images/So-sanh-osi-tcp-ip.png)
+![hinh_3](/LinhNH/CCNA/03.Timhieu_TCP_IP/images/So-sanh-osi-tcp-ip.png)
 
 `Giống nhau` :  
 - Cả 2 đều sử dụng mô hình kiến trúc phân lớp  
@@ -133,7 +133,7 @@ _Khi A gửi một dữ liệu (thông tin) đến B thì sẽ trải qua quá t
 - **Bước 2:** Máy chủ B nhận gói và phản hồi bằng số thứ tự của chính nó. Phản hồi cũng bao gồm số xác nhận, là số thứ tự của Máy chủ A được tăng thêm 1 (ví dụ như: 5433).  
 - **Bước 3:** Máy chủ A xác nhận phản hồi của Máy chủ B bằng cách gửi số xác nhận, là số thứ tự của Máy chủ B tăng thêm 1.  
 
-![hinh_4](/LinhNH/03.Timhieu_TCP_IP/images/Workflow-tcp-ip.png)
+![hinh_4](/LinhNH/CCNA/03.Timhieu_TCP_IP/images/Workflow-tcp-ip.png)
 
 **`Thiết lập kết nối (Connection Establishment):`**  
 Một thiết bị (được gọi là người gửi) gửi một thông điệp SYN (synchronize) đến thiết bị đích (được gọi là người nhận) để bắt đầu quá trình thiết lập kết nối.
@@ -159,7 +159,7 @@ Người nhận sẽ gửi một ACK để xác nhận việc nhận thông đi�
 Sau đó, người nhận sẽ gửi một thông điệp FIN để yêu cầu đóng kết nối từ phía người gửi.
 Cuối cùng, người gửi sẽ gửi một ACK xác nhận việc nhận thông điệp FIN từ người nhận. Kết nối được đóng.
 
-![hinh_4](/LinhNH/03.Timhieu_TCP_IP/images/Workflow-TCPIP.png)
+![hinh_4](/LinhNH/CCNA/03.Timhieu_TCP_IP/images/Workflow-TCPIP.png)
 
 ## 5. Phân biệt giao thức UDP và TCP
 ### 5.1 Tổng quan về giao thức UDP
@@ -167,7 +167,7 @@ Cuối cùng, người gửi sẽ gửi một ACK xác nhận việc nhận thô
 **UDP** (User Datagram Protocol) – Giao thức dữ liệu người dùng là một giao thức giao tiếp thay thế cho TCP – 
 giao thức kiểm soát đường truyền, được sử dụng chủ yếu để thiết lập các kết nối có độ trễ thấp và không chịu lỗi giữa các ứng dụng trên internet.  
 #### b. Cấu trúc gói tin UDP  
-![hinh_5.1](/LinhNH/03.Timhieu_TCP_IP/images/Cautruc-UDP.png)
+![hinh_5.1](/LinhNH/CCNA/03.Timhieu_TCP_IP/images/Cautruc-UDP.png)
 - **Port nguồn** (Source Port) (2 byte)  
 Đây là số cổng của máy gửi dữ liệu. Số cổng này xác định ứng dụng nguồn mà dữ liệu đang được gửi.  
 - **Port đích** (Destination Port) (2 byte)  
@@ -185,9 +185,9 @@ Giao thức UDP hoạt động như sau:
 - **Gửi datagram tới tầng mạng:** Giao thức UDP sẽ gửi datagram tới tầng mạng.    
 - **Gửi datagram tới máy tính nhận:** Tầng mạng sẽ gửi datagram tới máy tính nhận.      
 - **Nhận dữ liệu:** Khi máy tính nhận nhận được datagram, nó sẽ gọi hàm của giao thức UDP để nhận dữ liệu.  
-![hinh_5.1](/LinhNH/03.Timhieu_TCP_IP/images/UDP.png)
+![hinh_5.1](/LinhNH/CCNA/03.Timhieu_TCP_IP/images/UDP.png)
 ### 5.2 So sánh giữa UDP - TCP
-![hinh_5.2](/LinhNH/03.Timhieu_TCP_IP/images/So-sanh-tcp-udp.png)  
+![hinh_5.2](/LinhNH/CCNA/03.Timhieu_TCP_IP/images/So-sanh-tcp-udp.png)  
 **_Bảng so sánh_**
 |Tính năng|TCP|UDP|  
 |:--------------|:-----------|:------|
