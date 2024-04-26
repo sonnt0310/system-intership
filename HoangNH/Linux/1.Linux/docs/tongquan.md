@@ -6,7 +6,7 @@ Linux là một hệ điều hành mã nguồn mở phổ biến, được phát
 
 ## 2.Cấu trúc thư mục trong Linux
 
-![image1](/HoangNH/Linux/1.Tổng quan/image/tree.jpg)
+![image1](/HoangNH/Linux/1.Linux/image/tree.jpg)
 
 ### 2.1./ - Root : Thư mục gốc
 
@@ -162,7 +162,7 @@ Các nhánh distro phổ biến:
 
 Debian:
 
-![image2](/HoangNH/Linux/1.Tổng quan/image/debian.png)
+![image2](/HoangNH/Linux/1.Linux/image/debian.png)
 
 - Là một bản phân phối phi thương mại và là một trong những bản phân phối ra đời sớm nhất, duy trì bởi một cộng đồng phát triển tình nguyện với một cam kết mạnh mẽ cho nguyên tắc phần mềm miễn phí và quản lý dự án dân chủ.
 - Có 3 dạng khác nhau:
@@ -180,7 +180,7 @@ Debian:
 
 Fedora:
 
-![image3](/HoangNH/Linux/1.Tổng quan/image/fedora.jpg)
+![image3](/HoangNH/Linux/1.Linux/image/fedora.jpg)
 
 - Là một bản phân phối cộng đồng được "đỡ đầu" bởi một công ty của Mỹ - Red Hat. Nó được tạo ra nhằm kiểm thử các công nghệ cho một bản phân phối thương mại khác của Red Hat - nơi mà các phần mềm nguồn mở mới được tạo lập, phát triển và kiểm thử trong môi trường cộng đồng trước khi được đưa vào Red Hat Enterprise Linux.
 - Chu kì ra phiên bản mới của Fedora là 6 tháng. Phiên bản mới với các tính năng bảo mật mà các chuyên gia đánh giá khá tốt.
