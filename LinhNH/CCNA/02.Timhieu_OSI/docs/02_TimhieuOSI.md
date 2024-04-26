@@ -15,10 +15,10 @@
 ## 1. Khái quát về mô hình OSI
 **Mô hình OSI** (_Open Systems Interconnection_) là một mô hình tham chiếu để mô tả cách mà các hệ thống mạng giao tiếp với nhau. Mô hình OSI phân chia quá trình giao tiếp mạng thành các tầng độc lập nhằm tăng tính tương thích và tách biệt giữa các phần của một hệ thống mạng.  
 
-![hinh_0](/LinhNH/02.Timhieu_OSI/images/Mo_hinh_OSI.png)  
+![hinh_0](/LinhNH/CCNA/02.Timhieu_OSI/images/Mo_hinh_OSI.png)  
 Mô hình OSI phân chia quá trình truyền thông mạng thành 7 tầng khác nhau. Mỗi tầng có chức năng và nhiệm vụ riêng, đồng thời tương tác với nhau để đảm bảo việc truyền thông dữ liệu hiệu quả.   
 
-![hinh_1](/LinhNH/02.Timhieu_OSI/images/Layer.png)
+![hinh_1](/LinhNH/CCNA/02.Timhieu_OSI/images/Layer.png)
 
 ## 2. Các tầng trong mô hình OSI
 
@@ -26,7 +26,7 @@ Mô hình OSI phân chia quá trình truyền thông mạng thành 7 tầng khá
 
 - __Tầng Vật lý__ (Physical Layer) là tầng thấp nhất trong các tầng OSI, đảm bảo việc truyền dữ liệu qua môi trường vật lý và không quan tâm đến nội dung hay ý nghĩa của dữ liệu. Nó tạo ra một đường truyền vật lý ổn định và đáng tin cậy để các tầng cao hơn có thể gửi và nhận các gói tin dữ liệu.  
 
-![hinh_2.1](/LinhNH/02.Timhieu_OSI/images/Physical_Layer.png)
+![hinh_2.1](/LinhNH/CCNA/02.Timhieu_OSI/images/Physical_Layer.png)
 
 - Nhiệm vụ của tầng Vật lý bao gồm:
   - __Truyền dữ liệu__: Tầng Vật lý biến các bit thành tín hiệu vật lý để truyền qua các phương tiện truyền thông như cáp đồng trục, cáp xoắn đôi, cáp quang hay sóng vô tuyến. Nó xác định các quy tắc về tốc độ truyền, đồng bộ hóa, kích thước khung dữ liệu, phạm vi tín hiệu và các thông số vật lý khác.
@@ -40,7 +40,7 @@ Mô hình OSI phân chia quá trình truyền thông mạng thành 7 tầng khá
   - __Lớp LLC__ (Logical Link Control): Lớp LLC quản lý các quy tắc truyền thông đồng bộ và không đồng bộ, kiểm soát lỗi và kiểm tra tính toàn vẹn của dữ liệu. Nó đảm bảo việc truyền thông tin một cách tin cậy giữa các điểm cuối trên cùng một mạng liên kết.
   - __Lớp MAC__ (Media Access Control): Lớp MAC xác định cách truy cập vào phương tiện truyền thông chia sẻ, chẳng hạn như mạng LAN Ethernet. Nó quản lý việc gán địa chỉ vật lý (MAC address) cho các thiết bị mạng và xử lý việc truyền dữ liệu giữa các đầu cuối trên cùng một mạng.
 
-![hinh_2.2](/LinhNH/02.Timhieu_OSI/images/DataLink_Layer.png)
+![hinh_2.2](/LinhNH/CCNA/02.Timhieu_OSI/images/DataLink_Layer.png)
 
 
 - Tầng Liên kết dữ liệu có các chức năng quan trọng sau:
@@ -52,7 +52,7 @@ Mô hình OSI phân chia quá trình truyền thông mạng thành 7 tầng khá
 ### 2.3 Tầng mạng (Network layer)
 - Network layer là gì? Tầng Mạng (Network Layer) là tầng thứ ba trong mô hình OSI. Tầng này có trách nhiệm quản lý việc định tuyến và chuyển tiếp dữ liệu giữa các mạng khác nhau trong hệ thống mạng. Tầng Mạng cung cấp các dịch vụ cho tầng trên là tầng Giao vận và tầng dưới là tầng Liên kết dữ liệu.
 
-![hinh_2.3](/LinhNH/02.Timhieu_OSI/images/Network_Layer.png)
+![hinh_2.3](/LinhNH/CCNA/02.Timhieu_OSI/images/Network_Layer.png)
 - Tầng Mạng là tầng quan trọng trong mô hình OSI, vì nó đảm bảo việc định tuyến và chuyển tiếp dữ liệu giữa các mạng khác nhau. Các chức năng quan trọng của tầng Mạng bao gồm:
   - __Định tuyến__ (Routing): Tầng Mạng xác định đường đi tốt nhất cho việc truyền gói tin từ nguồn đến đích qua các mạng khác nhau. Nó sử dụng các thuật toán định tuyến như RIP (Routing Information Protocol) và OSPF (Open Shortest Path First) để quyết định đường đi tối ưu.
   - __Chuyển tiếp__ (Forwarding): Tầng Mạng thực hiện chuyển tiếp gói tin từ đầu vào đến đầu ra thông qua các thiết bị định tuyến (router). Các thiết bị định tuyến sử dụng bảng định tuyến để xác định cách chuyển tiếp gói tin đến đích.
@@ -62,7 +62,7 @@ Mô hình OSI phân chia quá trình truyền thông mạng thành 7 tầng khá
 ### 2.4 Tầng giao vận (Transport layer)
  - Tầng Giao vận là tầng thứ tư trong mô hình OSI, có trách nhiệm dữ liệu truyền đi là đáng tin cậy. Nó tạo điều kiện cho việc giao tiếp hiệu quả và đáng tin cậy giữa các ứng dụng, bất kể sử dụng các mạng hoặc thiết bị khác nhau.
 
-![hinh_2.4](/LinhNH/02.Timhieu_OSI/images/Transport_Layer.png)
+![hinh_2.4](/LinhNH/CCNA/02.Timhieu_OSI/images/Transport_Layer.png)
 
  - Các chức năng quan trọng của tầng Giao vận bao gồm:
 
@@ -74,7 +74,7 @@ Mô hình OSI phân chia quá trình truyền thông mạng thành 7 tầng khá
 ### 2.5 Tầng phiên (Session layer)
  - Tầng Phiên là tầng thứ năm trong mô hình mạng OSI . Tầng này có trách nhiệm thiết lập, duy trì và kết thúc các phiên (sessions) giao tiếp giữa các ứng dụng trên mạng. Nó tạo ra một môi trường nhất quán cho việc thiết lập và duy trì phiên giao tiếp, đồng bộ hóa dữ liệu và chấm dứt phiên.
 
-![hinh_2.5](/LinhNH/02.Timhieu_OSI/images/Session_Layer.png)
+![hinh_2.5](/LinhNH/CCNA/02.Timhieu_OSI/images/Session_Layer.png)
 
 - Các chức năng quan trọng của tầng Phiên bao gồm:
 
@@ -86,7 +86,7 @@ Mô hình OSI phân chia quá trình truyền thông mạng thành 7 tầng khá
 ### 2.6 Tầng trình diễn (Presentation layer)
 - Tầng Trình diễn là tầng thứ sáu trong mô hình OSI. Tầng này đảm nhiệm vai trò chuyển đổi và xử lý dữ liệu từ định dạng của ứng dụng thành định dạng chuẩn để truyền qua mạng và ngược lại. Nó cung cấp các dịch vụ và các cơ chế chuyển đổi, mã hóa, nén và định dạng dữ liệu để đảm bảo rằng dữ liệu được truyền và nhận một cách chính xác, an toàn và hiệu quả.
 
-![hinh_2.6](/LinhNH/02.Timhieu_OSI/images/Presentation_Layer.png)
+![hinh_2.6](/LinhNH/CCNA/02.Timhieu_OSI/images/Presentation_Layer.png)
 
 - Các chức năng chính của tầng Trình diễn bao gồm:
   - __Mã hóa/ Giải mã__ (Encryption/Decryption): Tầng Trình diễn có khả năng mã hóa dữ liệu trước khi truyền và giải mã dữ liệu khi nhận. Điều này đảm bảo tính bảo mật trong quá trình truyền dữ liệu trên mạng.
@@ -97,7 +97,7 @@ Mô hình OSI phân chia quá trình truyền thông mạng thành 7 tầng khá
 ### 2.7 Tầng ứng dụng (Application layer)
 - Tầng Ứng dụng (Application layer) là tầng cuối cùng và cao nhất trong mô hình OSI. Nó cung cấp giao diện giữa người dùng và mạng, cho phép người dùng truy cập vào các dịch vụ mạng và thực hiện các hoạt động liên quan đến ứng dụng.
 
-![hinh_2.7](/LinhNH/02.Timhieu_OSI/images/Application_Layer.png)
+![hinh_2.7](/LinhNH/CCNA/02.Timhieu_OSI/images/Application_Layer.png)
 
 - Tầng Ứng dụng bao gồm nhiều giao thức và dịch vụ như truyền tệp, truyền thư điện tử (email), truyền dữ liệu web, truyền dữ liệu đa phương tiện và nhiều ứng dụng khác. Một số giao thức và dịch vụ phổ biến tại tầng này bao gồm:
 
@@ -110,7 +110,7 @@ Mô hình OSI phân chia quá trình truyền thông mạng thành 7 tầng khá
 
  ***__Tổng kết__***
 
-![hinh_2.7](/LinhNH/02.Timhieu_OSI/images/Tong_ket.png)
+![hinh_2.7](/LinhNH/CCNA/02.Timhieu_OSI/images/Tong_ket.png)
 
 
 ## 3. Workflow với mô hình OSI
@@ -118,7 +118,7 @@ _Khi A gửi một dữ liệu (thông tin) đến B thì dữ liệu sẽ trả
 
 ### Phía máy gửi: Quá trình đóng gói tại trạm gửi (Data Encapsulation)
 
-![hinh_3.1](/LinhNH/02.Timhieu_OSI/images/Phia_may_gui.png)
+![hinh_3.1](/LinhNH/CCNA/02.Timhieu_OSI/images/Phia_may_gui.png)
 
 - __Bước 1__: Trình ứng dụng (bên A) tạo ra dữ liệu và các chương trình phần cứng, phần mềm cài đặt mỗi lớp sẽ bổ sung vào header
 - __Bước 2__: Tiếp theo các thông tin đó được chuyển xuống lớp Presentation để chuyển thành dạng chung, rồi mã hoá và nén dữ liệu. Tiếp đó dữ liệu được chuyển xuống lớp Session để bổ sung các thông tin về phiên giao dịch này.
@@ -129,7 +129,7 @@ _Khi A gửi một dữ liệu (thông tin) đến B thì dữ liệu sẽ trả
 
 ### Phía máy nhận: Quá trình mở gói dữ liệu (Data De-encapsulation)
 
-![hinh_3.2](/LinhNH/02.Timhieu_OSI/images/Phia_may_nhan.png)
+![hinh_3.2](/LinhNH/CCNA/02.Timhieu_OSI/images/Phia_may_nhan.png)
 
 - __Bước 1__: Lớp Physical kiểm tra quá trình đồng bộ bit và đặt chuỗi bit nhận được vào vùng đệm. Sau đó thông báo cho lớp Data Link dữ liệu đã được nhận.
 - __Bước 2__: Lớp DataLink kiểm lỗi frame. Nếu có lỗi thì frame bị bỏ. Sau đó kiểm tra địa chỉ lớp DataLink (địa chỉ mac) xem có trùng với địa chỉ máy nhận hay không. Nếu đúng thì phần dữ liệu sau khi loại header sẽ được chuyển lên cho lớp Network.
