@@ -173,7 +173,6 @@ OUTPUT
 |Lò a hính|Nữ|Ê đê|
 
 #### 2.6) Gạch ngang chữ
-
 Cú pháp: Sử dụng cặp dấu ~~ ở đầu (hoặc đầu và cuối câu) nếu muốn gạch ngang giữa chữ của câu đó.
 
 Ví dụ:   
