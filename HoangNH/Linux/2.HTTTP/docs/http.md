@@ -1,2 +1,0 @@
-# Tìm hiểu về HTTP
-
