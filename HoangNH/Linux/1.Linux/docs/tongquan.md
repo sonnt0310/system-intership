@@ -116,7 +116,6 @@ Linux là một hệ điều hành mã nguồn mở phổ biến, được phát
 
 ## 4.Linux command
 
-
 Linux command là một chương trình hoặc tiện ích chạy trên dòng lệnh. Dòng lệnh là giao diện chấp nhận các dòng văn bản và xử lý chúng thành hướng dẫn cho máy tính của bạn.
 
 Một số Linux command phổ biến:
