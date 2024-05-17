@@ -267,9 +267,51 @@ Lệnh man, viết tắt của manual, phục vụ một hệ thống tài liệ
 
 ![image49](/HoangNH/Linux/1.Linux/image/tail4.png)
 
-## 14.
+## 14.grep
 
+- Tìm kiếm chuỗi trong 1 file:
 
+![image50](/HoangNH/Linux/1.Linux/image/grep1.png)
 
+- Tìm kiếm trong nhiều file:
 
+![image51](/HoangNH/Linux/1.Linux/image/grep2.png)
+
+- Tìm kiếm chuỗi sử dụng biểu thức chính quy:
+
+  - `^`: tìm kiếm chuỗi bắt đầu bằng 1 ký tự nào đó
+
+![image52](/HoangNH/Linux/1.Linux/image/grep3.png)
+
+  - `$`: tìm kiếm chuỗi kết thúc bằng 1 ký tự nào đó
+
+![image53](/HoangNH/Linux/1.Linux/image/grep4.png)
+
+  -`[]`: chỉ định ký tự bất kỳ trong ngoặc
+
+![image54](/HoangNH/Linux/1.Linux/image/grep5.png)
+
+  - `.`: đại diện cho bất kỳ ký tự nào
+
+![image55](/HoangNH/Linux/1.Linux/image/grep6.png)
+
+- Tìm kiếm trong tất cả các file và thư mục: `grep -r "chuỗi" [directory]
+- Hiển thị dòng trước/sau của chuỗi tìm kiếm: -A là dòng trước, -B là dòng sau
+
+![image56](/HoangNH/Linux/1.Linux/image/grep7.png)
+
+- Tìm kiếm chuỗi không có từ khóa cụ thể
+
+![image57](/HoangNH/Linux/1.Linux/image/grep8.png)
+
+- Đếm số lần xuất hiện của chuỗi:  `grep -c "chuỗi" [filename]`
+- Hiển thị số thứ tự dòng chứa chuỗi kết quả: `grep -n "chuỗi" [filename]`
+
+## 15.find
+
+- Cú pháp: `find [path] [options] [expression]`
+- Tìm file theo tên ở thư mục hiện tại: `find . -name [filename]`
+- Tìm file trong thư mục cụ thể: `find [directory] -name [filename]`
+
+![image58](/HoangNH/Linux/1.Linux/image/find1.png)
 
