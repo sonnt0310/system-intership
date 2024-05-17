@@ -161,5 +161,115 @@ Khi thư mục trống:
 
 ## 8.mv
 
-- Chuyển file vào thư mục:
+- Cú pháp: mv [OPTIONS] SOURCE DESTINATION
+- Các options:
+   - -i: hỏi xác nhận trước khi ghi đè
+   - -v: ghi lại bản ghi của hoạt động
+   - -b: tạo một bản backup trước khi ghi đè
+
+![image32](/HoangNH/Linux/1.Linux/image/mv1.png)
+
+## 9.man
+
+Lệnh man, viết tắt của manual, phục vụ một hệ thống tài liệu tích hợp cung cấp thông tin về các lệnh, chức năng, và tệp cấu hình Linux khác.
+
+-  `man ls`:
+
+![image33](/HoangNH/Linux/1.Linux/image/man1.png)
+
+- Khi muốn thoát khỏi lệnh man, ấn q.
+
+## 10.touch
+
+- Cú pháp: touch [options] [filename]
+- option -a: tạo tệp mới và gán thời gian
+- -m: thay đổi thời gian sửa đổi
+
+![image34](/HoangNH/Linux/1.Linux/image/touch1.png)
+
+- -c: Đổi Access Time mà không phải tạo file mới
+- -t: đặt thời gian truy cập và chỉnh sửa đến một ngày giờ nhất định
+
+`touch -t YYMMDDhhmm.ss [filename]`
+
+![image35](/HoangNH/Linux/1.Linux/image/touch2.png)
+
+- -d: đặt ngày giờ bằng chuỗi
+
+![image36](/HoangNH/Linux/1.Linux/image/touch3.png)
+
+## 11.cat
+
+- Cú pháp: cat [options] [filename]
+-  `cat > [filename]`: tạo file mới và điền nội dung vào file. Ấn Ctrl+D để thoát file.
+- `cat [filename]`: xem nội dung file
+
+![image37](/HoangNH/Linux/1.Linux/image/cat1.png)
+
+- `cat [file1] > [file2]`: chuyển hướng nội dung file. Nếu file đích không có sẵn, lệnh này sẽ tự tạo file đó ra. Hoặc ghi đè lên file có cùng tên.
+
+![image38](/HoangNH/Linux/1.Linux/image/cat2.png)
+
+- `cat -n [filename]`: hiện thị số dòng
+
+![image39](/HoangNH/Linux/1.Linux/image/cat3.png)
+
+- -v: hiển thị tất cả những ký tự không in được
+- -T: hiển thị ký tự dấu tab
+- -s: cắt bớt dòng trống
+- -b: hiển thị những dòng không trống với số dòng trước nó
+
+## 12.head
+
+- In ra 10 dòng đầu của file:
+
+![image40](/HoangNH/Linux/1.Linux/image/head1.png)
+
+- In ra n dòng đầu: -n <số dòng>
+
+![image40](/HoangNH/Linux/1.Linux/image/head2.png)
+
+- Loại trừ n dòng cuối: -n -<số dòng>
+
+![image41](/HoangNH/Linux/1.Linux/image/head3.png)
+
+- In n ký tự đầu tiên của file: -c <số ký tự>
+
+![image42](/HoangNH/Linux/1.Linux/image/head4.png)
+
+- Thực hiện với nhiều file:
+
+![image43](/HoangNH/Linux/1.Linux/image/head5.png)
+
+- Lọc dữ liệu với grep:
+
+![image44](/HoangNH/Linux/1.Linux/image/head6.png)
+
+- Hiển thị các file sử dụng gần đây nhất:
+
+![image45](/HoangNH/Linux/1.Linux/image/head7.png)
+
+## 13.tail
+
+- In ra 10 dòng cuối:
+
+![image46](/HoangNH/Linux/1.Linux/image/tail1.png)
+
+- In ra n dòng cuối: -n <số dòng>
+
+![image47](/HoangNH/Linux/1.Linux/image/tail2.png)
+
+- In từ dòng n: -n +<số dòng>
+
+![image48](/HoangNH/Linux/1.Linux/image/tail3.png)
+
+- In n ký tự cuối của file: -c <số ký tự>
+
+![image49](/HoangNH/Linux/1.Linux/image/tail4.png)
+
+## 14.
+
+
+
+
 
