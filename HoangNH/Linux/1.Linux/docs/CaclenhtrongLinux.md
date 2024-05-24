@@ -315,3 +315,221 @@ Lệnh man, viết tắt của manual, phục vụ một hệ thống tài liệ
 
 ![image58](/HoangNH/Linux/1.Linux/image/find1.png)
 
+- Tìm kiếm theo loại tệp: -type
+
+Các options:
+- f: file thông thường
+- d: directories
+- l: liên kết tượng trưng
+- c: character devices
+- b: block devices
+- p: names pipe
+- s: sockets
+
+![image59](/HoangNH/Linux/1.Linux/image/find2.png)
+
+- Tìm kiếm theo kích thước: -size
+
+![image60](/HoangNH/Linux/1.Linux/image/find3.png)
+
+- Tìm kiếm theo quyền cụ thể: -perm
+
+![image61](/HoangNH/Linux/1.Linux/image/find4.png)
+
+## 16.echo
+
+- Nhập một dòng văn bản và hiển thị nó trên đầu ra tiêu chuẩn
+
+![image62](/HoangNH/Linux/1.Linux/image/echo1.png)
+
+- Khai báo một biến và hiển thị giá trị của nó
+
+![image63](/HoangNH/Linux/1.Linux/image/echo2.png)
+
+- In tất cả các tệp/thư mục:
+
+
+
+## 17.locate
+
+- Tìm kiếm các file, thư mục:
+
+## 18.cut
+
+- Cú pháp: cut <options> <file>
+- Các options:
+  - -b: Cắt theo vị trí byte
+  - -C: Cắt theo vị trí ký tự
+  - -d: Trích xuất chuỗi bằng cách dùng dấu phân cách được chỉ định với tùy chọn trường
+  - -f: Trích xuất theo một trường cụ thể
+  - -S: Trích xuất chỉ cho dấu phân cách
+
+- Trích xuất các ký tự từ chuỗi: `cut -b 1,3,5,7,9 filename.txt`
+
+- Cắt trong phạm vi: `cut -b 1-10,11-20 number.txt`
+
+- Trích xuất văn bản từ vị trí bắt đầu, kết thúc:
+
+## 19.tr(translate)
+
+- Cú pháp: `tr [options] <SET1> <SET2>` 
+
+SET là các chuỗi ký tự và một số trình tự được diễn giải mà terminal tự động nhận dạng:\\, \b, \t, \v, [:alnum:], [:alpha:], [:blank:], [:digit:], [:lower:], [:punct:], [:space:], [:upper:] 
+
+- Đổi chữ thường thành chữ hoa:
+
+`cat alphabet.txt | tr [:lower:] [:upper:]`
+hoặc `cat alphabet.txt | tr [a-z] [A-Z]`
+
+- Xóa ký tự: `cat number.txt | tr -d "e"`
+
+- Chuyển khoảng trắng thành tab: 
+
+- Xóa dấu câu, xóa các chữ số: 
+
+## 20.wc
+
+- Sử dụng wc với file, lệnh sẽ trả về số dòng,từ và byte trong file (-l, -w, -c):
+
+- Hiển thị độ dài của dòng dài nhất (- L):
+
+## 21.strings
+
+- Hiển thị các chuỗi ký tự trong tệp:
+Các options:
+
+  - -e: Hiển thị các ký tự không in được dưới dạng mã hex
+  - -n <n>: Chỉ hiển thị các chuỗi có ít nhất n ký tự
+  - -o <n>: Bỏ qua n ký tự đầu tiên của mỗi chuỗi
+  - -t: Hiển thị các ký tự tab dưới dạng \T
+  - -v: Hiển thị số lượng dòng của mỗi chuỗi
+
+## 22.alias
+
+Lệnh Alias cho phép chỉ định các từ khóa ngắn cho các chuỗi dài gồm các lệnh dùng thường xuyên.
+
+- Cú pháp: `alias shortName="your custom command here"`
+
+- Xóa alias dùng lệnh unalias
+
+## 23.sort 
+
+- Mặc định:
+
+- Tạo tệp đầu ra mới: -o để chỉ định tên file đã sắp xếp, tạo 1 file mới và thêm nội dung:
+
+- Sắp xếp ngược: -r 
+
+- Sắp xếp theo số: -n 
+
+- Sắp xếp bỏ qua viết hoa, viết thường: -f 
+
+- Sắp xếp bỏ qua hàng trống: -b 
+
+- Sắp xếp theo cột: - k(số cột)
+
+## 24.date
+
+- Lấy ngày giờ hiện tại: date
+
+- Lấy một ngày trong quá khứ/ tương lai: date -d "< ... >"
+
+- Nhận ngày trong tuần: 
+
+- Nhận giờ phối hợp quốc tế: date -u 
+
+- Nhận thời gian sửa đổi cuối cùng của tệp: date -R 
+
+## 25.sed (stream editor)
+
+- Thay thế từ đầu tiên mỗi dòng: `sed 's/từ cũ/từ mới/' <filename>`
+
+- Thay thế từ thứ n: `sed 's/từ cũ/từ mới/n' <filename>`
+
+- Thay thế tất cả: `sed 's/từ cũ/từ mới/g' <filename>`
+
+- Thay thế trên dòng m nhất định: `sed 'm s/từ cũ/từ mới/' <filename>`
+
+- Nhân bản dòng được thay thế: `sed 's/từ cũ/từ mới/p' <filename>`
+
+- Chỉ hiện thị các dòng được thay thế: `sed -n 's/từ cũ/từ mới/p' <filename>`
+
+- Thay thế trên khoảng dòng từ x đến y `sed 'x,y s/từ cũ/từ mới/' <filename>`
+
+- Xóa dòng thứ n trong file: `sed 'nd' <filename>`
+
+- Xóa dòng cuối cùng trong file : `sed '$d' <filename>`
+
+- Xóa các dòng từ x đến y: `sed 'x,yd' <filename>`
+
+- Xóa dòng thứ n đến cuối file: `sed 'nth,$d' <filename>`
+
+- Xóa dòng khớp mẫu: `sed '/pattern/d' <filename>`
+
+## 26.time 
+
+Lệnh time dùng để xác định thời gian thực hiện một hoạt động cụ thể.
+Khi thực hiện lệnh time có 3 kết quả:
+
+- real: liên quan đến thời gian trôi qua giữa khi thực thi và hoàn thành command
+- user: là thời gian người dùng dành cho bộ xử lý
+- sys: thời gian hệ thống (kernel) sử dụng để chạy command
+
+
+## 27.cal
+
+- Xem lịch tháng hiện tại: cal
+
+- Xem lịch n tháng gần nhất: cal -n
+
+- Xem lịch cả năm: cal -y 
+
+- Xem lịch một tháng trong năm cụ thể: cal month year
+
+
+## 28.uniq
+
+- Bỏ qua những dòng trùng lặp: `uniq <filename>`
+
+- Cho biết số dòng lệnh lặp lại: `uniq -c <filename>`
+
+- Chỉ in những dòng lặp lại: `uniq -d <filename>`
+
+- Chỉ in các dòng duy nhất: `uniq -u <filename>`
+
+- Bỏ qua các trường trong khi kiểm tra trùng lặp: `uniq -f N <filename>`
+
+- Bỏ qua các ký tự khi so sánh: `uniq -s N <filename>`
+
+- Kiểm tra các ký tự xem có trùng lặp không: `uniq -w N <filename>`
+
+
+## 29.gzip
+
+- Nén một file và xóa file gốc: `gzip file`
+
+- Nén một file và không xóa file gốc: `gzip -k file` hoặc `gzip -c file > file.gz`
+
+- Nén file trong thư mục: `gzip -r folder`
+
+- Thay đổi mức nén: `gzip -[1..9] file. 1 là tốc độ nén nhanh nhất và tỉ lệ nén dung lượng tối thiểu nhất. 9 là tốc độ nén chậm nhất và tỉ lệ nén dung lượng tốt nhất.
+
+- Giải nén: `gzip -d file.gz`
+
+- Xem nội dung file nén: `gzip -l file`
+
+## 30.gunzip
+
+- Giải nén : `gunzip file.gz`
+
+- Xem nội dung file mà cần giải nén: `gunzip -c file.gz`
+
+- Giải nén một cách mạnh mẽ: `gunzip -f file.gz`
+
+- Giải nén đệ quy các tệp: `gunzip -r file.gz`
+
+
+
+
+
+
