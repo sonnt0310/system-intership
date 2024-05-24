@@ -528,6 +528,44 @@ Khi thực hiện lệnh time có 3 kết quả:
 
 - Giải nén đệ quy các tệp: `gunzip -r file.gz`
 
+## 31.who
+
+Lệnh who dùng để in ra danh sách những người dùng hiện đang đăng nhập.
+
+- `who`. Nó sẽ liệt kê danh sách tất cả những người dùng đang đăng nhập trên hệ thống. Mỗi người dùng sẽ gồm những thông tin như sau:
+  - Tên đăng nhập.
+  - Terminal của user.
+  - Thời điểm đăng nhập.
+  - Địa chỉ IP máy chủ hoặc tên máy chủ.
+
+- `who -H`: n ra phần heading cho mỗi thông tin
+
+- `who -b`: xem ai là người đã rời khỏi hệ thống gần đây nhất.
+
+- `who -d`: Để xem danh sách tất cả các quy trình đã bị chết
+
+- `who -r`: để xem cấp độ của người dùng hiện tại.
+
+- `who -q`: Để lấy danh sách tên người dùng đang đăng nhập và tổng số lượng người dùng đó
+
+- `who -a`: để xem thông tin đầy đủ của các user.
+
+
+## 32.type
+
+Lệnh type được sử dụng để hiển thị thông tin về loại lệnh. 
+
+- Tùy chọn -t này cho biết mô tả loại lệnh.Mô tả các loại lệnh như sau:
+
+  - alias (shell alias)
+  - function (shell function)
+  - builtin (shell builtin)
+  - file (disk file)
+  - keyword (shell reserved word)
+
+- Hiển thị tất cả các vị trí có chứa lệnh: -a 
+
+
 
 
 
