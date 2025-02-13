@@ -44,9 +44,7 @@ IP gồm thành hai thành phần: phần host và phần mạng (network).
 Địa chỉ IP được chia thành 5 lớp (class) A, B, C, D và E. 
 
 - Lớp A : 
-
 ![Lớp A](<../images/Lớp A.png>)
-
     - Địa chỉ IP lớp A dùng một octet đầu làm phần network, ba octet sau làm phần host.
     - Bit đầu của một IP lớp A luôn là 0.
     - Các địa chỉ mạng lớp A sẽ bao gồm: 1.0.0.0 -> 126.0.0.0.
@@ -54,18 +52,14 @@ IP gồm thành hai thành phần: phần host và phần mạng (network).
     - Phần host có 24 bit => mỗi network lớp A có (224 – 2) host.
 
 - Lớp B :
-
 ![Lớp B](<../images/Lớp B.png>)
-
     - Địa chỉ lớp B sử dụng 2 octet đầu làm phần mạng, 2 octet sau làm phần
     - 2 bit đầu của một IP lớp B sẽ luôn là 1 0.
     - Các địa chỉ mạng lớp B sẽ bao gồm: 128.0.0.0 -> 191.255.0.0. Có tổng cộng 214 mạng trong lớp IP lớp
     - Phần host dài 16 bit, vì vậy một mạng lớp B có (216– 2) host.
 
 - Lớp C : 
-
 ![alt text](<../images/Lớp C.png>)
-
     - IP lớp C sử dụng ba octet đầu làm phần network, một octet sau làm phần
     - Ba bit đầu của một IP lớp C luôn là 1 1 0.
     - Các địa chỉ mạng lớp C sẽ bao gồm: 192.0.0.0 -> 223.255.255.0. Có tổng cộng 221 mạng trong lớp C.
