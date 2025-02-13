@@ -19,13 +19,13 @@ a) 192.168.2.0/24 mượn 5 bit.
 
 192.168.2.8/29 : địa chỉ mạng  
 192.168.2.9/29 : địa chỉ host đầu  
-192.168.2.14/29 : địa chỉ host cuối 
+192.168.2.14/29 : địa chỉ host cuối    
 192.168.2.15/29 : địa chỉ host broadcast         
 
 . . .
 
 192.168.2.248/29 : địa chỉ mạng     
-192.168.2.249/29 : địa chỉ host đầu
+192.168.2.249/29 : địa chỉ host đầu    
 192.168.2.254/29 : địa chỉ host cuối   
 192.168.2.255/29 : địa chỉ broadcast     
 
@@ -39,42 +39,42 @@ b/ 192.168.12.0/24 mượn 3 bit.
 
 192.168.12.0/27 : địa chỉ mạng  
 192.168.12.1/27 : địa chỉ host đầu  
-192.168.12.30/27 :địa chỉ host cuối 
-192.168.12.31/27 : địa chỉ broadcast    
+192.168.12.30/27 :địa chỉ host cuối    
+192.168.12.31/27 : địa chỉ    broadcast    
 
 192.168.12.32/27 : địa chỉ mạng  
 192.168.12.33/27 : địa chỉ host đầu  
-192.168.12.62/27 :địa chỉ host cuối 
+192.168.12.62/27 :địa chỉ host cuối     
 192.168.12.63/27 : địa chỉ broadcast 
 
 192.168.12.64/27 : địa chỉ mạng  
 192.168.12.65/27 : địa chỉ host đầu  
-192.168.12.94/27 :địa chỉ host cuối 
+192.168.12.94/27 :địa chỉ host cuối       
 192.168.12.95/27 : địa chỉ broadcast 
 
 192.168.12.96/27 : địa chỉ mạng  
 192.168.12.97/27 : địa chỉ host đầu  
-192.168.12.126/27 :địa chỉ host cuối 
+192.168.12.126/27 :địa chỉ host cuối    
 192.168.12.127/27 : địa chỉ broadcast 
 
 192.168.12.128/27 : địa chỉ mạng  
 192.168.12.129/27 : địa chỉ host đầu  
-192.168.12.158/27 :địa chỉ host cuối 
+192.168.12.158/27 :địa chỉ host cuối   
 192.168.12.159/27 : địa chỉ broadcast 
 
 192.168.12.160/27 : địa chỉ mạng  
 192.168.12.161/27 : địa chỉ host đầu  
-192.168.12.190/27 :địa chỉ host cuối 
+192.168.12.190/27 :địa chỉ host cuối   
 192.168.12.191/27 : địa chỉ broadcast 
 
 192.168.12.192/27 : địa chỉ mạng  
 192.168.12.193/27 : địa chỉ host đầu  
-192.168.12.222/27 :địa chỉ host cuối 
+192.168.12.222/27 :địa chỉ host cuối   
 192.168.12.223/27 : địa chỉ broadcast 
 
 192.168.12.224/27 : địa chỉ mạng  
 192.168.12.225/27 : địa chỉ host đầu  
-192.168.12.254/27 :địa chỉ host cuối 
+192.168.12.254/27 :địa chỉ host cuối   
 192.168.12.255/27 : địa chỉ broadcast 
 
 ---
@@ -87,22 +87,22 @@ c/ 172.16.2.0/24 mượn 2 bit
 
 172.16.2.0/26 : địa chỉ mạng  
 172.16.2.1/26 : địa chỉ host đầu  
-172.16.2.62/26 :địa chỉ host cuối 
+172.16.2.62/26 :địa chỉ host cuối   
 172.16.2.63/26 : địa chỉ broadcast    
 
 172.16.2.64/26 : địa chỉ mạng  
 172.16.2.65/26 : địa chỉ host đầu  
-172.16.2.126/26 :địa chỉ host cuối 
+172.16.2.126/26 :địa chỉ host cuối  
 172.16.2.127/26 : địa chỉ broadcast  
 
 172.16.2.128/26 : địa chỉ mạng  
 172.16.2.129/26 : địa chỉ host đầu  
-172.16.2.190/26 :địa chỉ host cuối 
+172.16.2.190/26 :địa chỉ host cuối  
 172.16.2.191/26 : địa chỉ broadcast  
 
 172.16.2.192/26 : địa chỉ mạng  
 172.16.2.193/26 : địa chỉ host đầu  
-172.16.2.254/26 :địa chỉ host cuối 
+172.16.2.254/26 :địa chỉ host cuối  
 172.16.2.255/26 : địa chỉ broadcast  
 
 ---
@@ -115,7 +115,7 @@ d/ 172.16.0.0/16 mượn 3 bit
 
 172.16.0.0/19 : địa chỉ mạng   
 172.16.1.0/19 : địa chỉ host đầu      
-172.16.30.0/19 : địa chỉ host cuối 
+172.16.30.0/19 : địa chỉ host cuối  
 172.16.31.0/19 : địa chỉ broadcast 
 
 172.16.32.0/19 : địa chỉ mạng   
@@ -126,13 +126,13 @@ d/ 172.16.0.0/16 mượn 3 bit
 ...
 
 172.16.192.0/19 : địa chỉ mạng  
-172.16.193.0/19 : địa chỉ host đầu
-172.16.222.0/19 : địa chỉ host cuối 
+172.16.193.0/19 : địa chỉ host đầu  
+172.16.222.0/19 : địa chỉ host cuối    
 172.16.223.0/19 : địa chỉ broadcast
 
 172.16.224.0/19 : địa chỉ mạng  
-172.16.225.0/19 : địa chỉ host đầu
-172.16.254.0/19 : địa chỉ host cuối 
+172.16.225.0/19 : địa chỉ host đầu    
+172.16.254.0/19 : địa chỉ host cuối    
 172.16.255.0/19 : địa chỉ broadcast
 
 ---
@@ -149,8 +149,8 @@ e/ 172.16.0.0/16 mượn 12 bit.
 172.16.0.15/28 : địa chỉ broadcast  
 
 172.16.0.16/28 : địa chỉ mạng  
-172.16.0.17/28 : địa chỉ host đầu
-172.16.0.30/28 : địa chỉ host cuối 
+172.16.0.17/28 : địa chỉ host đầu   
+172.16.0.30/28 : địa chỉ host cuối  
 172.16.0.31/28 : địa chỉ broadcast 
 
 .....
@@ -205,22 +205,22 @@ f/  10.0.0.0/8 mượn 5 bit.
 
 10.0.0.0/13 : địa chỉ mạng  
 10.1.0.0/13 : địa chỉ host đầu  
-10.6.0.0/13 : địa chỉ host cuối
+10.6.0.0/13 : địa chỉ host cuối  
 10.7.0.0/13 : địa chỉ broadcast 
 
 10.8.0.0/13 : địa chỉ mạng  
 10.9.0.0/13 : địa chỉ host đầu  
-10.14.0.0/13 : địa chỉ host cuối
+10.14.0.0/13 : địa chỉ host cuối    
 10.15.0.0/13 : địa chỉ broadcast 
 
 10.16.0.0/13 : địa chỉ mạng  
 10.17.0.0/13 : địa chỉ host đầu  
-10.22.0.0/13 : địa chỉ host cuối
+10.22.0.0/13 : địa chỉ host cuối    
 10.23.0.0/13 : địa chỉ broadcast 
 
 10.248.0.0/13 : địa chỉ mạng  
 10.249.0.0/13 : địa chỉ host đầu  
-10.254.0.0/13 : địa chỉ host cuối
+10.254.0.0/13 : địa chỉ host cuối   
 10.255.0.0/13 : địa chỉ broadcast 
 
 ---
@@ -233,53 +233,53 @@ g/ 10.0.0.0/8 mượn 10 bit.
 - Liệt kê các mạng như sau:
 
 10.0.0.0/18: địa chỉ mạng   
-10.0.1.0/18: địa chỉ host đầu
-10.0.62.0/18 : địa chỉ host cuối    
+10.0.1.0/18: địa chỉ host đầu    
+10.0.62.0/18 : địa chỉ host cuối     
 10.0.63.0/18: địa chỉ broadcast     
 
 10.0.64.0/18: địa chỉ mạng   
-10.0.65.0/18: địa chỉ host đầu
+10.0.65.0/18: địa chỉ host đầu     
 10.0.126.0/18 : địa chỉ host cuối    
 10.0.127.0/18: địa chỉ broadcast 
 
 10.0.128.0/18: địa chỉ mạng   
-10.0.129.0/18: địa chỉ host đầu
+10.0.129.0/18: địa chỉ host đầu  
 10.0.190.0/18 : địa chỉ host cuối    
 10.0.191.0/18: địa chỉ broadcast 
 
 10.0.192.0/18: địa chỉ mạng   
-10.0.193.0/18: địa chỉ host đầu
+10.0.193.0/18: địa chỉ host đầu  
 10.0.254.0/18 : địa chỉ host cuối    
 10.0.255.0/18: địa chỉ broadcast 
 
 10.1.0.0/18: địa chỉ mạng   
-10.1.1.0/18: địa chỉ host đầu
+10.1.1.0/18: địa chỉ host đầu    
 10.1.62.0/18 : địa chỉ host cuối    
 10.1.63.0/18: địa chỉ broadcast 
 
 10.1.64.0/18: địa chỉ mạng   
-10.1.65.0/18: địa chỉ host đầu
+10.1.65.0/18: địa chỉ host đầu   
 10.1.126.0/18 : địa chỉ host cuối    
 10.1.127.0/18: địa chỉ broadcast 
 
 ...
 
 10.1.192.0/18: địa chỉ mạng   
-10.1.193.0/18: địa chỉ host đầu
+10.1.193.0/18: địa chỉ host đầu  
 10.1.254.0/18 : địa chỉ host cuối    
 10.1.255.0/18: địa chỉ broadcast 
 
 ...
 
 10.255.0.0/18: địa chỉ mạng   
-10.255.1.0/18: địa chỉ host đầu
+10.255.1.0/18: địa chỉ host đầu  
 10.255.62.0/18 : địa chỉ host cuối    
 10.255.63.0/18: địa chỉ broadcast 
 
 ...
 
 10.255.192.0/18: địa chỉ mạng   
-10.255.193.0/18: địa chỉ host đầu
+10.255.193.0/18: địa chỉ host đầu   
 10.255.254.0/18 : địa chỉ host cuối    
 10.255.255.0/18: địa chỉ broadcast 
 
@@ -291,65 +291,65 @@ h/ 10.0.0.0/8 mượn 18 bit.
 - Liệt kê các mạng như sau:
 
 10.0.0.0/24: địa chỉ mạng   
-10.0.0.1/24: địa chỉ host đầu
-10.0.0.62/24 : địa chỉ host cuối    
+10.0.0.1/24: địa chỉ host đầu    
+10.0.0.62/24 : địa chỉ host cuối     
 10.0.0.63/24: địa chỉ broadcast 
 
 10.0.0.64/24: địa chỉ mạng   
-10.0.0.65/24: địa chỉ host đầu
+10.0.0.65/24: địa chỉ host đầu   
 10.0.0.126/24 : địa chỉ host cuối    
 10.0.0.127/24: địa chỉ broadcast 
 
 ...
 
 10.0.0.192/24: địa chỉ mạng   
-10.0.0.193/24: địa chỉ host đầu
+10.0.0.193/24: địa chỉ host đầu  
 10.0.0.254/24 : địa chỉ host cuối    
 10.0.0.255/24: địa chỉ broadcast 
 
 
 10.1.0.0/24: địa chỉ mạng   
-10.1.0.1/24: địa chỉ host đầu
+10.1.0.1/24: địa chỉ host đầu    
 10.1.0.62/24 : địa chỉ host cuối    
 10.1.0.63/24: địa chỉ broadcast 
 
 ... 
 
 10.1.0.192/24: địa chỉ mạng   
-10.1.0.193/24: địa chỉ host đầu
+10.1.0.193/24: địa chỉ host đầu     
 10.1.0.254/24 : địa chỉ host cuối    
 10.1.0.255/24: địa chỉ broadcast 
 
 ...
 
 10.255.0.192/24: địa chỉ mạng   
-10.255.0.193/24: địa chỉ host đầu
+10.255.0.193/24: địa chỉ host đầu   
 10.255.0.254/24 : địa chỉ host cuối    
 10.255.0.255/24: địa chỉ broadcast 
 
 10.1.1.0/24: địa chỉ mạng   
-10.1.1.1/24: địa chỉ host đầu
+10.1.1.1/24: địa chỉ host đầu    
 10.1.1.62/24 : địa chỉ host cuối    
 10.1.1.63/24: địa chỉ broadcast 
 
 ...
 
 10.1.1.192/24: địa chỉ mạng   
-10.1.1.193/24: địa chỉ host đầu
-10.1.1.254/24 : địa chỉ host cuối    
+10.1.1.193/24: địa chỉ host đầu     
+10.1.1.254/24 : địa chỉ host cuối     
 10.1.1.255/24: địa chỉ broadcast
 
 ...
 
 10.1.255.192/24: địa chỉ mạng   
-10.1.255.193/24: địa chỉ host đầu
+10.1.255.193/24: địa chỉ host đầu      
 10.1.255.254/24 : địa chỉ host cuối    
 10.1.255.255/24: địa chỉ broadcast
 
 ...
 
 10.255.255.192/24: địa chỉ mạng   
-10.255.255.193/24: địa chỉ host đầu
+10.255.255.193/24: địa chỉ host đầu    
 10.255.255.254/24 : địa chỉ host cuối    
 10.255.255.255/24: địa chỉ broadcast
 
@@ -377,33 +377,33 @@ Cách thức tiến hành là: sẽ xét các mạng theo thứ tự số host t
 
 -   Tiếp đó ta xét đến mạng có 20 host,  ta xem xem mượn bao nhiêu bit là phù hợp:
 
-      2m – 2 ≥ 21
+   2m – 2 ≥ 21
 
-      m + n = 8 (mượn bit ở octet thứ 4). Với m: số bit host, n: số bit mượn
+   m + n = 8 (mượn bit ở octet thứ 4). Với m: số bit host, n: số bit mượn
 
    Ta được m = 5 và n = 3. Vậy ta mượn 3 bit, mạng 172.16.5.0/24 được chia thành 8 mạng 172.16.5.0/27, 172.16.5.32/27, 172.16.5.64/27 và 172.16.5.96/27, 172.16.5.128/27, 172.16.5.160/27, 172.16.5.192/27, 172.16.5.224/27. Tuy nhiên các dải địa chỉ của các mạng 172.16.5.0/27 ,…, 172.16.5.160/27 đã được giành cho mạng 78 host và mạng 50 host. Do đó ta chỉ có thể lấy từ mạng 172.16.5.192/27 trở đi để gán cho mạng 20 host. Ở đây ta lấy mạng 172.16.5.192/27 gán cho mạng 20 host.
 
 -   Tiếp đó ta xét đến mạng có 10 host,  ta xem xem mượn bao nhiêu bit là phù hợp:
 
-      2m – 2 ≥ 11
+   2m – 2 ≥ 11
 
-      m + n = 8 (mượn bit ở octet thứ 4). Với m: số bit host, n: số bit mượn
+   m + n = 8 (mượn bit ở octet thứ 4). Với m: số bit host, n: số bit mượn
 
    Ta được m = 4 và n = 4 Vậy ta mượn 4 bit, mạng 172.16.5.0/28 được chia thành 16 mạng 172.16.5.0/28, 172.16.5.16/28, 172.16.5.32/28,..., 172.16.5.226/28, 172.16.5.240/28. Tuy nhiên các dải địa chỉ của các mạng 172.16.5.0/28 ,…, 172.16.5.224/28 đã được giành cho mạng 78 host và mạng 50 host, mạng 20 host . Do đó ta chỉ có thể lấy từ mạng 172.16.5.226/28 trở đi để gán cho mạng 10 host. Ở đây ta lấy mạng 172.16.5.226/28 gán cho mạng 10 host.
 
 Tiếp đó ta xét đến mạng có 5 host,  ta xem xem mượn bao nhiêu bit là phù hợp:
 
-      2m – 2 ≥ 6
+   2m – 2 ≥ 6
 
-      m + n = 8 (mượn bit ở octet thứ 4). Với m: số bit host, n: số bit mượn
+   m + n = 8 (mượn bit ở octet thứ 4). Với m: số bit host, n: số bit mượn
 
    Ta được m = 3 và n = 5 Vậy ta mượn 5 bit, mạng 172.16.5.0/29 được chia thành 32 mạng 172.16.5.0/29, 172.16.5.8/29, 172.16.5.16/29,..., 172.16.5.242/29, 172.16.5.248/29. Tuy nhiên các dải địa chỉ của các mạng 172.16.5.0/29 ,…, 172.16.5.240/29 đã được giành cho mạng 78 host và mạng 50 host, mạng 20 host, mạng 10 host  . Do đó ta chỉ có thể lấy từ mạng 172.16.5.242/29 trở đi để gán cho mạng 5 host. Ở đây ta lấy mạng 172.16.5.242/29 gán cho mạng 5 host.
 
 -   Tiếp đó ta xét đến các mạng có 2 host là các liên kết điểm – điểm serial,  ta xem thử mượn bao nhiêu bit là phù hợp:
 
-        2m – 2 ≥ 2
+   2m – 2 ≥ 2
 
-      m + n = 8 (mượn bit ở octet thứ 4). Với m: số bit host, n: số bit mượn
+   m + n = 8 (mượn bit ở octet thứ 4). Với m: số bit host, n: số bit mượn
 
    Ta được m = 2 và n = 6 là tối ưu hơn cả, đảm bảo không bị dư địa chỉ.. Vậy ta mượn  6 bit, mạng 172.16.5.0/24 được chia thành 26 = 64 mạng 172.16.5.0/30, 172.16.5.4/30, 172.16.5.8/30,…, 172.16.5.248/30, 172.16.5.252/30 . Tuy nhiên các dải địa chỉ của các mạng 172.16.5.0/30 ,…, 172.16.5.247/30 đã được giành cho mạng 78 host, mạng 50 host và mạng 20 host, mạng 10 host, mạng 5 host . Do đó ta chỉ có thể lấy từ mạng 172.16.5.248/30 để gán cho các mạng 2 host. Ở đây ta lấy mạng 192.168.1.248/30 và 192.168.1.252/30  gán cho hai liên kết serial.
 
@@ -415,14 +415,14 @@ __a/ 192.168.1.130/29__
 
 192.168.1.130 nằm trong dải host (không phải địa chỉ network hay broadcast) → Có thể dùng đặt cho host.
 
-__172.16.34.57/18__
+__b/ 172.16.34.57/18__
 
 /18 => có 18 bit mạng. Octet bị chia cắt là octet thứ 3
 => số bit mượn là 2 => bước nhảy là 64. Lấy octet thứ 3 của host là 34 chia 64 được 0 còn dư. Ta lấy 0 nhân 64 bằng 0. Host này thuộc mạng 172.16.0.57 
 
 172.16.34.57/18 nằm trong dải host (không phải địa chỉ network hay broadcast) → Có thể dùng đặt cho host.
 
-__203.162.4.191/28__
+__c/ 203.162.4.191/28__
 
 /28 => có 28 bit mạng. Octet bị chia cắt là octet thứ 4
 => số bit mượn là 4 => bước nhảy là 16. Lấy octet thứ 4 của host là 191 chia 16 được 11 còn dư. Ta lấy 11 nhân 16 bằng 176. Host này thuộc mạng 203.162.4.176 
@@ -430,28 +430,28 @@ __203.162.4.191/28__
 203.162.4.191/28 là địa chỉ broadcast của subnet
 → Không thể dùng đặt cho host.
 
-__1.1.1.1/30__ 
+__d/ 1.1.1.1/30__ 
 
 /30 => có 30 bit mạng. Octet bị chia cắt là octet thứ 4
 => số bit mượn là 6 => bước nhảy là 4. Lấy octet thứ 4 của host là 1 chia 4 được 0 còn dư. Ta lấy 0 nhân 4 bằng 0. Host này thuộc mạng 1.1.1.0 
 
 1.1.1.1/30 là địa chỉ host đầu nằm trong dải host -> có thể dùng làm host 
 
-__10.10.10.89/29__
+__e/ 10.10.10.89/29__
 
 /29 => có 29 bit mạng. Octet bị chia cắt là octet thứ 4
 => số bit mượn là 5 => bước nhảy là 8. Lấy octet thứ 4 của host là 89 chia 8 được 11 còn dư. Ta lấy 11 nhân 8 bằng 88. Host này thuộc mạng 10.10.10.88
 
 10.10.10.89/29 là địa chỉ host đầu nằm trong dải host -> có thể dùng làm host 
 
-__70.9.12.35/30__
+__f/ 70.9.12.35/30__
 
 /30 => có 30 bit mạng. Octet bị chia cắt là octet thứ 4
 => số bit mượn là 6 => bước nhảy là 4. Lấy octet thứ 4 của host là 35 chia 4 được 8 còn dư. Ta lấy 8 nhân 4 bằng 32. Host này thuộc mạng 70.9.12.32
 
 70.9.12.35/30 là địa chỉ broadcast. -> không làm địa chỉ host 
 
-__158.16.23.208/29__
+__g/ 158.16.23.208/29__
 
 /29 => có 29 bit mạng. Octet bị chia cắt là octet thứ 4
 => số bit mượn là 5 => bước nhảy là 8. Lấy octet thứ 4 của host là 208 chia 8 được 26 -> 158.16.23.208 là địa chỉ mạng.-> không dùng làm host
