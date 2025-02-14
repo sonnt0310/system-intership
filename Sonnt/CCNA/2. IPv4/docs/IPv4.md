@@ -49,41 +49,43 @@ IP gồm thành hai thành phần: phần host và phần mạng (network).
     - Bit đầu của một IP lớp A luôn là 0.
     - Các địa chỉ mạng lớp A sẽ bao gồm: 1.0.0.0 -> 126.0.0.0.
     - Mạng 127.0.0.0 được sử dụng như mạng loopback.
-    - Phần host có 24 bit => mỗi network lớp A có (224 – 2) host.
+    - Phần host có 24 bit => mỗi network lớp A có (2^24 – 2) host.
 
 - Lớp B :
 ![Lớp B](<../images/Lớp B.png>)
     - Địa chỉ lớp B sử dụng 2 octet đầu làm phần mạng, 2 octet sau làm phần
     - 2 bit đầu của một IP lớp B sẽ luôn là 1 0.
     - Các địa chỉ mạng lớp B sẽ bao gồm: 128.0.0.0 -> 191.255.0.0. Có tổng cộng 214 mạng trong lớp IP lớp
-    - Phần host dài 16 bit, vì vậy một mạng lớp B có (216– 2) host.
+    - Phần host dài 16 bit, vì vậy một mạng lớp B có (2^16– 2) host.
 
 - Lớp C : 
 ![alt text](<../images/Lớp C.png>)
     - IP lớp C sử dụng ba octet đầu làm phần network, một octet sau làm phần
     - Ba bit đầu của một IP lớp C luôn là 1 1 0.
     - Các địa chỉ mạng lớp C sẽ bao gồm: 192.0.0.0 -> 223.255.255.0. Có tổng cộng 221 mạng trong lớp C.
-    - Phần host dài 8 bit vì vậy nên một mạng lớp C sẽ có (28– 2) host.
+    - Phần host dài 8 bit vì vậy nên một mạng lớp C sẽ có (2^8– 2) host.
 
 - Lớp D : 
     - Bao gồm các địa chỉ nằm trong dải: 224.0.0.0 -> 239.255.255.255
-    - Thường dùng làm địa chỉ
-    - Ví dụ: 224.0.0.9 sử dụng cho RIPv2; 0.0.5 sử dụng cho OSPF.
-
+    - Thường dùng làm địa chỉ Multicast
+    
 - Lớp E :
     - Từ 240.0.0.0 trở đi.
-    - Thường sử dụng vào mục đích dự phòng.
+    - Thường sử dụng vào mục đích nghiên cứu .
 
 ## 6. IP Public và Private
 
 ### 6.1 IP Public 
 - Là địa chỉ IP sử dụng cho các gói tin đi trên môi trường Internet, được định tuyến trên môi trường Internet, không sử dụng trong mạng LAN.
 - Địa chỉ public phải là duy nhất cho mỗi host tham gia vào Internet. 
+- IP Public chia ra làm 2 loại là IP tĩnh (Static IP) và IP động (Dynamic IP)
 
+    - Địa chỉ Tĩnh là địa chỉ không thay đổi kể cả khi bạn ngắt kết nối và kết nối lại vào Internet, nó thường được dùng cho các dịch vụ trên Internet như Hosting
+
+    - Địa chỉ động là địa chỉ thay đổi mỗi lần truy cập Internet. Thường thì tất cả người dùng Internet đều có địa chỉ động do ISP cung cấp để liên kết vào Internet, khi ngắt kết nối địa chỉ này sẽ được dùng cho người dùng Internet khác và khi bạn kết nối lại bạn sẽ được cung cấp 1 địa chỉ IP mới
 ### 6.2 IP Private 
 - Chỉ được sử dụng trong mạng nội bộ (mạng LAN), không được định tuyến trên môi trường Internet.
-- Có thể được sử dụng lặp đi lặp lại
-trong các mạng LAN khác nhau. 
+- Có thể được sử dụng lặp đi lặp lại trong các mạng LAN khác nhau. 
 
 - Dải địa chỉ private (được quy định trong RFC 1918):
 
@@ -120,9 +122,13 @@ bên phần host để làm phần mạng, các bit mượn này được gọi 
 ## 8, Broadcast và Multicast 
 
 ### 8.1 Broadcast 
-**Broadcast** là cách thức truyền tin được gửi từ một điểm đến tất cả các điểm khác trong cùng một mạng.
+**Broadcast** là cách thức truyền tin được gửi từ một điểm đến tất cả các điểm khác trong cùng một mạng.Một gói broadcast chuyển đến tất cả các thiết bị tham gia trong mạng cục bộ , mà không phải quy định rõ ràng như một máy nhận . Một địa chỉ broadcast sẽ đại diện cho tất cả các thiết bị kết nối cùng mạng. Do đó khi một gói tin được gửi đến địa chỉ broadcast , tất cả các thiết bị trong mạng đều nhận được. Có 2 loại broadcast
+
+- Direct broadcast
+- Local broadcast
 
 ![Broadcast](../images/Broadcast.png)
+
 ### 8.2 Multicast 
 **Multicast** là cách thức truyền tin được gửi từ một điểm đến một tập hợp các điểm khác, và do đó là một hình thức kết nối đa điểm.
 
