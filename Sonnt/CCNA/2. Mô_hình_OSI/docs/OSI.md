@@ -120,7 +120,7 @@ Ví dụ thực tế:
 - Tầng 2 (datalink): Package được cắt nhỏ ra thành các Frame và bổ sung thông tin kiểm tra gói tin
 - Tầng 1 (phisical): Frame được chuyển thành chuỗi nhị phân để truyền thông tin đến máy nhận
 
-![alt text](../images/mohinhosi.png)
+![alt text](../images/Screenshot_5.png)
 
 **Phía máy nhận**
 
