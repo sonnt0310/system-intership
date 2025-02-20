@@ -12,7 +12,7 @@ TCP/IP là sự kết hợp giữa 2 giao thức. Trong đó IP (Giao thức li�
 
 Một mô hình TCP/IP tiêu chuẩn bao gồm 4 lớp được chồng lên nhau, bắt đầu từ tầng thấp nhất là Tầng vật lý (Physical) → Tầng mạng (Network) → Tầng giao vận (Transport) và cuối cùng là Tầng ứng dụng (Application)
 
-![alt text](../images/Screenshot_4.png)
+![alt text](../images/mohinhtcpip.png)
 
 Tầng 4 - Tầng Ứng dụng (Application) 
 
