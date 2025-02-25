@@ -5,6 +5,7 @@
 VLAN là cụm từ viết tắt của virtual local area network (hay virtual LAN) hay còn được gọi là mạng LAN ảo. VLAN là một kỹ thuật cho phép tạo lập các mạng LAN độc lập một cách logic trên cùng một kiến trúc hạ tầng vật lý. 
 
 ![alt text](<../images/mo hinh vlan.png>)
+
 Vlan định nghĩa các broadcast domains trong mạng lớp 2. Broadcast domains là tập hợp tất cả các thiết bị sẽ nhận được các broadcast frame có nguồn gốc từ bất kỳ thiết bị nào trong vùng. Broadcast domains thường giới hạn bởi Router vì Router không chuyển tiếp broadcast domains.
 
 
@@ -42,7 +43,7 @@ Có 3 loại VLAN, bao gồm:
 - Gửi khung Ethernet: Khi một thiết bị gửi khung Ethernet, nó sẽ thêm mã VLAN vào khung. Mã VLAN này xác định VLAN mà khung Ethernet thuộc về.
 - Chuyển khung đến bộ chuyển mạch: Khung Ethernet được truyền qua cáp đến bộ chuyển mạch.
 - Bộ chuyển mạch đọc mã VLAN: Bộ chuyển mạch đọc mã VLAN trong khung Ethernet.
-Chuyển khung đến cổng tương ứng: Bộ chuyển mạch chuyển khung Ethernet đến cổng tương ứng với VLAN được xác định bởi mã VLAN.
+- Chuyển khung đến cổng tương ứng: Bộ chuyển mạch chuyển khung Ethernet đến cổng tương ứng với VLAN được xác định bởi mã VLAN.
 - Thiết bị nhận khung: Thiết bị trên cổng nhận được khung Ethernet và xử lý nó.
 
 # 2.Trunking
@@ -85,20 +86,39 @@ Trunk Port là cổng trên switch có thể truyền dữ liệu của nhiều 
 
 - Cần phải định nghĩa VLAN nào được phép đi qua Trunk (chỉ định VLAN Allowed).
 
+![alt text](<../images/accessc port và trunk port.png>)
+
 # 3. Một số thiết bị khác
 ## 3.1 Hub
  **Khái niệm**
- 
- - Hub là một thiết bị mạng hoạt động ở Layer 1 (Physical Layer) của mô hình OSI, dùng để kết nối nhiều thiết bị trong một mạng LAN (Local Area Network). Nó hoạt động như một bộ chia tín hiệu, giúp truyền dữ liệu giữa các thiết bị trong mạng.
 
- **Chức năng của Hub**
+- Hub là một thiết bị mạng hoạt động ở Layer 1 (Physical Layer) của mô hình OSI, dùng để kết nối nhiều thiết bị trong một mạng LAN (Local Area Network). Nó hoạt động như một bộ chia tín hiệu, giúp truyền dữ liệu giữa các thiết bị trong mạng.
+
+![alt text](../images/hub.png)
+
+**Chức năng của Hub**
 - Kết nối các thiết bị trong mạng: Máy tính, máy in, server,…
 - Truyền dữ liệu bằng cách phát sóng (Broadcast): Khi một thiết bị gửi dữ liệu, Hub sẽ gửi nó đến tất cả các thiết bị khác.
 - Không lưu địa chỉ MAC: Hub không có khả năng phân biệt thiết bị nào gửi hoặc nhận dữ liệu.
+
+**Ưu điểm**
+
+- Dễ sử dụng: Hub không cần cấu hình phức tạp, chỉ cần cắm và chạy, rất tiện lợi cho người dùng phổ thông.
+- Chi phí thấp: Thiết bị này thường có giá rẻ hơn so với các thiết bị mạng khác như switch hay router, phù hợp cho các mạng nhỏ.
+- Kết nối cơ bản: Kết nối Hub là gì? Thiết bị này cung cấp kết nối cơ bản giữa các thiết bị trong mạng, giúp tạo nên hệ thống mạng nhanh chóng và đơn giản.
+
+**Nhược điểm**
+
+- Chia sẻ băng thông: Tất cả các thiết bị kết nối qua Hub phải chia sẻ cùng một băng thông, dẫn đến tốc độ chậm khi nhiều thiết bị cùng truyền dữ liệu.
+- Không thông minh: Thiết bị này không phân biệt được địa chỉ đích, do đó phát dữ liệu đến tất cả các thiết bị trong mạng, gây lãng phí tài nguyên và tắc nghẽn.
+- Half-duplex: Thiết bị này chỉ hỗ trợ chế độ half-duplex, nghĩa là chỉ có thể truyền hoặc nhận dữ liệu tại một thời điểm, không thể làm cả hai cùng lúc.
+- Không bảo mật: Hub không có khả năng kiểm soát truy cập hay bảo mật, khiến mạng dễ bị tấn công hoặc gián đoạn.
 ## 3.2 Router
 **Khái niệm**
 
 - Router (Bộ định tuyến) là thiết bị mạng máy tính dùng để chuyển các gói dữ liệu qua một liên mạng và đến các đầu cuối, thông qua một tiến trình gọi là "định tuyến". Nó hoạt động ở tầng thứ 3 (Tầng giao vận) theo mô hình OSI.
+
+![alt text](../images/router.png)
 
 **Chức năng**
 
@@ -150,6 +170,9 @@ Trunk Port là cổng trên switch có thể truyền dữ liệu của nhiều 
 ## 3.4 Firewall
 **Khái niệm**
 - Firewall (tường lửa) là một hệ thống bảo mật mạng giúp kiểm soát và giám sát lưu lượng dữ liệu ra vào giữa các mạng, thường là giữa mạng nội bộ (LAN) và mạng bên ngoài (Internet). Nó hoạt động như một rào cản bảo vệ, chỉ cho phép các kết nối hợp lệ và ngăn chặn các kết nối có hại. 
+
+![alt text](../images/firewall.png)
+
 **Chức năng của Firewall**
 
 - Bảo vệ mạng khỏi các cuộc tấn công: Ngăn chặn hacker, malware, DDoS, và các cuộc tấn công mạng khác.
@@ -167,7 +190,10 @@ Trunk Port là cổng trên switch có thể truyền dữ liệu của nhiều 
 
 - Gateway (Cổng mạng) là một thiết bị hoặc nút mạng hoạt động như cửa ngõ giao tiếp giữa hai mạng khác nhau, giúp chuyển đổi giao thức và định tuyến dữ liệu giữa chúng. Nó hoạt động ở Layer 3 (Network Layer) của mô hình OSI, nhưng có thể hỗ trợ cả các tầng cao hơn.
 
+![](../images/gateway.jpg)
+
 **Chức năng của Gateway**
+
 - Kết nối các mạng khác nhau: Ví dụ, mạng LAN kết nối với Internet thông qua Gateway.
 
 - Chuyển đổi giao thức (Protocol Conversion): Hỗ trợ truyền dữ liệu giữa các hệ thống dùng giao thức khác nhau.

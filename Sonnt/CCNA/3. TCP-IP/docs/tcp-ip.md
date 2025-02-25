@@ -53,8 +53,6 @@ Tầng 1 - Tầng Vật lý (Physical)
 - Tầng 3 (transport):Hỗ trợ phục hồi và xử lý lỗi , ghép các gói tin lại
 - Tầng 4 (application): Gỡ bỏ những header còn lại để nhận được dữ liệu bên gửi
 
-
-
 ## So sánh mô hình OSI và TCP/IP 
 
 - TCP/IP và OSI là hai giao thức mạng truyền thông tin được sử dụng phổ biến nhất. Tuy nhiên sự khác biệt giữa hai giao thức đó là mô hình OSI chỉ là mô hình khái niệm, nó chỉ sử dụng để tham chiếu mà không được sử dụng trong thực tế. Mặt khác, TCP/IP được sử dụng rộng rãi giúp thiết lập các liên kết và tương tác trong môi trường mạng hiện nay.
@@ -113,3 +111,4 @@ TCP hoạt động theo mô hình có kết nối (connection-oriented), nghĩa 
 | **Trò chơi trực tuyến (Online Gaming)** | UDP | Cần độ trễ thấp, tốc độ nhanh hơn. |
 | **Truyền phát trực tiếp (Live Streaming)** | UDP | Cần tốc độ cao, mất một vài gói tin không quan trọng. |
 | **Tra cứu DNS (Domain Name System)** | UDP | Phản hồi nhanh, không cần kiểm tra lỗi. |
+
