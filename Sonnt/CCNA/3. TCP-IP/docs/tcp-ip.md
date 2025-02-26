@@ -10,26 +10,27 @@ TCP/IP là sự kết hợp giữa 2 giao thức. Trong đó IP (Giao thức li�
 
 ## Chức năng của các tầng trong mô hình TCP/IP
 
-Một mô hình TCP/IP tiêu chuẩn bao gồm 4 lớp được chồng lên nhau, bắt đầu từ tầng thấp nhất là Tầng vật lý (Physical) → Tầng mạng (Network) → Tầng giao vận (Transport) và cuối cùng là Tầng ứng dụng (Application)
+Một mô hình TCP/IP tiêu chuẩn bao gồm 4 lớp được chồng lên nhau, bắt đầu từ tầng thấp nhất là Truy cập mạng (Network access) → Tầng mạng (Internet) → Tầng giao vận (Transport) và cuối cùng là Tầng ứng dụng (Application)
 
 ![alt text](../images/mohinhtcpip.png)
 
 
 Tầng 4 - Tầng Ứng dụng (Application) 
 
-- Tầng ứng dụng đảm nhận vai trò giao tiếp dữ liệu giữa 2 máy khác nhau thông qua các dịch vụ mạng khác nhau (duyệt web, chat, gửi email, một số giao thức trao đổi dữ liệu: SMTP, SSH, FTP,...). Dữ liệu khi đến đây sẽ được định dạng theo kiểu Byte nối Byte, cùng với đó là các thông tin định tuyến giúp xác định đường đi đúng của một gói tin.
+- Tầng ứng dụng đảm nhận vai trò giao tiếp dữ liệu giữa 2 máy khác nhau thông qua các dịch vụ mạng khác nhau (duyệt web, chat, gửi email, một số giao thức trao đổi dữ liệu: HTTP,SMTP, SSH, FTP,...). Cùng với đó là các thông tin định tuyến giúp xác định đường đi đúng của một gói tin.
 
 Tầng 3 - Tầng Giao vận (Transport) 
 
-- Tầng vận chuyển (Transport Layer-TCP) Cung cấp cơ chế truyền dữ liệu giữa các thiết bị đầu cuối. Đảm nhận nhiệm việc phân nhỏ các gói tin có kích thước lớn khi gửi và tập hợp lại khi nhận, tính toàn vẹn cho dữ liệu (không lỗi, không mất, đúng thứ tự) là yếu tố được đảm bảo.
+- Tầng vận chuyển : Cung cấp cơ chế truyền dữ liệu giữa các thiết bị đầu cuối. Đảm nhận nhiệm việc phân nhỏ các gói tin có kích thước lớn khi gửi và tập hợp lại khi nhận, tính toàn vẹn cho dữ liệu (không lỗi, không mất, đúng thứ tự) là yếu tố được đảm bảo.
 
 - Trong tầng này còn bao gồm 2 giao thức cốt lõi là TCP và UDP.
 
 Tầng 2 - Tầng mạng (Internet) 
 
--  Phân đoạn dữ liệu sẽ được đóng gói (Packets) với kích thước mỗi gói phù hợp với mạng chuyển mạch mà nó dùng để truyền dữ liệu. Lúc này, các gói tin được chèn thêm phần Header chứa thông tin của tầng mạng và tiếp tục được chuyển đến tầng tiếp theo. Các giao thức chính trong tầng là IP, ICMP và ARP.
+-  Phân đoạn dữ liệu sẽ được đóng gói (Packets) với kích thước mỗi gói phù hợp với mạng chuyển mạch mà nó dùng để truyền dữ liệu. Lúc này, các gói tin được chèn thêm phần Header chứa thông tin của tầng mạng và tiếp tục được chuyển đến tầng tiếp theo.
+ - Các giao thức chính trong tầng là IP, ICMP và ARP.
 
-Tầng 1 - Tầng Vật lý (Physical) 
+Tầng 1 - Tầng truy cập mạng (Network Access)
 
 - Là sự kết hợp giữa tầng Vật lý và tầng liên kết dữ liệu của mô hình OSI. Chịu trách nhiệm truyền dữ liệu giữa hai thiết bị trong cùng một mạng. Tại đây, các gói dữ liệu được đóng vào khung (gọi là Frame) và được định tuyến đi đến đích đã được chỉ định ban đầu.
 
@@ -41,14 +42,14 @@ Tầng 1 - Tầng Vật lý (Physical)
 
 - Tầng 4 (application): Người dùng đưa thông tin vào máy tính ( hình ảnh , văn bản...). Data sẽ được gửi xuống tầng vận chuyển
 - Tầng 3 (transport): Data ở đây sẽ được chia nhỏ thành các Segment,cấu trúc đầy đủ của segment lúc này là Header chứa thông tin điều khiển và sau đó là dữ liệu . Các Segment tiếp tục được chuyển xuống tầng Internet.
-- Tầng 2 (internet): Các Segment ở đây sẽ được đóng gói Packet với phần Header chứa thông tin tầng mạng. Các Packet tiếp tục được đóng vào các Frames được định tuyến đi đến đích chỉ định ban đầu
-- Tầng 1 (physical): Ở đây Frame sẽ được mã hóa thành chuỗi nhị phân
+- Tầng 2 (internet): Các Segment ở đây sẽ được đóng gói Packet với phần Header chứa thông tin tầng mạng. 
+- Tầng 1 (Network Access):Các Packet tiếp tục được đóng vào các Frames có chứa địa chỉ MAC. Ở đây Frame sẽ được mã hóa thành chuỗi nhị phân.
 
 ![alt text](../images/hoatdongtcpip.png)
 
 **Bên nhận**
 
-- Tầng 1 (physical):Máy nhận kiểm tra quá trình đồng bộ và đưa các chuỗi bit nhị phân vào vùng đệm rồi gửi thông báo đã nhận dữ liệu
+- Tầng 1 (Network Access):Máy nhận kiểm tra quá trình đồng bộ và đưa các chuỗi bit nhị phân vào vùng đệm rồi gửi thông báo đã nhận dữ liệu
 - Tầng 2 (internet): Tại đây thông tin sẽ được kiểm tra xem frame có bị lỗi không, nếu lỗi thì hủy và gửi lại. Kiểm tra các định tuyến, thông tin tầng mạng có đúng địa chỉ hay không, nếu đúng sẽ chuyển lên transport
 - Tầng 3 (transport):Hỗ trợ phục hồi và xử lý lỗi , ghép các gói tin lại
 - Tầng 4 (application): Gỡ bỏ những header còn lại để nhận được dữ liệu bên gửi
@@ -56,6 +57,8 @@ Tầng 1 - Tầng Vật lý (Physical)
 ## So sánh mô hình OSI và TCP/IP 
 
 - TCP/IP và OSI là hai giao thức mạng truyền thông tin được sử dụng phổ biến nhất. Tuy nhiên sự khác biệt giữa hai giao thức đó là mô hình OSI chỉ là mô hình khái niệm, nó chỉ sử dụng để tham chiếu mà không được sử dụng trong thực tế. Mặt khác, TCP/IP được sử dụng rộng rãi giúp thiết lập các liên kết và tương tác trong môi trường mạng hiện nay.
+
+![alt text](../images/Screenshot_1.png)
 
 - Điểm tương đồng
 
