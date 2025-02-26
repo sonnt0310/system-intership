@@ -8,7 +8,6 @@ VLAN là cụm từ viết tắt của virtual local area network (hay virtual L
 
 Vlan định nghĩa các broadcast domains trong mạng lớp 2. Broadcast domains là tập hợp tất cả các thiết bị sẽ nhận được các broadcast frame có nguồn gốc từ bất kỳ thiết bị nào trong vùng. Broadcast domains thường giới hạn bởi Router vì Router không chuyển tiếp broadcast domains.
 
-
 ## 1.2 Mục đích của VLAN
 
 ![alt text](<../images/mo hinh vlan 1.png>)
@@ -38,18 +37,11 @@ Có 3 loại VLAN, bao gồm:
 
 ![alt text](<../images/cach hoat dong vlan.webp>)
 
-**Các bước chi tiết về cách VLAN hoạt động:**
-
-- Gửi khung Ethernet: Khi một thiết bị gửi khung Ethernet, nó sẽ thêm mã VLAN vào khung. Mã VLAN này xác định VLAN mà khung Ethernet thuộc về.
-- Chuyển khung đến bộ chuyển mạch: Khung Ethernet được truyền qua cáp đến bộ chuyển mạch.
-- Bộ chuyển mạch đọc mã VLAN: Bộ chuyển mạch đọc mã VLAN trong khung Ethernet.
-- Chuyển khung đến cổng tương ứng: Bộ chuyển mạch chuyển khung Ethernet đến cổng tương ứng với VLAN được xác định bởi mã VLAN.
-- Thiết bị nhận khung: Thiết bị trên cổng nhận được khung Ethernet và xử lý nó.
-
 # 2.Trunking
 
 - Đường Trunk hay Trunking là một kỹ thuật kết nối các thiết bị mạng với nhau để tạo thành một mạng lớn hơn, đặc biệt trong các mạng LAN (Local Area Network) hoặc các mạng VLAN (Virtual Local Area Network). Đường trunk cho phép chuyển gói dữ liệu từ một VLAN này sang một VLAN khác trên cùng một đường truyền vật lý, điều này giúp tối ưu hóa việc sử dụng băng thông và giảm độ trễ trong mạng.
 
+**Ví Dụ**
 ![alt text](<../images/Ket noi 2 vlan.jpg>)
 
 - Để kết nối các VLAN dựa trên việc kết nối các cổng tương ứng trên 2 Switch lại với nhau bằng một kết nối vật lý (dây cáp mạng).
@@ -97,22 +89,23 @@ Trunk Port là cổng trên switch có thể truyền dữ liệu của nhiều 
 ![alt text](../images/hub.png)
 
 **Chức năng của Hub**
+
 - Kết nối các thiết bị trong mạng: Máy tính, máy in, server,…
 - Truyền dữ liệu bằng cách phát sóng (Broadcast): Khi một thiết bị gửi dữ liệu, Hub sẽ gửi nó đến tất cả các thiết bị khác.
 - Không lưu địa chỉ MAC: Hub không có khả năng phân biệt thiết bị nào gửi hoặc nhận dữ liệu.
 
 **Ưu điểm**
 
-- Dễ sử dụng: Hub không cần cấu hình phức tạp, chỉ cần cắm và chạy, rất tiện lợi cho người dùng phổ thông.
-- Chi phí thấp: Thiết bị này thường có giá rẻ hơn so với các thiết bị mạng khác như switch hay router, phù hợp cho các mạng nhỏ.
-- Kết nối cơ bản: Kết nối Hub là gì? Thiết bị này cung cấp kết nối cơ bản giữa các thiết bị trong mạng, giúp tạo nên hệ thống mạng nhanh chóng và đơn giản.
+- Hub không cần cấu hình phức tạp, chỉ cần cắm và chạy, rất tiện lợi cho người dùng phổ thông.
+- Thiết bị này thường có giá rẻ hơn so với các thiết bị mạng khác như switch hay router, phù hợp cho các mạng nhỏ.
+- Thiết bị này cung cấp kết nối cơ bản giữa các thiết bị trong mạng, giúp tạo nên hệ thống mạng nhanh chóng và đơn giản.
 
 **Nhược điểm**
 
-- Chia sẻ băng thông: Tất cả các thiết bị kết nối qua Hub phải chia sẻ cùng một băng thông, dẫn đến tốc độ chậm khi nhiều thiết bị cùng truyền dữ liệu.
-- Không thông minh: Thiết bị này không phân biệt được địa chỉ đích, do đó phát dữ liệu đến tất cả các thiết bị trong mạng, gây lãng phí tài nguyên và tắc nghẽn.
-- Half-duplex: Thiết bị này chỉ hỗ trợ chế độ half-duplex, nghĩa là chỉ có thể truyền hoặc nhận dữ liệu tại một thời điểm, không thể làm cả hai cùng lúc.
-- Không bảo mật: Hub không có khả năng kiểm soát truy cập hay bảo mật, khiến mạng dễ bị tấn công hoặc gián đoạn.
+- Tất cả các thiết bị kết nối qua Hub phải chia sẻ cùng một băng thông, dẫn đến tốc độ chậm khi nhiều thiết bị cùng truyền dữ liệu.
+- Thiết bị này không phân biệt được địa chỉ đích, do đó phát dữ liệu đến tất cả các thiết bị trong mạng, gây lãng phí tài nguyên và tắc nghẽn.
+- Thiết bị này chỉ hỗ trợ chế độ half-duplex, nghĩa là chỉ có thể truyền hoặc nhận dữ liệu tại một thời điểm, không thể làm cả hai cùng lúc.
+- Hub không có khả năng kiểm soát truy cập hay bảo mật, khiến mạng dễ bị tấn công hoặc gián đoạn.
 ## 3.2 Router
 **Khái niệm**
 
@@ -126,12 +119,11 @@ Trunk Port là cổng trên switch có thể truyền dữ liệu của nhiều 
 
 **Cấu tạo Router**
 
-- Cổng mạng LAN*
-    - Là mạng cục bộ (có thể có 1 hoặc nhiều cổng mạng LAN)
+- Cổng mạng LAN
     - Hiện nay thường các Router đều có 2 cổng LAN trở lên giúp kết nối từ modem chính đến các thiết bị đầu cuối (tivi, laptop, máy tính,…) để sử dụng mạng internet thông qua cáp mạng. Trên thị trường cổng LAN cũng rất đa dạng với nhiều tốc độ khác nhau đáp ứng được độ truyền tải cao và nhanh chóng.
 
 - Cổng WAN
-    - Là mạng diện rộng (có 1 hoặc 2) nhưng thường sử dụng là 1, nhưng đối với một số Router chuyên dùng thì sẽ có 2 cổng WAN. Cổng Wan nằm ở mặt sau Router, được sử dụng để kết nối với modem để truy cập internet từ nhà cung cấp ISP để tận dụng lợi thế của mạng internet trên tất cả các thiết bị được kết hợp với nó.
+    - Cổng Wan nằm ở mặt sau Router, được sử dụng để kết nối với modem để truy cập internet từ nhà cung cấp ISP để tận dụng lợi thế của mạng internet trên tất cả các thiết bị được kết hợp với nó.
 
 - Anten
     - Loại phát sóng wifi có thể là anten ngoài hoặc ăngten ngầm. Hiện nay, phổ biến thường là anten ngoài, số lượng anten càng nhiều thì càng tăng cường độ phát sóng Wifi hơn.
@@ -159,13 +151,13 @@ Trunk Port là cổng trên switch có thể truyền dữ liệu của nhiều 
 
 **Chức năng của Switch**
 
-- Chuyển mạch dữ liệu thông minh: Switch nhận các gói dữ liệu và chuyển tiếp chúng đến đúng thiết bị đích thay vì gửi đến toàn bộ mạng (như Hub).
+- Switch nhận các gói dữ liệu và chuyển tiếp chúng đến đúng thiết bị đích thay vì gửi đến toàn bộ mạng (như Hub).
 
-- Giảm tắc nghẽn mạng: Do switch gửi dữ liệu đúng nơi cần đến, nó giúp giảm xung đột dữ liệu so với Hub.
+- Do switch gửi dữ liệu đúng nơi cần đến, nó giúp giảm xung đột dữ liệu so với Hub.
 
-- Hỗ trợ VLAN (trong switch Layer 3): VLAN giúp phân chia mạng thành nhiều subnet để tăng tính bảo mật và hiệu suất.
+- VLAN giúp phân chia mạng thành nhiều subnet để tăng tính bảo mật và hiệu suất.
 
-- Tăng hiệu suất mạng: Switch có băng thông cao hơn và hỗ trợ nhiều cổng Ethernet, giúp truyền tải dữ liệu nhanh chóng.
+- Switch có băng thông cao hơn và hỗ trợ nhiều cổng Ethernet, giúp truyền tải dữ liệu nhanh chóng.
 
 ## 3.4 Firewall
 **Khái niệm**
@@ -175,15 +167,15 @@ Trunk Port là cổng trên switch có thể truyền dữ liệu của nhiều 
 
 **Chức năng của Firewall**
 
-- Bảo vệ mạng khỏi các cuộc tấn công: Ngăn chặn hacker, malware, DDoS, và các cuộc tấn công mạng khác.
+- Ngăn chặn hacker và các cuộc tấn công mạng khác.
 
--  Lọc lưu lượng truy cập: Chặn hoặc cho phép các kết nối dựa trên quy tắc (IP, cổng, giao thức, v.v.).
+- Chặn hoặc cho phép các kết nối dựa trên quy tắc (IP, cổng, giao thức, v.v.).
 
--  Kiểm soát truy cập: Quản lý quyền truy cập của người dùng vào mạng nội bộ hoặc Internet.
+- Quản lý quyền truy cập của người dùng vào mạng nội bộ hoặc Internet.
 
-- Ngăn chặn truy cập trái phép: Hạn chế quyền truy cập vào các tài nguyên quan trọng của tổ chức.
+- Hạn chế quyền truy cập vào các tài nguyên quan trọng của tổ chức.
 
-- Giám sát và ghi log: Theo dõi lưu lượng mạng để phát hiện các hành vi bất thường hoặc nguy cơ bảo mật.
+- Theo dõi lưu lượng mạng để phát hiện các hành vi bất thường hoặc nguy cơ bảo mật.
 
 ## 3.5 Gateway
 **Khái niệm**
