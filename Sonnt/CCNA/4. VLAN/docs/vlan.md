@@ -4,7 +4,7 @@
 
 VLAN là cụm từ viết tắt của virtual local area network (hay virtual LAN) hay còn được gọi là mạng LAN ảo. VLAN là một kỹ thuật cho phép tạo lập các mạng LAN độc lập một cách logic trên cùng một kiến trúc hạ tầng vật lý. 
 
-![alt text](<../images/mo hinh vlan.png>)
+![alt text](<../images/Ket noi 2 vlan.jpg>)
 
 Vlan định nghĩa các broadcast domains trong mạng lớp 2. Broadcast domains là tập hợp tất cả các thiết bị sẽ nhận được các broadcast frame có nguồn gốc từ bất kỳ thiết bị nào trong vùng. Broadcast domains thường giới hạn bởi Router vì Router không chuyển tiếp broadcast domains.
 
@@ -42,8 +42,6 @@ Access Port là cổng trên switch được cấu hình để thuộc về mộ
 
 - Chỉ thuộc về một VLAN duy nhất. 
 - Dùng cho kết nối với các thiết bị đầu cuối như PC, máy in, hoặc Access Point.
-
-![alt text](<../images/Ket noi 2 vlan.jpg>)
 
 # 2.Trunking
 
