@@ -52,8 +52,8 @@ OSPF (Open Shortest Path First) là giao thức định tuyến nội bộ hoạ
     - Router sẽ gửi LSA đến tất cả láng giềng trong vùng, và mỗi router trong cùng một khu vực sẽ có cùng một LSDB (Link-State Database).
     - Quá trình này được gọi là LSA flooding (lan truyền LSA).
 
-    ![alt text](image.png)
-
+    ![alt text](../images/tđthongtin.png)
+    
 - **Bước 4.** Thực hiện thuật toán SPF: 
     - Sau khi có LSDB hoàn chỉnh, router sử dụng thuật toán Dijkstra (SPF) để tính toán đường đi ngắn nhất đến từng mạng.
 
