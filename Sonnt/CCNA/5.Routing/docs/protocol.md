@@ -36,12 +36,13 @@ OSPF (Open Shortest Path First) là giao thức định tuyến nội bộ hoạ
     - Khi tiến trình OSPF được kích hoạt, router sẽ gửi gói tin Hello trên tất cả các giao diện đã bật OSPF.
     - Nếu có router khác cũng chạy OSPF trên cùng một phân đoạn mạng, hai router sẽ xác nhận nhau và thiết lập quan hệ láng giềng.
     - Chúng sẽ so sánh thông số như Area ID, Hello Timer, Dead Timer… để đảm bảo tương thích.
-
+    ![alt text](../images/tlqhlanggieng.png)
 - Bước 3. Trao đổi LSA và xây dựng bảng (LSDB): 
     - Khi hai router trở thành láng giềng, chúng sẽ trao đổi các Link-State Advertisement (LSA).
     - LSA chứa thông tin về các liên kết kết nối trực tiếp của router, bao gồm chi phí (cost), IP, trạng thái liên kết….
     - Router sẽ gửi LSA đến tất cả láng giềng trong vùng, và mỗi router trong cùng một khu vực sẽ có cùng một LSDB (Link-State Database).
     - Quá trình này được gọi là LSA flooding (lan truyền LSA).
+    ![alt text](image.png)
 - Bước 4. Thực hiện thuật toán SPF: 
     - Sau khi có LSDB hoàn chỉnh, router sử dụng thuật toán Dijkstra (SPF) để tính toán đường đi ngắn nhất đến từng mạng.
         *Quá trình hoạt động của SPF*
