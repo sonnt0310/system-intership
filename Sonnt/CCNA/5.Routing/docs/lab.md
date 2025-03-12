@@ -37,9 +37,12 @@
     Default Gateway: 192.168.3.1  
 
 # dùng định tuyến tĩnh (Static Route)
+    Router(config)# ip route (network-address) (subnet-mask) (next-hop ip address/ exit interface)
 ## Trên R1 , thêm tuyến đường đến 192.168.3.0/24:
 
     ip route 192.168.3.0 255.255.255.0 192.168.1.2
 
 ## Trên R2, thêm tuyến đường đến 192.168.2.0/24:
     ip route 192.168.2.0 255.255.255.0 192.168.1.1
+
+
