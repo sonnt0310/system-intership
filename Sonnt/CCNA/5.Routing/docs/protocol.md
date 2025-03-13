@@ -79,15 +79,15 @@ OSPF (Open Shortest Path First) là giao thức định tuyến nội bộ hoạ
     - Delay (Độ trễ)
     - Load (Mức tải trên đường truyền)
     - Reliability (Độ tin cậy)
-    - MTU (Maximum Transmission Unit - kích thước gói tin tối đa)
-Công thức đầy đủ của EIGRP Metric
+
+- Công thức đầy đủ của EIGRP Metric
 ![alt text](../images/IEGRP.png)
 
 - EIGRP chỉ cập nhật các thay đổi nhỏ (Partial Updates), giúp tiết kiệm băng thông và tăng tốc độ hội tụ.
 - EIGRP nhanh hơn nhờ Feasible Successor (Đường thay thế sẵn có), giúp router không cần tính toán lại toàn bộ khi đường chính bị lỗi.
 
 # BGP (Border Gateway Protocol)
-- BGP (Border Gateway Protocol) là giao thức định tuyến duy nhất sử dụng để trao đổi thông tin định tuyến giữa các Hệ thống tự trị (AS - Autonomous Systems) trên Internet.
+- BGP (Border Gateway Protocol) là giao thức định tuyến sử dụng để trao đổi thông tin định tuyến giữa các Hệ thống tự trị (AS - Autonomous Systems) trên Internet.
 ![alt text](../images/BGP.jpeg)
 - Loại giao thức: Giao thức định tuyến vector đường dẫn (Path Vector Routing Protocol).
 

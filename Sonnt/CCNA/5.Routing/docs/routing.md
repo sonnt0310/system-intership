@@ -54,9 +54,11 @@ Có 2 loại định tuyến : Định tuyến động và định tuyến tĩnh
 - Tất cả các bộ routing phải có cùng một giao thức routing động để trao đổi các tuyến.
 - Nếu bộ routing phát hiện ra bất kỳ thay đổi nào trong điều kiện hoặc cấu trúc liên kết, thì bộ routing sẽ phát thông tin này đến tất cả các bộ routing khác.
 
-**Đặc điểm của routing động:**
+**Ưu điểm của routing động:**
 
-- Nó dễ dàng hơn để cấu hình.
-- Sẽ hiệu quả hơn trong việc lựa chọn tuyến đường tốt nhất để đáp ứng với những thay đổi trong điều kiện hoặc cấu trúc liên kết. Nhược điểm của routing động:
+- Nó dễ dàng hơn để cấu  trong một mạng lớn.
+- Sẽ hiệu quả hơn trong việc lựa chọn tuyến đường tốt nhất để đáp ứng với những thay đổi trong điều kiện hoặc cấu trúc liên kết. 
+
+**Nhược điểm của routing động:**
 - Nó đắt hơn về việc sử dụng CPU và băng thông.
 - Nó kém an toàn hơn so với routing mặc định và tĩnh.
