@@ -6,7 +6,7 @@
 
  - Chia thành ba nhóm chính:
      - Distance-Vector: RIP (Routing Information Protocol).
-    - Link-State: OSPF (Open Shortest Path First) và IS-IS (Intermediate System to Intermediate System).
+    - Link-State: OSPF (Open Shortest Path First)
     - Hybrid (kết hợp): EIGRP (Enhanced Interior Gateway Routing Protocol).
 
 - Để thực hiện định tuyến giữa các AS với nhau chúng ta phải sử dụng một giao thức riêng gọi là giao thức định tuyến ngoại miền EGP (Exterior Gateway Protocol).
@@ -48,7 +48,7 @@ OSPF (Open Shortest Path First) là giao thức định tuyến nội bộ hoạ
 
 - **Bước 3.** Trao đổi LSA và xây dựng bảng (LSDB): 
     - Khi hai router trở thành láng giềng, chúng sẽ trao đổi các Link-State Advertisement (LSA).
-    - LSA chứa thông tin về các liên kết kết nối trực tiếp của router, bao gồm chi phí (cost), IP, trạng thái liên kết….
+    - LSA chứa thông tin về mạng, router, và các đường đi trong OSPF.
     - Router sẽ gửi LSA đến tất cả láng giềng trong vùng, và mỗi router trong cùng một khu vực sẽ có cùng một LSDB (Link-State Database).
     - Quá trình này được gọi là LSA flooding (lan truyền LSA).
 
@@ -59,9 +59,15 @@ OSPF (Open Shortest Path First) là giao thức định tuyến nội bộ hoạ
 
     - SPF:	Xây dựng cây đường đi ngắn nhất từ một điểm gốc đến tất cả các điểm.
 
+    - Trong OSPF không còn gọi là Metrict, thay vào đó gọi là Cost (Cost trên interface).
+
+    - Cost được tính khi đi vào 1 cổng và đi ra không tính.
+
+    ```Metric = cost = 108/Bandwidth (đơn vị bps).```
 - **Bước 5.** Cập nhật bảng định tuyến với các đường dẫn tốt nhất: 
     - Sau khi thuật toán SPF tính toán xong, router cập nhật các đường đi tốt nhất vào bảng định tuyến (Routing Table).
     - Khi có gói tin cần gửi, router sẽ dựa vào bảng định tuyến để quyết định chuyển tiếp gói tin theo đường tối ưu nhất.
+
 # EIGRP (Enhanced Interior Gateway Routing Protocol)
 
 - EIGRP là Hybrid (kết hợp Distance-Vector & Link-State), sử dụng thuật toán DUAL (Diffusing Update Algorithm) để tính toán đường đi và hội tụ nhanh hơn.
@@ -74,12 +80,31 @@ OSPF (Open Shortest Path First) là giao thức định tuyến nội bộ hoạ
     - Load (Mức tải trên đường truyền)
     - Reliability (Độ tin cậy)
     - MTU (Maximum Transmission Unit - kích thước gói tin tối đa)
+Công thức đầy đủ của EIGRP Metric
+![alt text](../images/IEGRP.png)
+
 - EIGRP chỉ cập nhật các thay đổi nhỏ (Partial Updates), giúp tiết kiệm băng thông và tăng tốc độ hội tụ.
 - EIGRP nhanh hơn nhờ Feasible Successor (Đường thay thế sẵn có), giúp router không cần tính toán lại toàn bộ khi đường chính bị lỗi.
-- EIGRP hỗ trợ cả Equal-Cost và Unequal-Cost Load Balancing (chia tải ngay cả khi các tuyến có chi phí khác nhau), giúp tối ưu hiệu suất mạng.
 
 # BGP (Border Gateway Protocol)
-- BGP là một giao thức EGP được thiết kết để phân phối thông tin định tuyến giữa các AS.
-- BGP là một giao thức định tuyến vecto khoảng cách.
-- Bảng định tuyến chứa tất cả các đích mà router biết và địa chỉ hop tiếp theo mà router phải gửi để đến đích cũng như metric cost của con đường đó.
-- Nếu một router có thể chọn nhiều hop để gửi data tới đích, nó sẽ quyết định chọn một hop dựa vào so sánh các metric phải trả khi gửi data
+- BGP (Border Gateway Protocol) là giao thức định tuyến duy nhất sử dụng để trao đổi thông tin định tuyến giữa các Hệ thống tự trị (AS - Autonomous Systems) trên Internet.
+![alt text](../images/BGP.jpeg)
+- Loại giao thức: Giao thức định tuyến vector đường dẫn (Path Vector Routing Protocol).
+
+- Chức năng chính:
+    - Quản lý và trao đổi thông tin định tuyến giữa các mạng lớn (ISP, trung tâm dữ liệu, doanh nghiệp).
+    - Chọn tuyến đường tối ưu dựa trên chính sách thay vì chỉ dựa vào khoảng cách như các giao thức khác.
+    
+- Các loại BGP:
+    - eBGP (External BGP): Kết nối giữa các AS khác nhau (dùng trên Internet).
+    - iBGP (Internal BGP): Dùng để trao đổi thông tin định tuyến giữa các router trong AS trước khi xuất ra eBGP.
+
+- Tiêu chí chọn đường đi trong BGP (BGP Best Path Selection):
+    - Độ ưu tiên : Local Preference (Ưu tiên cục bộ) Giá trị cao hơn được ưu tiên hơn
+    - Đường dẫn ngắn nhất (AS-PATH): BGP ưu tiên đường đi có ít AS hơn. Đường ngắn hơn thường được chọn vì có ít trung gian hơn.
+    - Nguồn gốc : IGP > EGP > Incomplete (định tuyến từ IGP được ưu tiên hơn)
+    - Chính sách định tuyến của nhà mạng: Các ISP hoặc doanh nghiệp có thể tùy chỉnh chính sách định tuyến theo yêu cầu riêng
+
+- Nhược điểm:
+    - Hội tụ chậm khi có thay đổi mạng.
+    - Cấu hình phức tạp, dễ gây lỗi nếu thiết lập sai.

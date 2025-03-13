@@ -1,3 +1,5 @@
+![alt text](../images/labrouting.png)
+
 # Cấu hình trên Router0
     enable
     configure terminal
@@ -45,4 +47,6 @@
 ## Trên R2, thêm tuyến đường đến 192.168.2.0/24:
     ip route 192.168.2.0 255.255.255.0 192.168.1.1
 
+# Ping gói tin từ PC 0 đến PC1
 
+![alt text](../images/routing1.png)
