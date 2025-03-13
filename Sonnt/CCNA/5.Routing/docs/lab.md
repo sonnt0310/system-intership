@@ -13,6 +13,8 @@
     no shutdown
     exit
 
+![alt text](../images/Screenshot_3.png)
+
 # Cấu hình trên Router1
     enable
     configure terminal
@@ -26,6 +28,7 @@
     no shutdown
     exit
 
+![alt text](../images/Screenshot_3.png)
 
 # Cấu hình trên PC0
     IP Address: 192.168.2.2  
@@ -49,4 +52,4 @@
 
 # Ping gói tin từ PC 0 đến PC1
 
-![alt text](../images/routing1.png)
+![alt text](../images/Screenshot_2.png)
