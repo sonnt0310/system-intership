@@ -13,7 +13,7 @@
     no shutdown
     exit
 
-![alt text](../images/Screenshot_3.png)
+![alt text](../images/routing4.png)
 
 # Cấu hình trên Router1
     enable
