@@ -2,16 +2,20 @@
 
 - Hệ thống tự trị là một nhóm các mạng và bộ định tuyến có chung chính sách quản trị.
 
+- Mỗi AS được nhận dạng bằng một số duy nhất gọi là ASN (Autonomous System Number)
+
+![alt text](../images/AS.png)
+
 - Các giao thức định tuyến được sử dụng bên trong một AS được gọi là giao thức định tuyến nội miền IGP (Interior Gateway Protocol).
 
- - Chia thành ba nhóm chính:
-     - Distance-Vector: RIP (Routing Information Protocol).
-    - Link-State: OSPF (Open Shortest Path First)
-    - Hybrid (kết hợp): EIGRP (Enhanced Interior Gateway Routing Protocol).
+    - Chia thành ba nhóm chính:
+        - Distance-Vector: RIP (Routing Information Protocol).
+        - Link-State: OSPF (Open Shortest Path First).
+        - Hybrid (kết hợp): EIGRP (Enhanced Interior Gateway Routing Protocol).
 
 - Để thực hiện định tuyến giữa các AS với nhau chúng ta phải sử dụng một giao thức riêng gọi là giao thức định tuyến ngoại miền EGP (Exterior Gateway Protocol).
 
-![alt text](<../images/routing 2.png>)
+![alt text](../images/routing_1.png)
 
 # RIP (Routing Information Protocol )
 - Routing Information Protocol (RIP) được thiết kế như là một giao thức IGP dùng cho các AS có kích thước nhỏ, không sử dụng cho hệ thống mạng lớn và phức tạp.
@@ -31,7 +35,7 @@ Trong giao thức định tuyến RIP, hop count được sử dụng để đo 
  # OSPF (Open Shortest Path First)
 OSPF (Open Shortest Path First) là giao thức định tuyến nội bộ hoạt động dựa trên thuật toán link state routing.
 
-![alt text](../images/OSPF.png)
+![alt text](../images/OSPF_1.png)
 
 ## **Hoạt động của OSPF**
 
@@ -100,10 +104,10 @@ OSPF (Open Shortest Path First) là giao thức định tuyến nội bộ hoạ
     - iBGP (Internal BGP): Dùng để trao đổi thông tin định tuyến giữa các router trong AS trước khi xuất ra eBGP.
 
 - Tiêu chí chọn đường đi trong BGP (BGP Best Path Selection):
-    - Độ ưu tiên : Local Preference (Ưu tiên cục bộ) Giá trị cao hơn được ưu tiên hơn
+    - Độ ưu tiên : Local Preference (Ưu tiên cục bộ) Giá trị cao hơn được ưu tiên hơn.
     - Đường dẫn ngắn nhất (AS-PATH): BGP ưu tiên đường đi có ít AS hơn. Đường ngắn hơn thường được chọn vì có ít trung gian hơn.
     - Nguồn gốc : IGP > EGP > Incomplete (định tuyến từ IGP được ưu tiên hơn)
-    - Chính sách định tuyến của nhà mạng: Các ISP hoặc doanh nghiệp có thể tùy chỉnh chính sách định tuyến theo yêu cầu riêng
+    - Chính sách định tuyến của nhà mạng: Các ISP hoặc doanh nghiệp có thể tùy chỉnh chính sách định tuyến theo yêu cầu riêng.
 
 - Nhược điểm:
     - Hội tụ chậm khi có thay đổi mạng.
