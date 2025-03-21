@@ -116,3 +116,24 @@ Quá trình gói tin trả về từ Server đến Host:
 - Gói tin từ Server: Source IP = 200.100.10.1, Destination IP = 150.150.0.1
 - Router+NAT nhận được gói tin và kiểm tra bảng NAT
 - Router+NAT thay đổi Destination IP thành địa chỉ IP riêng của Host: Source IP = 200.100.10.1, Destination IP = 10.0.0.1
+
+### SNAT (Source Network Address Translation)
+
+**Định nghĩa:**
+SNAT là kỹ thuật thay đổi địa chỉ IP nguồn của gói tin khi nó đi qua thiết bị NAT (thường là router).
+
+**Nguyên lý hoạt động:**
+1. Khi gói tin từ mạng nội bộ (có địa chỉ IP riêng) đi ra internet, router sẽ thay đổi địa chỉ IP nguồn từ địa chỉ IP riêng sang địa chỉ IP công cộng của router.
+2. Router lưu thông tin ánh xạ này (địa chỉ IP nguồn gốc + cổng nguồn → địa chỉ IP công cộng + cổng mới) vào bảng NAT.
+3. Khi gói tin phản hồi từ internet trở về, router sử dụng bảng NAT để chuyển đổi ngược lại địa chỉ đích thành địa chỉ IP riêng ban đầu.
+
+### DNAT (Destination Network Address Translation)
+
+**Định nghĩa:**
+DNAT là kỹ thuật thay đổi địa chỉ IP đích của gói tin khi nó đi qua thiết bị NAT.
+
+**Nguyên lý hoạt động:**
+1. Khi gói tin từ internet đi vào mạng nội bộ, router thay đổi địa chỉ IP đích từ địa chỉ IP công cộng sang địa chỉ IP riêng của máy chủ trong mạng nội bộ.
+2. Router lưu thông tin ánh xạ này vào bảng NAT.
+3. Khi gói tin phản hồi từ máy chủ nội bộ, router lại thay đổi địa chỉ nguồn từ địa chỉ IP riêng sang địa chỉ IP công cộng.
+
