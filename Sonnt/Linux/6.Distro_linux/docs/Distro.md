@@ -1,11 +1,11 @@
 # Distro linux, phân loại distro 
 
-1. Khái niệm distro
+## 1. Khái niệm distro
 
 1.1. Giới thiệu distro
 Distro là từ viết tắt thay thế cho Linux Distribution - bản phân phối của Linux - là một hệ điều hành được tập hợp từ nhiều phần mềm dựa trên nhân Linux (Linux Kernel) và thường có một hệ thống quản lý các gói tin.
 
-2. Phân loại distro 
+## 2. Phân loại distro 
 Các bản phân phối Linux thường được phân loại thành 3 nhánh chính, mỗi nhánh sử dụng một hệ quản lý gói (package manager) khác nhau. Dưới đây là chi tiết về các nhánh:
 
 2.1 Debian-based (Dựa trên Debian):
