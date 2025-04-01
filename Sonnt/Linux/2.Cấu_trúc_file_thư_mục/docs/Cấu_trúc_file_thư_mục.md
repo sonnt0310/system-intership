@@ -83,8 +83,4 @@ Trên hệ điều hành Linux, cấu trúc thư mục được tổ chức theo
 
 ---
 
-## 5. Ý nghĩa của hệ thống tệp
-- **Quản trị viên hệ thống** sử dụng để tìm tệp cấu hình hoặc xử lý sự cố.
-- **Lập trình viên** cần hiểu để làm việc với hệ thống Linux hiệu quả hơn.
-- **Người dùng bình thường** có thể sử dụng `/home`, `/tmp` và biết tránh xóa các tệp quan trọng.
 
