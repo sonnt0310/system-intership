@@ -18,7 +18,7 @@ Các bản phân phối tiêu biểu:
 - Debian
 
 - Ubuntu
-
+ 
 - Linux Mint
   
 - Kali Linux
