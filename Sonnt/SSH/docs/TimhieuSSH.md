@@ -9,31 +9,70 @@ SSH tên đầy đủ là Secure SHell là một giao thức mạng mang tính b
 
 ![alt text](../images/SSH_2.png)
 
-- Kết nối ban đầu: Máy khách (client) gửi yêu cầu kết nối đến máy chủ (server) thông qua cổng SSH (thường là cổng 22).
+### Bước 1.Khi Client khởi tạo 1 kết nối TCP tới port 22 ở Server, sẽ có 2 thông tin được trao đổi:
 
-- Xác thực danh tính:
+- Phiên bản Protocol mà Server hỗ trợ
+- Phiên bản của gói cài đặt SSH trên Server
+Nếu phiên bản Protocol của Server phù hợp với Client thì kết nối mới được tiếp tục. 
 
-    - Máy chủ gửi khóa công khai của nó đến máy khách.
+### Bước 2.Thiết lập Transport Layer (Trao đổi khóa và mã hóa)
 
-    - Máy khách sử dụng khóa công khai này để xác minh danh tính của máy chủ.
+- Đây là giai đoạn quan trọng để thiết lập một kênh mã hóa an toàn. SSH-2 sử dụng thuật toán Diffie-Hellman (hoặc biến thể) để trao đổi khóa, thay vì chỉ dựa vào RSA như SSH-1.
 
-    - Máy khách có thể sử dụng mật khẩu hoặc cặp khóa (private key/public key) để xác thực với máy chủ.
+### Thương lượng thuật toán:
 
-- Thiết lập kênh mã hóa: Sau khi xác thực thành công, cả hai bên sẽ thiết lập một kênh truyền dữ liệu mã hóa bằng các thuật toán như AES hoặc RSA để đảm bảo rằng dữ liệu được bảo vệ.
+Server gửi danh sách các thuật toán mà nó hỗ trợ, bao gồm:
 
-- Giao tiếp an toàn:
+- Thuật toán trao đổi khóa (key exchange):
+    - diffie-hellman-group14-sha256, ecdh-sha2-nistp256, v.v.
+    - Thuật toán mã hóa: aes256-ctr, chacha20-poly1305, v.v.
+    - Thuật toán kiểm tra toàn vẹn (MAC): hmac-sha2-256, v.v.
+    - Thuật toán nén: none, zlib, v.v.
 
-    - Máy khách và máy chủ sử dụng kênh mã hóa này để truyền dữ liệu, lệnh, hoặc file.
+Client chọn một bộ thuật toán từ danh sách này và gửi lại lựa chọn của mình.
 
-    - Mọi dữ liệu đi qua kênh SSH đều được mã hóa, giúp tránh việc bị đánh cắp hoặc sửa đổi.
+### Trao đổi khóa Diffie-Hellman:
+- Mục tiêu: Tạo ra một shared secret (bí mật chung) mà cả Client và Server dùng để tạo khóa mã hóa, mà không cần gửi trực tiếp khóa qua mạng.
 
-## 3. Giao thức SSH được dùng ở rất nhiều nền tảng từ Linux, macOs, Windows với các mục đích như:
+- Quy trình:
+    - Server gửi Host Key (thường là RSA, DSA, hoặc ECDSA) để định danh chính nó, kèm theo chữ ký số để chứng minh tính xác thực.
+    - Client và Server thực hiện trao đổi Diffie-Hellman:
+    Client tạo cặp khóa tạm thời (public/private) và gửi khóa công khai của nó.
+    - Server cũng tạo cặp khóa tạm thời và gửi khóa công khai của nó.
+    - Cả hai dùng khóa riêng của mình và khóa công khai của bên kia để tính toán shared secret.
+- Từ shared secret, cả hai bên tạo ra:
+    - Session Key: Khóa đối xứng để mã hóa dữ liệu.
+    - Integrity Key: Khóa để tạo mã kiểm tra toàn vẹn (MAC).
+    - Các khóa khác nếu cần (như khóa khởi tạo).`
 
-- Đăng nhập vào shell của máy tính từ xa (máy chủ)
-- Thi hành lệnh trên máy kết nối
-- Thiết lập tự động đăng nhập vào server
-- Truyền tải file an toàn
-- Gắn một thư mục ở máy từ xa (máy chủ) vào máy client
+### Xác thực Server:
+- Client kiểm tra Host Key của Server:
+    - Nếu Client đã lưu Host Key từ trước (trong known_hosts), nó so sánh để xác nhận Server.
+    - Nếu là lần đầu kết nối, Client hỏi người dùng có chấp nhận Host Key không (hiển thị fingerprint).
+- Sau khi xác thực Server và trao đổi khóa thành công, kênh mã hóa được thiết lập.
+    - Mã hóa và kiểm tra toàn vẹn:
+    - Dữ liệu từ đây được mã hóa bằng Session Key (thường dùng AES hoặc ChaCha20).
+    - Mỗi gói tin được gắn thêm MAC (Message Authentication Code) để đảm bảo không bị thay đổi.
+### Bước 3. User Authentication (Xác thực Client)
+Sau khi kênh mã hóa được thiết lập, Server cần xác thực Client để đảm bảo người dùng hợp lệ. SSH-2 hỗ trợ nhiều phương pháp xác thực, phổ biến nhất là:
+
+- Password Authentication:
+    - Server yêu cầu Client gửi username và password.
+    - Client mã hóa password bằng Session Key và gửi qua kênh an toàn.
+    - Server giải mã và kiểm tra với cơ sở dữ liệu (thường là /etc/passwd).
+    - Nếu khớp, Client được xác thực.
+
+- Public Key Authentication:
+    - Chuẩn bị trước:
+        - Client tạo cặp khóa RSA/DSA/ECDSA: Public Key và Private Key.
+        - Public Key được gửi trước cho Server và lưu trong ~/.ssh/authorized_keys.
+    - Quy trình:
+        - Client gửi yêu cầu xác thực bằng khóa công khai, kèm theo thông tin về Public Key của nó.
+        - Server gửi một chuỗi ngẫu nhiên (challenge) cho Client.
+        - Client ký chuỗi này bằng Private Key và gửi chữ ký lại.
+        - Server dùng Public Key để kiểm tra chữ ký. Nếu hợp lệ, Client được xác thực.
+### Bước 4 4. Connection Protocol (Thiết lập kênh giao tiếp)
+- Sau khi xác thực thành công, SSH-2 mở các kênh (channels) để Client và Server giao tiếp
 
 ## 4. SSH key
 - SSH key (Secure Shell key) là một cặp mã hóa bao gồm một khóa riêng tư (private key) và một khóa công khai (public key) được sử dụng trong giao thức SSH để xác thực và bảo mật quá trình truyền tải dữ liệu và đăng nhập từ xa vào các máy chủ. SSH key thường được sử dụng để thay thế việc nhập mật khẩu khi kết nối đến một máy chủ từ xa.
@@ -45,45 +84,13 @@ SSH tên đầy đủ là Secure SHell là một giao thức mạng mang tính b
 Đây là phần mật của cặp khoá SSH mà người dùng giữ bí mật trên máy tính hoặc thiết bị cá nhân. Mọi thông tin liên quan đến Private Key cần được bảo vệ chặt chẽ vì nó đóng vai trò quan trọng trong quá trình xác thực và truy cập.
 
 ### Cách hoạt động của SSH key
-
-
-![alt text](<../images/SSH key_1.png>)
-
-Bước 1: Client khởi tạo kết nối SSH
-- Client gửi yêu cầu kết nối đến SSH Server, yêu cầu xác thực bằng khóa công khai (Public Key Authentication).
-
-- Thông báo cho Server biết rằng Client muốn đăng nhập bằng khóa công khai (không phải mật khẩu).
-
-Bước 2: Server kiểm tra Public Key
-- Server kiểm tra xem Public Key của Client có nằm trong ~/.ssh/authorized_keys không.
-- Nếu có, Server gửi một thông điệp ngẫu nhiên (challenge) đến Client.
-- Đảm bảo rằng Client có khóa riêng (Private Key) tương ứng với Public Key đã lưu trên Server.
-
-Bước 3: Client mã hóa thông điệp bằng Private Key
-- Client dùng Private Key để mã hóa thông điệp (challenge) nhận được từ Server.
-- Client gửi thông điệp đã mã hóa ngược lại cho Server.
-- Chứng minh Client sở hữu Private Key mà không cần gửi nó qua mạng.
-- Private Key KHÔNG BAO GIỜ rời khỏi máy Client.
-
-Bước 4: Client gửi lại thông điệp đã mã hóa đến Server.
-
-Bước 5: Server giải mã và xác thực
--Server dùng Public Key của Client (trong authorized_keys) để giải mã thông điệp.
-
-- Nếu nội dung sau giải mã khớp với thông điệp gốc (challenge), xác thực thành công.
-
-
-- Chỉ ai có Private Key hợp lệ mới có thể tạo ra thông điệp chính xác.
-
-- Ngăn chặn kẻ xấu giả mạo, vì Public Key chỉ có thể giải mã thông điệp, không thể tạo ra nội dung hợp lệ.
-
-Bước 6: Server cấp quyền đăng nhập
-
-- Nếu xác thực thành công, Server cho phép Client đăng nhập.
-
-- Nếu xác thực thất bại, kết nối bị từ chối.
-
-
+ ![alt text](../images/ssh-key.png)
+- Máy khách bắt đầu bằng cách gửi ID đến cặp khóa mà nó muốn xác thực trên máy chủ từ xa.
+- Máy chủ sẽ kiểm tra xem có khóa công khai nào có cùng ID khóa trong tài khoản mà máy khách đang cố gắng đăng nhập hay không.
+- Nếu tìm thấy khóa công khai trùng khớp, máy chủ sẽ tạo một số ngẫu nhiên, mã hóa nó bằng khóa công khai và gửi cho máy khách.
+- Máy khách giải mã tin nhắn bằng khóa riêng và cùng với sự trợ giúp của khóa phiên, tính toán giá trị băm MD5 của tin nhắn.
+- Sau đó, máy khách sẽ mã hóa giá trị băm và gửi đến máy chủ.
+- Trong khi đó, máy chủ cũng tính toán giá trị băm MD5 của tin nhắn được gửi đến máy khách (với sự trợ giúp của khóa phiên). Nếu hai giá trị này khớp nhau, điều đó chứng tỏ máy khách sở hữu khóa riêng tương ứng và máy khách được xác thực trên máy chủ. 
 ## 5. Các kỹ thuật mã hóa SSH
 
 ### 5.1 Symmetrical Encryption

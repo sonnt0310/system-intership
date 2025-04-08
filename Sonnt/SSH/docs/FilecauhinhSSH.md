@@ -51,7 +51,7 @@ PasswordAuthentication yes/no
 
 
 - Bật chế độ xác thực SSH Key
-
+```
 PubkeyAuthentication yes
-
+```
 ```yes```: Cho phép xác thực bằng SSH key.
