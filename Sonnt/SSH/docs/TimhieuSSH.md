@@ -21,15 +21,9 @@ Nếu phiên bản Protocol của Server phù hợp với Client thì kết nố
 
 ### Thương lượng thuật toán:
 
-Server gửi danh sách các thuật toán mà nó hỗ trợ, bao gồm:
+- Server gửi danh sách các thuật toán mà nó hỗ trợ, 
 
-- Thuật toán trao đổi khóa (key exchange):
-    - diffie-hellman-group14-sha256, ecdh-sha2-nistp256, v.v.
-    - Thuật toán mã hóa: aes256-ctr, chacha20-poly1305, v.v.
-    - Thuật toán kiểm tra toàn vẹn (MAC): hmac-sha2-256, v.v.
-    - Thuật toán nén: none, zlib, v.v.
-
-Client chọn một bộ thuật toán từ danh sách này và gửi lại lựa chọn của mình.
+- Client chọn một bộ thuật toán từ danh sách này và gửi lại lựa chọn của mình.
 
 ### Trao đổi khóa Diffie-Hellman:
 - Mục tiêu: Tạo ra một shared secret (bí mật chung) mà cả Client và Server dùng để tạo khóa mã hóa, mà không cần gửi trực tiếp khóa qua mạng.
@@ -42,16 +36,14 @@ Client chọn một bộ thuật toán từ danh sách này và gửi lại lự
     - Cả hai dùng khóa riêng của mình và khóa công khai của bên kia để tính toán shared secret.
 - Từ shared secret, cả hai bên tạo ra:
     - Session Key: Khóa đối xứng để mã hóa dữ liệu.
-    - Integrity Key: Khóa để tạo mã kiểm tra toàn vẹn (MAC).
-    - Các khóa khác nếu cần (như khóa khởi tạo).`
-
+    
 ### Xác thực Server:
 - Client kiểm tra Host Key của Server:
     - Nếu Client đã lưu Host Key từ trước (trong known_hosts), nó so sánh để xác nhận Server.
     - Nếu là lần đầu kết nối, Client hỏi người dùng có chấp nhận Host Key không (hiển thị fingerprint).
-- Sau khi xác thực Server và trao đổi khóa thành công, kênh mã hóa được thiết lập.
-    - Mã hóa và kiểm tra toàn vẹn:
-    - Dữ liệu từ đây được mã hóa bằng Session Key (thường dùng AES hoặc ChaCha20).
+    - Sau khi xác thực Server và trao đổi khóa thành công, kênh mã hóa được thiết lập.
+- Mã hóa và kiểm tra toàn vẹn:
+    - Dữ liệu từ đây được mã hóa bằng Session Key 
     - Mỗi gói tin được gắn thêm MAC (Message Authentication Code) để đảm bảo không bị thay đổi.
 ### Bước 3. User Authentication (Xác thực Client)
 Sau khi kênh mã hóa được thiết lập, Server cần xác thực Client để đảm bảo người dùng hợp lệ. SSH-2 hỗ trợ nhiều phương pháp xác thực, phổ biến nhất là:
@@ -63,14 +55,7 @@ Sau khi kênh mã hóa được thiết lập, Server cần xác thực Client �
     - Nếu khớp, Client được xác thực.
 
 - Public Key Authentication:
-    - Chuẩn bị trước:
-        - Client tạo cặp khóa RSA/DSA/ECDSA: Public Key và Private Key.
-        - Public Key được gửi trước cho Server và lưu trong ~/.ssh/authorized_keys.
-    - Quy trình:
-        - Client gửi yêu cầu xác thực bằng khóa công khai, kèm theo thông tin về Public Key của nó.
-        - Server gửi một chuỗi ngẫu nhiên (challenge) cho Client.
-        - Client ký chuỗi này bằng Private Key và gửi chữ ký lại.
-        - Server dùng Public Key để kiểm tra chữ ký. Nếu hợp lệ, Client được xác thực.
+    - Sử dụng cặp khóa Public key và Private key để xác thực.
 ### Bước 4 4. Connection Protocol (Thiết lập kênh giao tiếp)
 - Sau khi xác thực thành công, SSH-2 mở các kênh (channels) để Client và Server giao tiếp
 
