@@ -168,3 +168,42 @@ sudo systemctl reload apache2
     - Truy cập: http://mywebsite.local
 
     - Truy cập: http://secondsite.local:81
+
+# Cài đặt web trên CentOs
+- Tạo thư mục cho website   
+```
+sudo mkdir -p /var/www/cafe/index.html
+```
+- Tạo đoạn HTML trong `index.html`
+-  Cấu hình Virtual Host cho Apache
+```
+sudo nano /etc/httpd/conf.d/cafe.conf
+```
+Thêm nội dung:
+```
+<VirtualHost *:80>
+    ServerAdmin cafe@gmail.com
+    DocumentRoot /var/www/cafe
+    ServerName cafe.cafe
+    ErrorLog /var/log/httpd/cafe-error_log
+    CustomLog /var/log/httpd/cafe-access_log combined
+</VirtualHost>
+```
+- 
+    - `DocumentRoot`: Đường dẫn tới thư mục chứa website của bạn. Đây là nơi Apache sẽ tìm tệp HTML và các tài nguyên khác của website.
+    - `ServerName`: Đây là tên miền của website. 
+    - `ErrorLog` và `CustomLog`: Đây là đường dẫn tới các tệp log để ghi nhận lỗi và truy cập
+
+- Kiểm tra quyền thư mục và tệp
+
+Đảm bảo rằng thư mục /var/www/cafe và tệp index.html có quyền phù hợp để Apache có thể truy cập
+```
+sudo chown -R apache:apache /var/www/cafe
+sudo chmod -R 755 /var/www/cafe
+```
+- Khởi động lại apache
+```
+sudo systemctl restart httpd
+```
+- Kiểm tra :
+Lên trình duyệt nhập Ip để kiểm tra
