@@ -32,13 +32,12 @@
 
 ## 1.4 Cấu trúc cơ bản của HTTP
 
-Giao thức HTTP là một giao thức Yêu cầu/Phản hồi dựa trên cấu trúc Client/Server, các trình duyệt web, các thiết bị tìm kiếm,… hoạt động như các Client, và các Server web hoạt động như một Server.
-
-![alt text](../images/HTTP_2.png)
+![alt text](image.png)
 
 ## 1.5 Tiến trình hoạt động 
+![alt text](image-1.png)
 - HTTP client thiết lập một kết nối TCP đến server. Nếu thiết lập thành công, client và server sẽ truyền nhận dữ liệu với nhau thông qua kết nối này, kết nối được thiết lập còn gọi là socket interface bao gồm các thông tin: địa chỉ IP, loại giao thức giao vận (chính là TCP), và port (mặc định là 80).
-- Sau khi kết nối thành công, client gửi một HTTP request đến server thông qua socket interface vừa được thiết lập.  Trong gói tin request sẽ chứa đường dẫn yêu cầu (path name) là /category/internet-of-thing.
+- Sau khi kết nối thành công, client gửi một HTTP request đến server thông qua socket interface vừa được thiết lập.  
 - Server sẽ nhận và xử lý request từ client thông qua socket, sau đó đóng gói dữ liệu tương ứng và gửi một HTTP response về cho client. Dữ liệu trả về sẽ là một file HTML chứa các loại dữ liệu khác nhau như văn bản, hình ảnh,…
 - Server đóng kết nối TCP.
 - Client nhận được dữ liệu phản hồi từ server và đóng kết nối TCP.

@@ -84,19 +84,43 @@ sudo tail -f /var/log/nginx/access.log
 ```
 ## Log Format Mặc Định
 Log format mặc định của Nginx là combined, bao gồm các chi tiết cơ bản về yêu cầu và phản hồi:
+```
+127.0.0.1 - - [15/Apr/2025:15:42:37 +0000] "GET /index.html HTTP/1.1" 200 1043 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36"
+```
 
 Giải Thích Các Thành Phần:
-- remote_addr : Địa chỉ IP của client.
-- remote_user : Tên user đã xác thực (nếu có).
-- time_local : Thời gian và ngày giờ của yêu cầu theo local.
-- request : Dòng yêu cầu HTTP đầy đủ. bao gồm method, path
-    - Ví dụ: "GET /index.php HTTP/1.1"
-- status : Mã trạng thái HTTP (e.g., 200, 404).
-- body_bytes_sent : Kích thước của body phản hồi tính bằng byte.
-- http_referer : URL của trang web dẫn đến yêu cầu.
-- http_user_agent : Chuỗi user agent (trình duyệt, bot, v.v.) của client.
+1. IP của client (127.0.0.1):
 
-Có thể định nghĩa các log format tùy chỉnh để thu thập thêm dữ liệu hoặc đơn giản hóa các dòng log. Sử dụng directive `log_format` để tạo format và gán tên cho nó.
+    - Địa chỉ IP của client gửi yêu cầu đến máy chủ.
+
+2. Khách hàng (User) (-):
+
+    - Thông tin người dùng (tên đăng nhập nếu có). Nếu không có, sẽ là dấu -.
+
+3. Thời gian yêu cầu ([15/Apr/2025:15:42:37 +0000]):
+
+    - Thời gian yêu cầu được gửi, bao gồm cả múi giờ.
+
+4. Dòng yêu cầu ("GET /index.html HTTP/1.1"):
+
+    - Đây là dòng yêu cầu HTTP, bao gồm phương thức HTTP (GET, POST, PUT, DELETE, v.v.), đường dẫn (URL) và phiên bản giao thức HTTP.
+
+5. Mã trạng thái HTTP (200):
+
+    - Mã trạng thái HTTP trả về từ máy chủ cho client. Mã 200 nghĩa là yêu cầu thành công, và có thể là các mã khác như 404 (Not Found), 500 (Internal Server Error), v.v.
+
+6. Kích thước phản hồi (1043):
+
+    - Kích thước của dữ liệu phản hồi (tính bằng byte) từ máy chủ gửi lại cho client.
+
+7. Referrer ("-"):
+
+    - Referrer (nguồn gốc của yêu cầu) là URL từ trang web mà client đã truy cập trước khi yêu cầu URL hiện tại. Nếu không có referrer, trường này sẽ là dấu -.
+
+8. User-Agent ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36"):
+
+    - Thông tin về trình duyệt và hệ điều hành của client gửi yêu cầu. Thông tin này có thể được sử dụng để phân tích các kiểu trình duyệt hay hệ điều hành phổ biến.
+
 
 
 

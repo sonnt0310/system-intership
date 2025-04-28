@@ -16,49 +16,24 @@ curl (Client URL) là một công cụ dòng lệnh mạnh mẽ dùng để truy
 - Sau khi cài đặt xong ta kiểm tra thử phiên bản đã cài đặt 
 
 `curl --version` 
+![alt text](../images/Curl_1.png)
 ## Cú pháp cơ bản
 
 ```curl [tùy chọn] [URL]```
 
-Gửi yêu cầu GET:
-
-``` curl https://api.example.com/data```
 
 ## Các tùy chọn phổ biến:
 
--X: Chỉ định phương thức HTTP (GET, POST, v.v.).
+- X : Chỉ định phương thức (GET, POST, PUT, DELETE)
+- d : Dữ liệu gửi đi (body request)
+- H : Thêm custom header
+- i : Hiển thị Header + Body
+- I : Chỉ Header, không Body
+- o : Lưu nội dung vào file
+- O : Download file, giữ tên file gốc
 
--H: Thêm header (ví dụ: -H "Authorization: Bearer token").
+## Ví dụ:
 
--d: Gửi dữ liệu trong body (ví dụ: form hoặc JSON).
+![alt text](../images/curl_2.png)
 
--o/-O: Lưu output vào file.
-
--v: Hiển thị chi tiết quá trình gửi/nhận (verbose).
-
--k: Bỏ qua kiểm tra SSL (không khuyến khích trong môi trường sản xuất).
-
-## Dùng cURL Command để tải file 
-- Lệnh này tải file từ một URL và lưu nó trong thư mục làm việc hiện tại với tên file giống với tên file trên máy chủ từ xa.
-
-```curl -O http://yourdomain.com/yourfile.tar.gz  ```
-
-- Lệnh này cũng tải file từ một URL nhưng cho phép bạn chỉ định tên file và đường dẫn lưu trữ cho file được tải xuống.
-
-```curl -o newyourfile.tar.gz http://yourdomain.com/yourfile.tar.gz```
-
-## Lệnh HTTP cURL Command
-
-- cURL Linux được sử dụng để gửi yêu cầu POST hoặc GET đến các URL được chỉ định, hoặc để gửi yêu cầu lấy thông tin header của trang web được chỉ định bởi URL. 
-
-```curl -I www.yourdomain.com```
-
-## Lệnh cURL cho Cookies 
-
-- Lệnh này cho phép bạn gửi yêu cầu đến một trang web và lưu các cookies mà trang web đó gửi lại vào một tệp tin. Điều này rất hữu ích khi bạn muốn duy trì phiên đăng nhập hoặc các thông tin liên quan giữa các yêu cầu cURL khác nhau.
-
-```curl –cookie-jar Mycookies.txt https://www.samplewebsite.com /index.html -O:```
-
-- Với lệnh sau, bạn có thể yêu cầu trang web và sử dụng các cookies đã lưu từ trước trong tệp tin cookies.
-
-```url –cookie Mycookies.txt https://www.samplewebsite.com:```
+![alt text](../images/curl_3.png)
