@@ -25,8 +25,35 @@ WordPress được phân loại thành hai phiên bản chính: WordPress.org v�
     - Không thể cài plugin hoặc chỉnh sửa mã nguồn ở các gói thấp.
     - Các tính năng nâng cao (như plugin, theme tùy chỉnh, tên miền riêng) yêu cầu gói trả phí.
     - Người dùng không kiểm soát hoàn toàn dữ liệu hoặc máy chủ.
-# Các thành phần chính 
-Vậy với Website WordPress chúng ta có:
+# Các thành phần chính trong trang quản trị của website WordPress
+
+![alt text](../images/wp.jpg)
+
+- Dashboard – Bảng tin: thống kê số bài viết hiện tại, số bình luận trên website của bạn, bản nháp, tin tức, tình trạng website,...
+- Post – Bài viết: quản lý các bài viết trên trang. Có thể tạo bài viết mới, tạo chuyên mục, gắn thẻ bài viết, thêm ảnh, chỉnh sửa bài viết tùy ý
+    - All Posts: tại đây bạn có thể xem, chỉnh sửa và quản lý tất các bài viết có trên website.
+    - Add New: Tạo bài viết mới.
+    - Categories: Quản lý các chuyên mục của bài viết.
+    - Tags: quản lý các thẻ bài viết đang có
+
+- Media – Thư viện: Có thể tải các hình ảnh, video lên Website qua mục này. Đây cũng là nơi lưu trữ các file media (hình ảnh, video, nhạc,...) của bạn.
+- Library: thư viện media, quản lý các tập tin đã upload lên.
+- Add New: thêm một file media mới.
+- Pages: các trang trongwebsite của bạn. Có thể tạo trang mới cho website, thêm ảnh, thêm nội dung, chỉnh sửa trang theo ý muốn.
+
+    - Add Pages: xem và quản lý toàn bộ pages hiện có
+
+    - Add New: tạo trang mới.
+- Comments: Trang quản lý các ý kiến bình luận trên website .Có thể xoá hoặc cấm bất kỳ người nào sử dụng chức năng này trên web của bạn.
+- Appearance – Giao diện: là khu vực làm việc để tiến hành tinh chỉnh giao diện (theme) trên website hoặc đổi theme, cài đặt Widget, cài đặt Menu
+- Plugins: Trang quản lý các Plugin bổ sung tính năng cho website của bạn. Bạn có thể cài đặt hoặc gỡ bỏ bất kỳ Plugin nào tại trang này. 
+- Users: Trang quản lý người dùng đã đăng ký sử dụng tại website của bạn. Bạn có thể thêm, xoá hoặc phân quyền cho bất kỳ người dùng nào tại trang này.
+- Tools: Trang quản lý xuất/nhập dữ liệu. Bạn có thể xuất ra file để làm file backup cho website phòng trường hợp website của bạn bị hack, bị mất dữ liệu trong tương lai, từ đó bạn có thể sử dụng công cụ import để khôi phục lại dữ liệu đã export.
+
+- Settings: Trang chỉnh sửa các thông số chung cho website như url của web, timezone, Date Format, cấu trúc đường dẫn,…. Thông thường việc quản lý và chỉnh sửa thông số của các Plugin cũng được thực hiện tại đây.
+
+
+# Các thành phần WordPress: 
 
 - Source Code: bao gồm WordPress Core + Theme + Plugins
 
@@ -58,9 +85,9 @@ Quá trình hoạt động của WordPress từ lúc người dùng truy cập v
 2. Web Server nhận yêu cầu
     - Apache hoặc Nginx nhận được request.
 
-    - Web server chuyển hướng yêu cầu đến file index.php của WordPress, thường là qua .htaccess (Apache) hoặc rewrite rule (Nginx).
+    - Web server chuyển hướng yêu cầu đến `file index.php `của WordPress, thường là qua `.htaccess` (Apache) hoặc `rewrite rule` (Nginx).
 3. WordPress khởi động (Bootstrap)
-    index.php → gọi wp-blog-header.php → gọi wp-load.php → gọi wp-config.php → load toàn bộ hệ thống lõi (core system).
+    `index.php` → gọi `wp-blog-header.php` → gọi `wp-load.php` → gọi `wp-config.php` → load toàn bộ hệ thống lõi (core system).
 
     - Kết nối tới Database.
 
@@ -68,7 +95,7 @@ Quá trình hoạt động của WordPress từ lúc người dùng truy cập v
 4. Plugins và Theme được kích hoạt
 WordPress nạp tất cả các plugin đang kích hoạt.
 
-    - Sau đó, nạp theme đang được sử dụng:
+    - Sau đó, nạp theme đang được sử dụng
 
     - Template hierarchy sẽ quyết định file nào được dùng (ví dụ: single.php, page.php, archive.php, v.v.).
 
@@ -82,7 +109,6 @@ WordPress nạp tất cả các plugin đang kích hoạt.
     - WordPress kết hợp nội dung từ database + giao diện theme → tạo thành HTML đầy đủ.
 
     - HTML được trả về cho trình duyệt người dùng.
-
 
 7. Trình duyệt hiển thị trang
     - Trình duyệt render HTML, tải thêm CSS, JavaScript, hình ảnh từ server.
@@ -172,3 +198,4 @@ Các thành phần cần thiết cho website WordPress theo cấu trúc mới:
 - PHP xử lý logic và truy vấn cơ sở dữ liệu.
 
 - Trả kết quả HTML lại cho Nginx → trình duyệt.
+
