@@ -27,7 +27,7 @@ WordPress được phân loại thành hai phiên bản chính: WordPress.org v�
     - Người dùng không kiểm soát hoàn toàn dữ liệu hoặc máy chủ.
 # Các thành phần chính trong trang quản trị của website WordPress
 
-![alt text](../images/wp.jpg)
+![alt text](../images/wp_8.png)
 
 - Dashboard – Bảng tin: thống kê số bài viết hiện tại, số bình luận trên website của bạn, bản nháp, tin tức, tình trạng website,...
 - Post – Bài viết: quản lý các bài viết trên trang. Có thể tạo bài viết mới, tạo chuyên mục, gắn thẻ bài viết, thêm ảnh, chỉnh sửa bài viết tùy ý
