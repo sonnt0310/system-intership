@@ -61,7 +61,7 @@ Các lệnh FTP cơ bản
 - ```hash```: Hiển thị dấu # để theo dõi tiến trình truyền tệp.
 
 
-## Sử dụng lệnh ```help``` hoặc ```?`` để hiển thị tất cả lệnh có sẵn với giao thức FTP.
+## Sử dụng lệnh ```help``` hoặc ```?``` để hiển thị tất cả lệnh có sẵn với giao thức FTP.
 
 ![alt text](<../images/Command 1.png>)
 
