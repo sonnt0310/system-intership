@@ -32,10 +32,11 @@
 
 ## 1.4 Cấu trúc cơ bản của HTTP
 
-![alt text](image.png)
+![alt text](../images/image.png)
 
 ## 1.5 Tiến trình hoạt động 
-![alt text](image-1.png)
+![alt text](../images/image-1.png)
+
 - HTTP client thiết lập một kết nối TCP đến server. Nếu thiết lập thành công, client và server sẽ truyền nhận dữ liệu với nhau thông qua kết nối này, kết nối được thiết lập còn gọi là socket interface bao gồm các thông tin: địa chỉ IP, loại giao thức giao vận (chính là TCP), và port (mặc định là 80).
 - Sau khi kết nối thành công, client gửi một HTTP request đến server thông qua socket interface vừa được thiết lập.  
 - Server sẽ nhận và xử lý request từ client thông qua socket, sau đó đóng gói dữ liệu tương ứng và gửi một HTTP response về cho client. Dữ liệu trả về sẽ là một file HTML chứa các loại dữ liệu khác nhau như văn bản, hình ảnh,…
