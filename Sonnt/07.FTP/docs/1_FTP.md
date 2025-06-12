@@ -1,6 +1,6 @@
 # 1.FTP là gì ?
 
-FTP (File Transfer Protocol) là một giao thức mạng chuẩn dùng để truyền tải tập tin (file) giữa máy khách (client) và máy chủ (server) qua mạng TCP/IP (thường là Internet hoặc mạng nội bộ).
+FTP (File Transfer Protocol) là một giao thức mạnggiữa máy khách (client) chuẩn dùng để truyền tải tập tin (file)  và máy chủ (server) qua mạng TCP/IP (thường là Internet hoặc mạng nội bộ).
 
 FTP sử dụng 2 cổng gồm:
 

@@ -42,7 +42,7 @@ allow_writeable_chroot=YES #Cho phép upload khi dùng chroot
 ```
 sudo systemctl restart vsftpd
 ```
-
+ 
 # Bước 5: Mở tường lửa (UFW)
 ```
 sudo ufw allow 20/tcp

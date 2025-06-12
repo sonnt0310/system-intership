@@ -1,5 +1,5 @@
 # 1. Tìm hiểu về giao thức HTTP
-## 1.1Giao thức HTTP là gì ?
+## 1.1 Giao thức HTTP là gì ?
 
 - Http (HyperText Transfer Protocol) là giao thức truyền tải siêu văn bản, giao tiếp trên cơ sở TCP/IP, được sử dụng để phân phối dữ liệu (các tệp HTML, các file ảnh, …) trong www dùng để truyền tải dữ liệu giữa Web server đến các trình duyệt Web và ngược lại. Giao thức này sử dụng cổng 80 (port 80) là chủ yếu (ngoài ra có thể dùng cổng 8080).
 
@@ -28,7 +28,7 @@
 
 - HTTP là giao thức connectionless (kết nối không liên tục): một trình duyệt khởi tạo một yêu cầu HTTP từ phía client và sau đó một yêu cầu được tạo ra, Client ngắt kết nối từ Server và đợi cho một phản hồi. Server xử lý yêu cầu và thiết lập lại sự kết nối với Client để gửi phản hồi trở lại.
 - HTTP là một phương tiện độc lập: Nó nghĩa là, bất kỳ loại dữ liệu nào cũng có thể được gửi bởi HTTP miễn là Server và Client biết cách để kiểm soát nội dung dữ liệu. 
-- HTTP là stateless: Như đã được đề cập ở trên, HTTP là connectionless và nó một kết quả trực tiếp là HTTP trở thành một giao thức Stateless. Server và Client biết về nhau chi trong một yêu cầu hiện tại. Sau đó, cả hai chúng nó quên tất cả về nhau. Do bản chất của giao thức, cả Client và các trình duyệt có thể giữ lại thông tin giữa các yêu cầu khác nhau giữa các trang web.
+- HTTP là stateless(Không trạng thái ): Request hiện tại không biết những gì đã hoàn thành trong request trước đó.
 
 ## 1.4 Cấu trúc cơ bản của HTTP
 
@@ -44,11 +44,13 @@
 - Client nhận được dữ liệu phản hồi từ server và đóng kết nối TCP.
 ## 1.6 URL
 URL (Uniform Resource Locator) là địa chỉ của tài nguyên trên mạng mà client muốn truy cập. Một URL tiêu chuẩn bao gồm:
-
-- Scheme (HTTP/HTTPS): Định nghĩa giao thức truyền tải.
-- Host (Tên miền): Địa chỉ của máy chủ lưu trữ tài nguyên.
+```
+protocol://hostname:port/path-and-file-name
+```
+- Protocol (HTTP/HTTPS): Định nghĩa giao thức truyền tải.
+- Hostname (Tên miền): Địa chỉ của máy chủ lưu trữ tài nguyên.
+- Port : cổng TCP để Server lắng nghe REQUEST từ Client
 - Path (Đường dẫn): Vị trí cụ thể của tài nguyên trên máy chủ.
-- Tham số: Các tham số bổ sung có thể được truyền qua URL để điều chỉnh hoặc tùy chỉnh truy cập tài nguyên.
 
 ## 1.7 Proxy 
 Proxy (hay máy chủ proxy) là một hệ thống trung gian hoạt động như một cầu nối giữa client (ví dụ: trình duyệt web của bạn) và server (máy chủ chứa tài nguyên, như trang web). Proxy nhận yêu cầu từ client, chuyển tiếp yêu cầu đó đến server, nhận phản hồi từ server, và gửi lại cho client.
@@ -84,19 +86,23 @@ Khi sử dụng HTTP, tiến trình hoạt động của proxy thường diễn 
 - Session (phiên làm việc) là một cơ chế được sử dụng để duy trì trạng thái hoặc thông tin liên quan đến một người dùng trong suốt quá trình tương tác của họ với một ứng dụng web.
 - Giao thức HTTP Có đặc trưng "stateless" ,nên session sinh ra như một cách để lưu trữ thông tin của các user qua nhiều request.
 
-![alt text](../images/Session_1.png)
+- Cơ chế hoạt động:
+    - Người dùng gửi HTTP request đầu tiên (ví dụ truy cập website).
 
-- Một session được tính bắt đầu từ khi user (người dùng) gửi request (yêu cầu thực hiện một thao tác nào đó) đến server (máy chủ). Session sẽ không tự động kết thúc khi bạn di chuyển giữa các trang khác nhau của một ứng dụng/ nền tảng. Một session chỉ chính thức kết thúc khi timeout (hết thời gian) hoặc khi đóng ứng dụng/ nền tảng. Trong mỗi phiên làm việc, các dữ liệu/ giá trị của session được lưu tạm thời trên server, từ đó giúp hệ thống đưa ra những quyết định về quyền hạn hoặc tuỳ chọn riêng tuỳ thuộc vào từng user.
+    - Server tạo một Session ID (mã định danh phiên làm việc) và lưu trữ dữ liệu tạm thời ở phía server.
+
+    - Session ID được gửi về cho client thông qua cookie, URL, hoặc HTTP header.
+
+    - Ở những request tiếp theo, client gửi lại Session ID → server biết người dùng là ai.
+
 
 - Mỗi session sẽ được cung cấp một mã định danh duy nhất, gọi là SessionID. Khi truy cập lại vào nền tảng/ ứng dụng sau khi đã tắt, người dùng sẽ được cấp một SessionID khác với trước đó.
 
-![alt text](../images/sesion_2.png)
+
 
 ## 1.9 HTTP massage
 - Các yêu cầu được tạo bởi client gửi tới web server và khi các web server gửi lại dữ liệu được gọi lần lượt là HTTP request và HTTP response. Chúng đều được gọi là HTTP message, là các message có cấu trúc đơn giản.
 - HTTP Message rất đơn giản, ta hoàn toàn có thể đọc được mà không nhất thiết phải có công cụ phân tích riêng biệt, nó làm giảm đi sự phức tạp khi phát triển hay khi debug ứng dụng.
-
-![alt text](../images/HTTPmessage_1.png)
 
 Cấu trúc chung của Request/Response có 4 thành phần:
 ![alt text](../images/HTTPmassage_2.png)
